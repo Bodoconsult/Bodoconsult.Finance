@@ -1,9 +1,4 @@
-﻿
-///Get the covarianz matrix as arrayusing System;
-///Get the covarianz matrix as ar
-///
-/// ///Calcuate risk///Risk in percent as double (0.1 means 10%)1 means 10%)1 means 10%///Get covariance matrix as arraystem.Data;
-/// ///Calcuate risk///Risk in percent as double (0.1 means 10%)1 means 10%)1 means 10%///Get covariance matrix as arrayCstem.Data;
+﻿// Copyright (c) Bodoconsult EDV-Dienstleistungen GmbH.  All rights reserved.
 
 using System;
 using System.Data;
@@ -32,7 +27,9 @@ public class RiskCalculator
     /// </summary>
     internal Vector<double> VectorB { get; private set; }
 
-
+    /// <summary>
+    /// Covariance matrix
+    /// </summary>
     internal Matrix<double> CovarianceMatrix { get; private set; }
 
     /// <summary>
@@ -71,8 +68,6 @@ public class RiskCalculator
 
         VectorB = Matrix<double>.Build.DenseOfColumnVectors(VectorA).Transpose().Row(0);
     }
-
-
 
     /// <summary>
     /// Load covariance matrix from a datatable with three columns
@@ -121,19 +116,15 @@ public class RiskCalculator
         CovarianceMatrix = Matrix<double>.Build.DenseOfArray(erg);
     }
 
-
-    //public double[,] Zwerg;
-    //public double[,] Zwerg1;
-
+    /// <summary>
+    /// Calculate depot risks
+    /// </summary>
     public void Calculate()
     {
         var erg = Matrix<double>.Build.DenseOfRowVectors(VectorB).Multiply(CovarianceMatrix);
 
-        //Zwerg = erg.ToArray();
-
         var erg1 = Matrix<double>.Build.DenseOfColumnVectors(VectorA).Multiply(erg);
 
-        //Zwerg1 = erg1.ToArray();
         try
         {
             Risk = Math.Sqrt(erg1[0, 0]);

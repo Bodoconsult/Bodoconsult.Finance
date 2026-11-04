@@ -66,8 +66,11 @@ public class FinanzDbUpdaterAllServicesContainerServiceProvider : IDiContainerSe
         //diContainer.AddSingleton<IGeneralAppManagementManager, GeneralAppManagementManager>();
 
         // Services
-        var db = new SqlClientConnManager(globals.AppStartParameter.DefaultConnectionString);
-        db.SendStatus = SendStatus;
+        var db = new SqlClientConnManager(globals.AppStartParameter.DefaultConnectionString)
+        {
+            SendStatus = SendStatus
+        };
+        db.SetCommandTimeout(600000);
         diContainer.AddSingleton((IConnManager)db);
 
         diContainer.AddSingleton<IDataHandler, DataHandler>();

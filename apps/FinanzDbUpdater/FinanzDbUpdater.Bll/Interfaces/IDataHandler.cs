@@ -86,8 +86,21 @@ public interface IDataHandler: IDisposable
     void UpdateLiquidity();
     IList<OwnerData> GetOwnersDataForRiskMetrics();
     DataTable GetBasicRiskDataForOwner(string owner);
+
+    /// <summary>
+    /// Get the covariance matrix for an asset owner
+    /// </summary>
+    /// <param name="owner">Requested asset owner</param>
+    /// <returns>Covariance matrix for the owner</returns>
     DataTable GetCovarianceMatrixForOwner(string owner);
+
+    /// <summary>
+    /// Update the risk for an asset owner
+    /// </summary>
+    /// <param name="owner"></param>
+    /// <param name="risk"></param>
     void UpdateOwnerRisk(string owner, double risk);
+
     IList<OwnerData> GetOwnersDataForMcs();
     IList<OwnerData> GetOwnersDataForTimePathMcs();
     void SaveMcsResult(string owner, double median, double mean, double standardDeviation);

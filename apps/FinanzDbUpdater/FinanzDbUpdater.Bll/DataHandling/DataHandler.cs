@@ -626,6 +626,7 @@ public sealed class DataHandler : IDataHandler
         return result;
     }
 
+
     public void RegisterBewertungForBft(string path, string title, string keyword, int accountId)
     {
         var lo = new SqlCommand
@@ -646,7 +647,6 @@ public sealed class DataHandler : IDataHandler
 
     public IList<OwnerData> GetOwnersForMailVersand()
     {
-
         var result = new List<OwnerData>();
 
         var dt = _db.GetDataTable("exec dbo.GetAnlegerMailVersandLiquiditaet");
