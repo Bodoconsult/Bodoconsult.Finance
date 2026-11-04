@@ -68,6 +68,18 @@ Project-Url: https://github.com/dotnet/dotnet
 
 ## Referenced external libraries for Bodoconsult.Finance.Payment.Banking
 
+### Nuget package library Bodoconsult.App by Robert Leisner
+
+Copyright: Bodoconsult EDV-Dienstleistungen GmbH
+
+Package providing basic functionality like logging, application performance measuring etc. for layered apps in a client server scenario
+
+License: MIT
+
+License-Url: https://licenses.nuget.org/MIT
+
+Project-Url: https://github.com/Bodoconsult/Bodoconsult.AppInfrastructure
+
 ### Nuget package library Bodoconsult.Pdf by Robert Leisner
 
 Copyright: Bodoconsult EDV-Dienstleistungen GmbH
@@ -407,6 +419,18 @@ Project-Url: https://github.com/dotnet/dotnet
 
 ## Referenced external libraries for Bodoconsult.Finance.Quotations
 
+### Nuget package library Bodoconsult.App by Robert Leisner
+
+Copyright: Bodoconsult EDV-Dienstleistungen GmbH
+
+Package providing basic functionality like logging, application performance measuring etc. for layered apps in a client server scenario
+
+License: MIT
+
+License-Url: https://licenses.nuget.org/MIT
+
+Project-Url: https://github.com/Bodoconsult/Bodoconsult.AppInfrastructure
+
 ### Nuget package library Bodoconsult.Pdf by Robert Leisner
 
 Copyright: Bodoconsult EDV-Dienstleistungen GmbH
@@ -469,6 +493,18 @@ License-Url: https://licenses.nuget.org/MIT
 
 Project-Url: https://github.com/Azure/azure-sdk-for-net
 
+#### Nuget package library Bodoconsult.App by Robert Leisner
+
+Copyright: Bodoconsult EDV-Dienstleistungen GmbH
+
+Package providing basic functionality like logging, application performance measuring etc. for layered apps in a client server scenario
+
+License: MIT
+
+License-Url: https://licenses.nuget.org/MIT
+
+Project-Url: https://github.com/Bodoconsult/Bodoconsult.AppInfrastructure
+
 #### Nuget package library Bodoconsult.Database by Robert Leisner
 
 Copyright: Bodoconsult EDV-Dienstleistungen GmbH
@@ -492,30 +528,6 @@ License: MIT
 License-Url: https://licenses.nuget.org/MIT
 
 Project-Url: https://github.com/Bodoconsult/Bodoconsult.AppInfrastructure
-
-#### Nuget package library log4net by The Apache Software Foundation
-
-Copyright: Copyright © 2004 - 2026 The Apache Software Foundation
-
-log4net is a tool to help the programmer output log statements to a variety of output targets.
-In case of problems with an application, it is helpful to enable logging so that the problem
-can be located. With log4net it is possible to enable logging at runtime without modifying the
-application binary. The log4net package is designed so that log statements can remain in
-shipped code without incurring a high performance cost. It follows that the speed of logging
-(or rather not logging) is crucial.
-
-At the same time, log output can be so voluminous that it quickly becomes overwhelming.
-One of the distinctive features of log4net is the notion of hierarchical loggers.
-Using these loggers it is possible to selectively control which log statements are output
-at arbitrary granularity.
-
-log4net is designed with two distinct goals in mind: speed and flexibility
-
-License: Apache-2.0
-
-License-Url: https://licenses.nuget.org/Apache-2.0
-
-Project-Url: https://github.com/apache/logging-log4net
 
 #### Nuget package library Newtonsoft.Json by James Newton-King
 
@@ -565,29 +577,29 @@ License-Url: https://licenses.nuget.org/MIT
 
 Project-Url: https://github.com/Azure/azure-sdk-for-net
 
-### Nuget package library log4net by The Apache Software Foundation
+### Nuget package library Bodoconsult.App by Robert Leisner
 
-Copyright: Copyright © 2004 - 2026 The Apache Software Foundation
+Copyright: Bodoconsult EDV-Dienstleistungen GmbH
 
-log4net is a tool to help the programmer output log statements to a variety of output targets.
-In case of problems with an application, it is helpful to enable logging so that the problem
-can be located. With log4net it is possible to enable logging at runtime without modifying the
-application binary. The log4net package is designed so that log statements can remain in
-shipped code without incurring a high performance cost. It follows that the speed of logging
-(or rather not logging) is crucial.
+Package providing basic functionality like logging, application performance measuring etc. for layered apps in a client server scenario
 
-At the same time, log output can be so voluminous that it quickly becomes overwhelming.
-One of the distinctive features of log4net is the notion of hierarchical loggers.
-Using these loggers it is possible to selectively control which log statements are output
-at arbitrary granularity.
+License: MIT
 
-log4net is designed with two distinct goals in mind: speed and flexibility
+License-Url: https://licenses.nuget.org/MIT
 
-License: Apache-2.0
+Project-Url: https://github.com/Bodoconsult/Bodoconsult.AppInfrastructure
 
-License-Url: https://licenses.nuget.org/Apache-2.0
+### Nuget package library Bodoconsult.App.Windows by Robert Leisner
 
-Project-Url: https://github.com/apache/logging-log4net
+Copyright: Bodoconsult EDV-Dienstleistungen GmbH
+
+Additonal tools for app infrastructure like eventlog logging and file tools for Windows OS
+
+License: MIT
+
+License-Url: https://licenses.nuget.org/MIT
+
+Project-Url: https://github.com/Bodoconsult/Bodoconsult.AppInfrastructure
 
 ### Nuget package library System.Drawing.Common by Microsoft
 

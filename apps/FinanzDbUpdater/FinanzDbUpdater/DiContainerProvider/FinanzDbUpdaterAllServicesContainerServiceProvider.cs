@@ -1,17 +1,16 @@
 ﻿// Copyright (c) Bodoconsult EDV-Dienstleistungen GmbH. All rights reserved.
 
 using Bodoconsult.App.Abstractions.Interfaces;
-using Bodoconsult.App.Benchmarking;
 using Bodoconsult.App.Factories;
 using Microsoft.Extensions.Logging;
 using System;
-using System.IO;
 using System.Runtime.Versioning;
 using Bodoconsult.App.Abstractions.DependencyInjection;
 using Bodoconsult.Database.Interfaces;
 using Bodoconsult.Database.SqlClient;
 using Bodoconsult.Finance.Quotations;
 using Bodoconsult.Finance.Quotations.Interfaces;
+using FinanzDbUpdater.Bll;
 using FinanzDbUpdater.Bll.Interfaces;
 using FinanzDbUpdater.Bll.App;
 using FinanzDbUpdater.Bll.DataHandling;
@@ -68,14 +67,21 @@ public class FinanzDbUpdaterAllServicesContainerServiceProvider : IDiContainerSe
 
         // Services
         var db = new SqlClientConnManager(globals.AppStartParameter.DefaultConnectionString);
+        db.SendStatus = SendStatus;
         diContainer.AddSingleton((IConnManager)db);
 
         diContainer.AddSingleton<IDataHandler, DataHandler>();
         diContainer.AddSingleton<IQuotationHandler, QuotationHandler>();
-        diContainer.AddSingleton<IFinanzDbUpdateHandler , IFinanzDbUpdateHandler >();
+        diContainer.AddSingleton<IFinanzDbUpdateHandler , FinanzDbUpdateHandler >();
 
         // Load all other services required for the app now
         diContainer.AddSingleton<IApplicationService, FinanzDbUpdaterService>();
+    }
+
+    private void SendStatus(string message)
+    {
+        _appGlobals.StatusMessageDelegate?.Invoke(message);
+        _appGlobals.Logger?.LogInformation(message);
     }
 
     /// <summary>

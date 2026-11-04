@@ -140,8 +140,7 @@ public sealed class DataHandler : IDataHandler
     {
         var lo = new SqlCommand
         {
-            CommandType =
-                CommandType.StoredProcedure,
+            CommandType = CommandType.StoredProcedure,
             CommandText = "dbo.UpdateWPKursISIN"
         };
         lo.Parameters.Add("@ISIN", SqlDbType.VarChar);

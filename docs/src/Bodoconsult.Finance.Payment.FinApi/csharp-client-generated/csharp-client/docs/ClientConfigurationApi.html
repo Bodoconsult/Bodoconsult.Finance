@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>IO.Swagger.Api.ClientConfigurationApi | Bodoconsult.AppInfrastructure </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="IO.Swagger.Api.ClientConfigurationApi | Bodoconsult.AppInfrastructure ">
+      
+      
+      <link rel="icon" href="../../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Bodoconsult/Bodoconsult.Finance/blob/main/src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/ClientConfigurationApi.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../../../index.html">
+            <img id="logo" class="svg" src="../../../../../logo.svg" alt="Bodoconsult.AppInfrastructure">
+            Bodoconsult.AppInfrastructure
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="ioswaggerapiclientconfigurationapi">IO.Swagger.Api.ClientConfigurationApi</h1>
+
+<p>All URIs are relative to <em>https://localhost</em></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="ClientConfigurationApi.html#editclientconfiguration"><strong>EditClientConfiguration</strong></a></td>
+<td><strong>PATCH</strong> /api/v1/clientConfiguration</td>
+<td>Edit client configuration</td>
+</tr>
+<tr>
+<td><a href="ClientConfigurationApi.html#getclientconfiguration"><strong>GetClientConfiguration</strong></a></td>
+<td><strong>GET</strong> /api/v1/clientConfiguration</td>
+<td>Get client configuration</td>
+</tr>
+</tbody>
+</table>
+<p><a name="editclientconfiguration"></a></p>
+<h1 id="editclientconfiguration"><strong>EditClientConfiguration</strong></h1>
+<blockquote>
+<p>ClientConfiguration EditClientConfiguration (ClientConfigurationParams body = null)</p>
+</blockquote>
+<p>Edit client configuration</p>
+<p>Edit your client's configuration. Must pass your global (i.e. client) access_token.<br><br> <b>NOTE</b>: When token validity periods are changed, this only applies to newly requested tokens, and does not change the expiration time of already existing tokens.</p>
+<h3 id="example">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class EditClientConfigurationExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new ClientConfigurationApi();
+            var body = new ClientConfigurationParams(); // ClientConfigurationParams | Client configuration parameters (optional) 
+
+            try
+            {
+                // Edit client configuration
+                ClientConfiguration result = apiInstance.EditClientConfiguration(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling ClientConfigurationApi.EditClientConfiguration: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="ClientConfigurationParams.html"><strong>ClientConfigurationParams</strong></a></td>
+<td>Client configuration parameters</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type">Return type</h3>
+<p><a href="ClientConfiguration.html"><strong>ClientConfiguration</strong></a></p>
+<h3 id="authorization">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+<p><a name="getclientconfiguration"></a></p>
+<h1 id="getclientconfiguration"><strong>GetClientConfiguration</strong></h1>
+<blockquote>
+<p>ClientConfiguration GetClientConfiguration ()</p>
+</blockquote>
+<p>Get client configuration</p>
+<p>Get your client's configuration. Must pass your global (i.e. client) access_token.</p>
+<h3 id="example-1">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class GetClientConfigurationExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new ClientConfigurationApi();
+
+            try
+            {
+                // Get client configuration
+                ClientConfiguration result = apiInstance.GetClientConfiguration();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling ClientConfigurationApi.GetClientConfiguration: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters-1">Parameters</h3>
+<p>This endpoint does not need any parameter.</p>
+<h3 id="return-type-1">Return type</h3>
+<p><a href="ClientConfiguration.html"><strong>ClientConfiguration</strong></a></p>
+<h3 id="authorization-1">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers-1">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Bodoconsult/Bodoconsult.Finance/blob/main/src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/ClientConfigurationApi.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

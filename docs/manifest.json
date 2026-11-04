@@ -1,0 +1,1784 @@
+{
+  "docfx_version": "2.81.0+ba844df625370a6bd7c1ecab0d0ec4d1d9128ac4",
+  "source_base_path": "C:/Daten/Projekte/Tools/Bodoconsult.Finance",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "CODE_OF_CONDUCT.md",
+      "output": {
+        ".html": {
+          "relative_path": "CODE_OF_CONDUCT.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "CONTRIBUTING.md",
+      "output": {
+        ".html": {
+          "relative_path": "CONTRIBUTING.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "LICENSE.md",
+      "output": {
+        ".html": {
+          "relative_path": "LICENSE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ReleaseNotes.md",
+      "output": {
+        ".html": {
+          "relative_path": "ReleaseNotes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "doc/BodoMoneyTransfer/LICENSE.md",
+      "output": {
+        ".html": {
+          "relative_path": "doc/BodoMoneyTransfer/LICENSE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "doc/BodoMoneyTransfer/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "doc/BodoMoneyTransfer/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "doc/BodoMoneyTransfer/ReleaseNotes.md",
+      "output": {
+        ".html": {
+          "relative_path": "doc/BodoMoneyTransfer/ReleaseNotes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "doc/BodoMoneyTransfer/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/BodoMoneyTransfer/toc.html"
+        },
+        ".json": {
+          "relative_path": "doc/BodoMoneyTransfer/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "doc/Bodoconsult.Finance.Payment.Banking/LICENSE.md",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Bodoconsult.Finance.Payment.Banking/LICENSE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "doc/Bodoconsult.Finance.Payment.Banking/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Bodoconsult.Finance.Payment.Banking/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "doc/Bodoconsult.Finance.Payment.Banking/ReleaseNotes.md",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Bodoconsult.Finance.Payment.Banking/ReleaseNotes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "doc/Bodoconsult.Finance.Payment.Banking/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Bodoconsult.Finance.Payment.Banking/toc.html"
+        },
+        ".json": {
+          "relative_path": "doc/Bodoconsult.Finance.Payment.Banking/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "doc/Bodoconsult.Finance.Payment.Base/LICENSE.md",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Bodoconsult.Finance.Payment.Base/LICENSE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "doc/Bodoconsult.Finance.Payment.Base/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Bodoconsult.Finance.Payment.Base/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "doc/Bodoconsult.Finance.Payment.Base/ReleaseNotes.md",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Bodoconsult.Finance.Payment.Base/ReleaseNotes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "doc/Bodoconsult.Finance.Payment.Base/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Bodoconsult.Finance.Payment.Base/toc.html"
+        },
+        ".json": {
+          "relative_path": "doc/Bodoconsult.Finance.Payment.Base/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "doc/Bodoconsult.Finance.Payment.FinApi/LICENSE.md",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Bodoconsult.Finance.Payment.FinApi/LICENSE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "doc/Bodoconsult.Finance.Payment.FinApi/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Bodoconsult.Finance.Payment.FinApi/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "doc/Bodoconsult.Finance.Payment.FinApi/ReleaseNotes.md",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Bodoconsult.Finance.Payment.FinApi/ReleaseNotes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "doc/Bodoconsult.Finance.Payment.FinApi/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Bodoconsult.Finance.Payment.FinApi/toc.html"
+        },
+        ".json": {
+          "relative_path": "doc/Bodoconsult.Finance.Payment.FinApi/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "doc/Bodoconsult.Finance.Portfolio/LICENSE.md",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Bodoconsult.Finance.Portfolio/LICENSE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "doc/Bodoconsult.Finance.Portfolio/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Bodoconsult.Finance.Portfolio/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "doc/Bodoconsult.Finance.Portfolio/ReleaseNotes.md",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Bodoconsult.Finance.Portfolio/ReleaseNotes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "doc/Bodoconsult.Finance.Portfolio/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Bodoconsult.Finance.Portfolio/toc.html"
+        },
+        ".json": {
+          "relative_path": "doc/Bodoconsult.Finance.Portfolio/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "doc/Bodoconsult.Finance.Quotations/LICENSE.md",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Bodoconsult.Finance.Quotations/LICENSE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "doc/Bodoconsult.Finance.Quotations/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Bodoconsult.Finance.Quotations/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "doc/Bodoconsult.Finance.Quotations/ReleaseNotes.md",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Bodoconsult.Finance.Quotations/ReleaseNotes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "doc/Bodoconsult.Finance.Quotations/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/Bodoconsult.Finance.Quotations/toc.html"
+        },
+        ".json": {
+          "relative_path": "doc/Bodoconsult.Finance.Quotations/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "doc/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "doc/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "doc/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "doc/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "doc/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "doc/toc.html"
+        },
+        ".json": {
+          "relative_path": "doc/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/FinApi_DecoupledApproach.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/FinApi_DecoupledApproach.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "licenses/baselic.md",
+      "output": {
+        ".html": {
+          "relative_path": "licenses/baselic.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "licenses/lic.md",
+      "output": {
+        ".html": {
+          "relative_path": "licenses/lic.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.Banking/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.Banking/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/AccessToken.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/AccessToken.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/Account.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/Account.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/AccountInterface.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/AccountInterface.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/AccountList.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/AccountList.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/AccountParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/AccountParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/AccountReference.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/AccountReference.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/AccountsApi.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/AccountsApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/AuthorizationApi.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/AuthorizationApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/BadCredentialsError.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/BadCredentialsError.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/Bank.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/Bank.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/BankConnection.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/BankConnection.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/BankConnectionInterface.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/BankConnectionInterface.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/BankConnectionList.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/BankConnectionList.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/BankConnectionOwner.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/BankConnectionOwner.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/BankConnectionsApi.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/BankConnectionsApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/BankConsent.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/BankConsent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/BankInterface.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/BankInterface.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/BankInterfaceLoginField.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/BankInterfaceLoginField.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/BankList.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/BankList.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/BanksApi.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/BanksApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/CashFlow.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/CashFlow.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/CashFlowList.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/CashFlowList.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/CategoriesApi.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/CategoriesApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/CategorizationCheckResult.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/CategorizationCheckResult.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/CategorizationCheckResults.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/CategorizationCheckResults.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/Category.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/Category.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/CategoryList.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/CategoryList.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/CategoryParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/CategoryParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/ChangeClientCredentialsParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/ChangeClientCredentialsParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/CheckCategorizationData.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/CheckCategorizationData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/CheckCategorizationTransactionData.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/CheckCategorizationTransactionData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/ClearingAccountData.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/ClearingAccountData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/ClientConfiguration.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/ClientConfiguration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/ClientConfigurationApi.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/ClientConfigurationApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/ClientConfigurationParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/ClientConfigurationParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/ConnectInterfaceParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/ConnectInterfaceParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/DailyBalance.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/DailyBalance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/DailyBalanceList.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/DailyBalanceList.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/DirectDebitOrderingResponse.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/DirectDebitOrderingResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/EditBankConnectionParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/EditBankConnectionParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/EditCategoryParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/EditCategoryParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/EditTppCredentialParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/EditTppCredentialParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/ErrorDetails.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/ErrorDetails.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/ErrorMessage.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/ErrorMessage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/ExecutePasswordChangeParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/ExecutePasswordChangeParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/ExecuteSepaDirectDebitParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/ExecuteSepaDirectDebitParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/ExecuteSepaMoneyTransferParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/ExecuteSepaMoneyTransferParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/IbanRule.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/IbanRule.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/IbanRuleList.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/IbanRuleList.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/IbanRuleParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/IbanRuleParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/IbanRulesParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/IbanRulesParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/IdentifierList.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/IdentifierList.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/IdentifiersParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/IdentifiersParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/ImportBankConnectionParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/ImportBankConnectionParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/KeywordRule.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/KeywordRule.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/KeywordRuleList.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/KeywordRuleList.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/KeywordRuleParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/KeywordRuleParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/KeywordRulesParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/KeywordRulesParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/Label.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/Label.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/LabelList.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/LabelList.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/LabelParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/LabelParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/LabelsApi.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/LabelsApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/LoginCredential.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/LoginCredential.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/LoginCredentialResource.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/LoginCredentialResource.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/MandatorAdministrationApi.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/MandatorAdministrationApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/MockAccountData.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/MockAccountData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/MockBankConnectionUpdate.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/MockBankConnectionUpdate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/MockBatchUpdateParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/MockBatchUpdateParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/MocksAndTestsApi.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/MocksAndTestsApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/MoneyTransferOrderingResponse.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/MoneyTransferOrderingResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/MonthlyUserStats.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/MonthlyUserStats.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/MultiStepAuthenticationCallback.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/MultiStepAuthenticationCallback.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/MultiStepAuthenticationChallenge.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/MultiStepAuthenticationChallenge.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/NewTransaction.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/NewTransaction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/NotificationRule.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/NotificationRule.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/NotificationRuleList.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/NotificationRuleList.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/NotificationRuleParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/NotificationRuleParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/NotificationRulesApi.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/NotificationRulesApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/PageableBankList.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/PageableBankList.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/PageableCategoryList.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/PageableCategoryList.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/PageableIbanRuleList.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/PageableIbanRuleList.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/PageableKeywordRuleList.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/PageableKeywordRuleList.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/PageableLabelList.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/PageableLabelList.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/PageablePaymentResources.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/PageablePaymentResources.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/PageableSecurityList.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/PageableSecurityList.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/PageableTppAuthenticationGroupResources.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/PageableTppAuthenticationGroupResources.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/PageableTppCertificateList.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/PageableTppCertificateList.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/PageableTppCredentialResources.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/PageableTppCredentialResources.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/PageableTransactionList.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/PageableTransactionList.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/PageableUserInfoList.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/PageableUserInfoList.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/Paging.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/Paging.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/PasswordChangingResource.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/PasswordChangingResource.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/Payment.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/Payment.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/PaymentExecutionResponse.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/PaymentExecutionResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/PaymentsApi.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/PaymentsApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/PaypalTransactionData.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/PaypalTransactionData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/RemoveInterfaceParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/RemoveInterfaceParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/RequestPasswordChangeParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/RequestPasswordChangeParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/RequestSepaDirectDebitParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/RequestSepaDirectDebitParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/RequestSepaMoneyTransferParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/RequestSepaMoneyTransferParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/SecuritiesApi.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/SecuritiesApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/Security.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/Security.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/SecurityList.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/SecurityList.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/SingleDirectDebitData.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/SingleDirectDebitData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/SingleMoneyTransferRecipientData.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/SingleMoneyTransferRecipientData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/SplitTransactionsParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/SplitTransactionsParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/SubTransactionParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/SubTransactionParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/TPPCertificatesApi.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/TPPCertificatesApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/TPPCredentialsApi.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/TPPCredentialsApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/TppAuthenticationGroup.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/TppAuthenticationGroup.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/TppCertificate.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/TppCertificate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/TppCertificateParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/TppCertificateParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/TppCredentials.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/TppCredentials.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/TppCredentialsParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/TppCredentialsParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/TrainCategorizationData.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/TrainCategorizationData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/TrainCategorizationTransactionData.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/TrainCategorizationTransactionData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/Transaction.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/Transaction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/TransactionList.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/TransactionList.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/TransactionsApi.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/TransactionsApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/TriggerCategorizationParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/TriggerCategorizationParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/TwoStepProcedure.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/TwoStepProcedure.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/UpdateBankConnectionParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/UpdateBankConnectionParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/UpdateMultipleTransactionsParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/UpdateMultipleTransactionsParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/UpdateResult.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/UpdateResult.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/UpdateTransactionsParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/UpdateTransactionsParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/User.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/User.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/UserCreateParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/UserCreateParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/UserIdentifiersList.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/UserIdentifiersList.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/UserIdentifiersParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/UserIdentifiersParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/UserInfo.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/UserInfo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/UserUpdateParams.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/UserUpdateParams.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/UsersApi.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/UsersApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/VerificationStatusResource.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/VerificationStatusResource.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/WebForm.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/WebForm.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/WebFormsApi.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/WebFormsApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

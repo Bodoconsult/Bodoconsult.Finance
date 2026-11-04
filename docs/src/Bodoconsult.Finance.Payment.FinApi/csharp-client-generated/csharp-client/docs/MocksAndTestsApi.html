@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>IO.Swagger.Api.MocksAndTestsApi | Bodoconsult.AppInfrastructure </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="IO.Swagger.Api.MocksAndTestsApi | Bodoconsult.AppInfrastructure ">
+      
+      
+      <link rel="icon" href="../../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Bodoconsult/Bodoconsult.Finance/blob/main/src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/MocksAndTestsApi.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../../../index.html">
+            <img id="logo" class="svg" src="../../../../../logo.svg" alt="Bodoconsult.AppInfrastructure">
+            Bodoconsult.AppInfrastructure
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="ioswaggerapimocksandtestsapi">IO.Swagger.Api.MocksAndTestsApi</h1>
+
+<p>All URIs are relative to <em>https://localhost</em></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="MocksAndTestsApi.html#checkcategorization"><strong>CheckCategorization</strong></a></td>
+<td><strong>POST</strong> /api/v1/tests/checkCategorization</td>
+<td>Check categorization</td>
+</tr>
+<tr>
+<td><a href="MocksAndTestsApi.html#mockbatchupdate"><strong>MockBatchUpdate</strong></a></td>
+<td><strong>POST</strong> /api/v1/tests/mockBatchUpdate</td>
+<td>Mock batch update</td>
+</tr>
+</tbody>
+</table>
+<p><a name="checkcategorization"></a></p>
+<h1 id="checkcategorization"><strong>CheckCategorization</strong></h1>
+<blockquote>
+<p>CategorizationCheckResults CheckCategorization (CheckCategorizationData body)</p>
+</blockquote>
+<p>Check categorization</p>
+<p>This service can be used to check the categorization for a given set of transactions, without the need of having the transactions actually imported in finAPI. The result of the categorization is the same as if the transactions were actually imported (the service regards the user-specific categorization rules of the user that is authorized by the access_token). Must pass the user's access_token.</p>
+<h3 id="example">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class CheckCategorizationExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new MocksAndTestsApi();
+            var body = new CheckCategorizationData(); // CheckCategorizationData | Transactions data
+
+            try
+            {
+                // Check categorization
+                CategorizationCheckResults result = apiInstance.CheckCategorization(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling MocksAndTestsApi.CheckCategorization: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="CheckCategorizationData.html"><strong>CheckCategorizationData</strong></a></td>
+<td>Transactions data</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type">Return type</h3>
+<p><a href="CategorizationCheckResults.html"><strong>CategorizationCheckResults</strong></a></p>
+<h3 id="authorization">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+<p><a name="mockbatchupdate"></a></p>
+<h1 id="mockbatchupdate"><strong>MockBatchUpdate</strong></h1>
+<blockquote>
+<p>void MockBatchUpdate (MockBatchUpdateParams body)</p>
+</blockquote>
+<p>Mock batch update</p>
+<p>This service can be used to mock an update of one or several bank connections by letting you simulate finAPI's communication with a bank server. More specifically, you can provide custom balances and transactions for existing accounts and finAPI will import that data into the accounts as if the data had been delivered by a real bank server during a real update. The idea of this service is to allow you to create accounts with specific data in them so that you can test your application in different scenarios.<br><br>You can also test your application's reception and processing of push notifications with this service, by enabling the 'triggerNotifications' flag in your request. When this flag is enabled, finAPI will send notifications to your application based on the notification rules that are set up for the user and on the data you provided in the request, the same way as it works with finAPI's real automatic batch update process.<br><br>Note that this service behaves mostly like calling the bank connection update service, meaning that it returns immediately after having asynchronously started the update process, and also meaning that you have to check the status of the updated bank connections and accounts to find out when the update has finished and what the result is. As you can update several bank connections at once, this service is closer to how finAPI's automatic batch updates work as it is to the manual update service though. Because of this, the result of the mocked bank connection updates will be stored in the 'lastAutoUpdate' field of the bank connections and not in the 'lastManualUpdate' field. Also, just like with the real batch update, any bank connection that you use with this service must have a PIN stored (even though it is not actually forwarded to any bank server).<br><br>Also note that this service may be called only when the user's automatic bank connection updates are disabled, to make sure that the mock updates cannot intervene with a real update (please see the User field 'isAutoUpdateEnabled'). Also, it is currently not possible to mock data for security accounts with this service, as you can only pass transactions, but not security positions.<br><br>Please be aware that you will 'mess up' the accounts when using this service, meaning that when you perform a real update of accounts that you have previously updated with this service, finAPI might detect inconsistencies in the data that exists in its database and the data that is reported by the bank server, and try to fix this with the insertion of an adjusting entry ('Zwischensaldo' transaction). Also, new real transactions might not get imported as finAPI could match them to mocked transactions. <b>THIS SERVICE IS MEANT FOR TESTING PURPOSES DURING DEVELOPMENT OF YOUR APPLICATION ONLY!</b> This is why it will work only on the sandbox or alpha environments. Calling it on the live environment will result in <b>403 Forbidden</b>.</p>
+<h3 id="example-1">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class MockBatchUpdateExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new MocksAndTestsApi();
+            var body = new MockBatchUpdateParams(); // MockBatchUpdateParams | Data for mock bank connection updates
+
+            try
+            {
+                // Mock batch update
+                apiInstance.MockBatchUpdate(body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling MocksAndTestsApi.MockBatchUpdate: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters-1">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="MockBatchUpdateParams.html"><strong>MockBatchUpdateParams</strong></a></td>
+<td>Data for mock bank connection updates</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type-1">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization-1">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers-1">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Bodoconsult/Bodoconsult.Finance/blob/main/src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/MocksAndTestsApi.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

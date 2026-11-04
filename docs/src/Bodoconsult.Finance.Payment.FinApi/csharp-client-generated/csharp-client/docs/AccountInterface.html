@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>IO.Swagger.Model.AccountInterface | Bodoconsult.AppInfrastructure </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="IO.Swagger.Model.AccountInterface | Bodoconsult.AppInfrastructure ">
+      
+      
+      <link rel="icon" href="../../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Bodoconsult/Bodoconsult.Finance/blob/main/src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/AccountInterface.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../../../index.html">
+            <img id="logo" class="svg" src="../../../../../logo.svg" alt="Bodoconsult.AppInfrastructure">
+            Bodoconsult.AppInfrastructure
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="ioswaggermodelaccountinterface">IO.Swagger.Model.AccountInterface</h1>
+
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Interface</strong></td>
+<td><strong>string</strong></td>
+<td>Bank interface. Possible values:&lt;br&gt;&lt;br&gt;&amp;bull; &lt;code&gt;FINTS_SERVER&lt;/code&gt; - finAPI will download account data via the bank's FinTS interface.&lt;br&gt;&amp;bull; &lt;code&gt;WEB_SCRAPER&lt;/code&gt; - finAPI will parse account data from the bank's online banking website.&lt;br&gt;&amp;bull; &lt;code&gt;XS2A&lt;/code&gt; - finAPI will download account data via the bank's XS2A interface.&lt;br&gt;</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Status</strong></td>
+<td><strong>string</strong></td>
+<td>The current status of the account from the perspective of this interface. Possible values are:&lt;br/&gt;&amp;bull; &lt;code&gt;UPDATED&lt;/code&gt; means that the account is up to date from finAPI's point of view. This means that no current import/update is running, and the previous import/update had successfully updated the account's data (e.g. transactions and securities), and the bank given balance matched the transaction's calculated sum, meaning that no adjusting entry ('Zwischensaldo' transaction) was inserted.&lt;br/&gt;&amp;bull; &lt;code&gt;UPDATED_FIXED&lt;/code&gt; means that the account is up to date from finAPI's point of view (no current import/update is running, and the previous import/update had successfully updated the account's data), BUT there was a deviation in the bank given balance which was fixed by adding an adjusting entry ('Zwischensaldo' transaction).&lt;br/&gt;&amp;bull; &lt;code&gt;DOWNLOAD_IN_PROGRESS&lt;/code&gt; means that the account's data is currently being imported/updated.&lt;br/&gt;&amp;bull; &lt;code&gt;DOWNLOAD_FAILED&lt;/code&gt; means that the account data was not successfully imported or updated. Possible reasons: finAPI could not get the account's balance, or it could not parse all transactions/securities, or some internal error has occurred. Also, it could mean that finAPI could not even get to the point of receiving the account data from the bank server, for example because of incorrect login credentials or a network problem. Note however that when we get a balance and just an empty list of transactions or securities, then this is regarded as valid and successful download. The reason for this is that for some accounts that have little activity, we may actually get no recent transactions but only a balance.&lt;br/&gt;&amp;bull; &lt;code&gt;DEPRECATED&lt;/code&gt; means that the account could no longer be matched with any account from the bank server. This can mean either that the account was terminated by the user and is no longer sent by the bank server, or that finAPI could no longer match it because the account's data (name, type, iban, account number, etc.) has been changed by the bank.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Capabilities</strong></td>
+<td><strong>List&lt;string&gt;</strong></td>
+<td>List of account capabilities that this interface supports. Possible values are:&lt;br/&gt;&lt;br/&gt;&amp;bull; &lt;code&gt;DATA_DOWNLOAD&lt;/code&gt; - download of balance and transactions/securities&lt;br/&gt;&amp;bull; &lt;code&gt;IBAN_ONLY_SEPA_MONEY_TRANSFER&lt;/code&gt; - money transfer where the recipient's account is defined just by the IBAN&lt;br/&gt;&amp;bull; &lt;code&gt;IBAN_ONLY_SEPA_DIRECT_DEBIT&lt;/code&gt; - direct debit where the debitor's account is defined just by the IBAN&lt;br/&gt;&amp;bull; &lt;code&gt;SEPA_MONEY_TRANSFER&lt;/code&gt; - single money transfer&lt;br/&gt;&amp;bull; &lt;code&gt;SEPA_COLLECTIVE_MONEY_TRANSFER&lt;/code&gt; - collective money transfer&lt;br/&gt;&amp;bull; &lt;code&gt;SEPA_BASIC_DIRECT_DEBIT&lt;/code&gt; - single basic direct debit&lt;br/&gt;&amp;bull; &lt;code&gt;SEPA_BASIC_COLLECTIVE_DIRECT_DEBIT&lt;/code&gt; - collective basic direct debit&lt;br/&gt;&amp;bull; &lt;code&gt;SEPA_B2B_DIRECT_DEBIT&lt;/code&gt; - single Business-To-Business direct debit&lt;br/&gt;&amp;bull; &lt;code&gt;SEPA_B2B_COLLECTIVE_DIRECT_DEBIT&lt;/code&gt; - collective Business-To-Business direct debit&lt;br/&gt;&lt;br/&gt;Note that this list may be empty if the interface is not supporting any of the above capabilities. Also note that the list may be refreshed each time the account is being updated though this interface, so available capabilities may get added or removed in the course of an account update.&lt;br/&gt;&lt;br/&gt;</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>LastSuccessfulUpdate</strong></td>
+<td><strong>string</strong></td>
+<td>Timestamp of when the account was last successfully updated using this interface (or initially imported); more precisely: time when the account data (balance and positions) has been stored into the finAPI databases. The value is returned in the format 'YYYY-MM-DD HH:MM:SS.SSS' (german time).</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>LastUpdateAttempt</strong></td>
+<td><strong>string</strong></td>
+<td>Timestamp of when the account was last tried to be updated using this interface (or initially imported); more precisely: time when the update (or initial import) was triggered. The value is returned in the format 'YYYY-MM-DD HH:MM:SS.SSS' (german time).</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<p><a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html">[Back to README]</a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Bodoconsult/Bodoconsult.Finance/blob/main/src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/AccountInterface.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

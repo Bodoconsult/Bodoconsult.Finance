@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>IO.Swagger.Api.AccountsApi | Bodoconsult.AppInfrastructure </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="IO.Swagger.Api.AccountsApi | Bodoconsult.AppInfrastructure ">
+      
+      
+      <link rel="icon" href="../../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Bodoconsult/Bodoconsult.Finance/blob/main/src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/AccountsApi.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../../../index.html">
+            <img id="logo" class="svg" src="../../../../../logo.svg" alt="Bodoconsult.AppInfrastructure">
+            Bodoconsult.AppInfrastructure
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="ioswaggerapiaccountsapi">IO.Swagger.Api.AccountsApi</h1>
+
+<p>All URIs are relative to <em>https://localhost</em></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="AccountsApi.html#deleteaccount"><strong>DeleteAccount</strong></a></td>
+<td><strong>DELETE</strong> /api/v1/accounts/{id}</td>
+<td>Delete an account</td>
+</tr>
+<tr>
+<td><a href="AccountsApi.html#deleteallaccounts"><strong>DeleteAllAccounts</strong></a></td>
+<td><strong>DELETE</strong> /api/v1/accounts</td>
+<td>Delete all accounts</td>
+</tr>
+<tr>
+<td><a href="AccountsApi.html#editaccount"><strong>EditAccount</strong></a></td>
+<td><strong>PATCH</strong> /api/v1/accounts/{id}</td>
+<td>Edit an account</td>
+</tr>
+<tr>
+<td><a href="AccountsApi.html#executesepadirectdebit"><strong>ExecuteSepaDirectDebit</strong></a></td>
+<td><strong>POST</strong> /api/v1/accounts/executeSepaDirectDebit</td>
+<td>Execute SEPA Direct Debit</td>
+</tr>
+<tr>
+<td><a href="AccountsApi.html#executesepamoneytransfer"><strong>ExecuteSepaMoneyTransfer</strong></a></td>
+<td><strong>POST</strong> /api/v1/accounts/executeSepaMoneyTransfer</td>
+<td>Execute SEPA Money Transfer</td>
+</tr>
+<tr>
+<td><a href="AccountsApi.html#getaccount"><strong>GetAccount</strong></a></td>
+<td><strong>GET</strong> /api/v1/accounts/{id}</td>
+<td>Get an account</td>
+</tr>
+<tr>
+<td><a href="AccountsApi.html#getandsearchallaccounts"><strong>GetAndSearchAllAccounts</strong></a></td>
+<td><strong>GET</strong> /api/v1/accounts</td>
+<td>Get and search all accounts</td>
+</tr>
+<tr>
+<td><a href="AccountsApi.html#getdailybalances"><strong>GetDailyBalances</strong></a></td>
+<td><strong>GET</strong> /api/v1/accounts/dailyBalances</td>
+<td>Get daily balances</td>
+</tr>
+<tr>
+<td><a href="AccountsApi.html#getmultipleaccounts"><strong>GetMultipleAccounts</strong></a></td>
+<td><strong>GET</strong> /api/v1/accounts/{ids}</td>
+<td>Get multiple accounts</td>
+</tr>
+<tr>
+<td><a href="AccountsApi.html#requestsepadirectdebit"><strong>RequestSepaDirectDebit</strong></a></td>
+<td><strong>POST</strong> /api/v1/accounts/requestSepaDirectDebit</td>
+<td>Request SEPA Direct Debit</td>
+</tr>
+<tr>
+<td><a href="AccountsApi.html#requestsepamoneytransfer"><strong>RequestSepaMoneyTransfer</strong></a></td>
+<td><strong>POST</strong> /api/v1/accounts/requestSepaMoneyTransfer</td>
+<td>Request SEPA Money Transfer</td>
+</tr>
+</tbody>
+</table>
+<p><a name="deleteaccount"></a></p>
+<h1 id="deleteaccount"><strong>DeleteAccount</strong></h1>
+<blockquote>
+<p>void DeleteAccount (long? id)</p>
+</blockquote>
+<p>Delete an account</p>
+<p>Delete a single bank account of the user that is authorized by the access_token, including its transactions and balance data. Must pass the account's identifier and the user's access_token.<br><br>Notes: <br>- You cannot delete an account while the bank connection that it relates to is currently in the process of import, update, or transactions categorization. <br>- When the last remaining account of a bank connection gets deleted, then the bank connection itself will get deleted as well! <br>- All notification rules that are connected to the account will get adjusted so that they no longer have this account listed. Notification rules that are connected to just this account (and no other accounts) will get deleted altogether.</p>
+<h3 id="example">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class DeleteAccountExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new AccountsApi();
+            var id = 789;  // long? | Identifier of the account to delete
+
+            try
+            {
+                // Delete an account
+                apiInstance.DeleteAccount(id);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling AccountsApi.DeleteAccount: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>id</strong></td>
+<td><strong>long?</strong></td>
+<td>Identifier of the account to delete</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+<p><a name="deleteallaccounts"></a></p>
+<h1 id="deleteallaccounts"><strong>DeleteAllAccounts</strong></h1>
+<blockquote>
+<p>IdentifierList DeleteAllAccounts ()</p>
+</blockquote>
+<p>Delete all accounts</p>
+<p>Delete all accounts of the user that is authorized by the access_token, including all transactions and balance data. Must pass the user's access_token.<br><br>Notes: <br>- Deleting all of the user's accounts also deletes all of his bank connections. <br>- All notification rules that are connected to any specific accounts will get deleted as well. <br>- If at least one of the user's bank connections in currently in the process of import, update, or transactions categorization, then this service will perform no action at all.</p>
+<h3 id="example-1">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class DeleteAllAccountsExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new AccountsApi();
+
+            try
+            {
+                // Delete all accounts
+                IdentifierList result = apiInstance.DeleteAllAccounts();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling AccountsApi.DeleteAllAccounts: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters-1">Parameters</h3>
+<p>This endpoint does not need any parameter.</p>
+<h3 id="return-type-1">Return type</h3>
+<p><a href="IdentifierList.html"><strong>IdentifierList</strong></a></p>
+<h3 id="authorization-1">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers-1">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+<p><a name="editaccount"></a></p>
+<h1 id="editaccount"><strong>EditAccount</strong></h1>
+<blockquote>
+<p>Account EditAccount (long? id, AccountParams body = null)</p>
+</blockquote>
+<p>Edit an account</p>
+<p>Change the name and/or the type and/or the 'isNew' flag of a single bank account of the user that is authorized by the access_token. Must pass the account's identifier, the account's new name and/or type and/or 'isNew' flag, and the user's access_token.</p>
+<h3 id="example-2">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class EditAccountExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new AccountsApi();
+            var id = 789;  // long? | Identifier of the account to edit
+            var body = new AccountParams(); // AccountParams | New account name and/or type and/or 'isNew' flag (optional) 
+
+            try
+            {
+                // Edit an account
+                Account result = apiInstance.EditAccount(id, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling AccountsApi.EditAccount: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters-2">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>id</strong></td>
+<td><strong>long?</strong></td>
+<td>Identifier of the account to edit</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="AccountParams.html"><strong>AccountParams</strong></a></td>
+<td>New account name and/or type and/or 'isNew' flag</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type-2">Return type</h3>
+<p><a href="Account.html"><strong>Account</strong></a></p>
+<h3 id="authorization-2">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers-2">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+<p><a name="executesepadirectdebit"></a></p>
+<h1 id="executesepadirectdebit"><strong>ExecuteSepaDirectDebit</strong></h1>
+<blockquote>
+<p>PaymentExecutionResponse ExecuteSepaDirectDebit (ExecuteSepaDirectDebitParams body)</p>
+</blockquote>
+<p>Execute SEPA Direct Debit</p>
+<p>Execute a SEPA direct debit order that has been previously submitted by the use of the /requestSepaDirectDebit service.<br><br>Note: in case of using finAPI's web form flow, the web form is dealing with triggering this service itself.<br><br>Note that this service only works when your client has payments enabled (see client configuration).<br><br>DEPRECATED: This service will be removed at some point. Please refer to the 'Payments' section of the API instead.</p>
+<h3 id="example-3">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class ExecuteSepaDirectDebitExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new AccountsApi();
+            var body = new ExecuteSepaDirectDebitParams(); // ExecuteSepaDirectDebitParams | Parameters for the execution of a SEPA direct debit order
+
+            try
+            {
+                // Execute SEPA Direct Debit
+                PaymentExecutionResponse result = apiInstance.ExecuteSepaDirectDebit(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling AccountsApi.ExecuteSepaDirectDebit: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters-3">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="ExecuteSepaDirectDebitParams.html"><strong>ExecuteSepaDirectDebitParams</strong></a></td>
+<td>Parameters for the execution of a SEPA direct debit order</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type-3">Return type</h3>
+<p><a href="PaymentExecutionResponse.html"><strong>PaymentExecutionResponse</strong></a></p>
+<h3 id="authorization-3">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers-3">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+<p><a name="executesepamoneytransfer"></a></p>
+<h1 id="executesepamoneytransfer"><strong>ExecuteSepaMoneyTransfer</strong></h1>
+<blockquote>
+<p>PaymentExecutionResponse ExecuteSepaMoneyTransfer (ExecuteSepaMoneyTransferParams body)</p>
+</blockquote>
+<p>Execute SEPA Money Transfer</p>
+<p>Execute a SEPA money transfer order that has been previously submitted by the use of the /requestSepaMoneyTransfer service.<br><br>Note: in case of using finAPI's web form flow, the web form is dealing with triggering this service itself.<br><br>Note that this service only works when your client has payments enabled (see client configuration).<br><br>DEPRECATED: This service will be removed at some point. Please refer to the 'Payments' section of the API instead.</p>
+<h3 id="example-4">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class ExecuteSepaMoneyTransferExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new AccountsApi();
+            var body = new ExecuteSepaMoneyTransferParams(); // ExecuteSepaMoneyTransferParams | Parameters for the execution of a SEPA money transfer order
+
+            try
+            {
+                // Execute SEPA Money Transfer
+                PaymentExecutionResponse result = apiInstance.ExecuteSepaMoneyTransfer(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling AccountsApi.ExecuteSepaMoneyTransfer: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters-4">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="ExecuteSepaMoneyTransferParams.html"><strong>ExecuteSepaMoneyTransferParams</strong></a></td>
+<td>Parameters for the execution of a SEPA money transfer order</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type-4">Return type</h3>
+<p><a href="PaymentExecutionResponse.html"><strong>PaymentExecutionResponse</strong></a></p>
+<h3 id="authorization-4">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers-4">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+<p><a name="getaccount"></a></p>
+<h1 id="getaccount"><strong>GetAccount</strong></h1>
+<blockquote>
+<p>Account GetAccount (long? id)</p>
+</blockquote>
+<p>Get an account</p>
+<p>Get a single bank account of the user that is authorized by the access_token. Must pass the account's identifier and the user's access_token.</p>
+<h3 id="example-5">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class GetAccountExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new AccountsApi();
+            var id = 789;  // long? | Identifier of requested account
+
+            try
+            {
+                // Get an account
+                Account result = apiInstance.GetAccount(id);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling AccountsApi.GetAccount: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters-5">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>id</strong></td>
+<td><strong>long?</strong></td>
+<td>Identifier of requested account</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type-5">Return type</h3>
+<p><a href="Account.html"><strong>Account</strong></a></p>
+<h3 id="authorization-5">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers-5">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+<p><a name="getandsearchallaccounts"></a></p>
+<h1 id="getandsearchallaccounts"><strong>GetAndSearchAllAccounts</strong></h1>
+<blockquote>
+<p>AccountList GetAndSearchAllAccounts (List&lt;long?&gt; ids = null, string search = null, List&lt;long?&gt; accountTypeIds = null, List<string> accountTypes = null, List&lt;long?&gt; bankConnectionIds = null, string minLastSuccessfulUpdate = null, string maxLastSuccessfulUpdate = null, decimal? minBalance = null, decimal? maxBalance = null)</string></p>
+</blockquote>
+<p>Get and search all accounts</p>
+<p>Get bank accounts of the user that is authorized by the access_token. Must pass the user's access_token. You can set optional search criteria to get only those bank accounts that you are interested in. If you do not specify any search criteria, then this service functions as a 'get all' service.</p>
+<h3 id="example-6">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class GetAndSearchAllAccountsExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new AccountsApi();
+            var ids = new List&lt;long?&gt;(); // List&lt;long?&gt; | A comma-separated list of account identifiers. If specified, then only accounts whose identifier match any of the given identifiers will be regarded. The maximum number of identifiers is 1000. (optional) 
+            var search = search_example;  // string | If specified, then only those accounts will be contained in the result whose 'accountName', 'iban', 'accountNumber' or 'subAccountNumber' contains the given search string (the matching works case-insensitive). If no accounts contain the search string in any of these fields, then the result will be an empty list. NOTE: If the given search string consists of several terms (separated by whitespace), then ALL of these terms must be contained in the searched fields in order for an account to get included into the result. (optional) 
+            var accountTypeIds = new List&lt;long?&gt;(); // List&lt;long?&gt; | A comma-separated list of account type ids. If specified, then only accounts that relate to the given types will be regarded. If not specified, then all accounts will be regarded. This field is deprecated and will be removed at some point, please refer to the accountTypes field instead. (optional) 
+            var accountTypes = new List&lt;string&gt;(); // List&lt;string&gt; | A comma-separated list of account types. If specified, then only accounts that relate to the given types will be regarded. If not specified, then all accounts will be regarded. (optional) 
+            var bankConnectionIds = new List&lt;long?&gt;(); // List&lt;long?&gt; | A comma-separated list of bank connection identifiers. If specified, then only accounts that relate to the given bank connections will be regarded. If not specified, then all accounts will be regarded. (optional) 
+            var minLastSuccessfulUpdate = minLastSuccessfulUpdate_example;  // string | Lower bound for a account's last successful update date, in the format 'YYYY-MM-DD' (e.g. '2016-01-01'). If specified, then only accounts whose 'lastSuccessfulUpdate' is equal to or later than the given date will be regarded. (optional) 
+            var maxLastSuccessfulUpdate = maxLastSuccessfulUpdate_example;  // string | Upper bound for a account's last successful update date, in the format 'YYYY-MM-DD' (e.g. '2016-01-01'). If specified, then only accounts whose 'lastSuccessfulUpdate' is equal to or earlier than the given date will be regarded. (optional) 
+            var minBalance = 8.14;  // decimal? | If specified, then only accounts whose balance is equal to or greater than the given balance will be regarded. Can contain a positive or negative number with at most two decimal places. Examples: -300.12, or 90.95 (optional) 
+            var maxBalance = 8.14;  // decimal? | If specified, then only accounts whose balance is equal to or less than the given balance will be regarded. Can contain a positive or negative number with at most two decimal places. Examples: -300.12, or 90.95 (optional) 
+
+            try
+            {
+                // Get and search all accounts
+                AccountList result = apiInstance.GetAndSearchAllAccounts(ids, search, accountTypeIds, accountTypes, bankConnectionIds, minLastSuccessfulUpdate, maxLastSuccessfulUpdate, minBalance, maxBalance);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling AccountsApi.GetAndSearchAllAccounts: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters-6">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ids</strong></td>
+<td><a href="long?.md"><strong>List&lt;long?&gt;</strong></a></td>
+<td>A comma-separated list of account identifiers. If specified, then only accounts whose identifier match any of the given identifiers will be regarded. The maximum number of identifiers is 1000.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>search</strong></td>
+<td><strong>string</strong></td>
+<td>If specified, then only those accounts will be contained in the result whose 'accountName', 'iban', 'accountNumber' or 'subAccountNumber' contains the given search string (the matching works case-insensitive). If no accounts contain the search string in any of these fields, then the result will be an empty list. NOTE: If the given search string consists of several terms (separated by whitespace), then ALL of these terms must be contained in the searched fields in order for an account to get included into the result.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>accountTypeIds</strong></td>
+<td><a href="long?.md"><strong>List&lt;long?&gt;</strong></a></td>
+<td>A comma-separated list of account type ids. If specified, then only accounts that relate to the given types will be regarded. If not specified, then all accounts will be regarded. This field is deprecated and will be removed at some point, please refer to the accountTypes field instead.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>accountTypes</strong></td>
+<td><a href="string.md"><strong>List&lt;string&gt;</strong></a></td>
+<td>A comma-separated list of account types. If specified, then only accounts that relate to the given types will be regarded. If not specified, then all accounts will be regarded.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>bankConnectionIds</strong></td>
+<td><a href="long?.md"><strong>List&lt;long?&gt;</strong></a></td>
+<td>A comma-separated list of bank connection identifiers. If specified, then only accounts that relate to the given bank connections will be regarded. If not specified, then all accounts will be regarded.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>minLastSuccessfulUpdate</strong></td>
+<td><strong>string</strong></td>
+<td>Lower bound for a account's last successful update date, in the format 'YYYY-MM-DD' (e.g. '2016-01-01'). If specified, then only accounts whose 'lastSuccessfulUpdate' is equal to or later than the given date will be regarded.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>maxLastSuccessfulUpdate</strong></td>
+<td><strong>string</strong></td>
+<td>Upper bound for a account's last successful update date, in the format 'YYYY-MM-DD' (e.g. '2016-01-01'). If specified, then only accounts whose 'lastSuccessfulUpdate' is equal to or earlier than the given date will be regarded.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>minBalance</strong></td>
+<td><strong>decimal?</strong></td>
+<td>If specified, then only accounts whose balance is equal to or greater than the given balance will be regarded. Can contain a positive or negative number with at most two decimal places. Examples: -300.12, or 90.95</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>maxBalance</strong></td>
+<td><strong>decimal?</strong></td>
+<td>If specified, then only accounts whose balance is equal to or less than the given balance will be regarded. Can contain a positive or negative number with at most two decimal places. Examples: -300.12, or 90.95</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type-6">Return type</h3>
+<p><a href="AccountList.html"><strong>AccountList</strong></a></p>
+<h3 id="authorization-6">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers-6">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+<p><a name="getdailybalances"></a></p>
+<h1 id="getdailybalances"><strong>GetDailyBalances</strong></h1>
+<blockquote>
+<p>DailyBalanceList GetDailyBalances (List&lt;long?&gt; accountIds = null, string startDate = null, string endDate = null, bool? withProjection = null, int? page = null, int? perPage = null, List<string> order = null)</string></p>
+</blockquote>
+<p>Get daily balances</p>
+<p>Returns the user's daily balances for a given period and a set of specified accounts (or all accounts, if none are specified). The daily balances are calculated by finAPI and are based on the current balances of the regarded accounts.</p>
+<h3 id="example-7">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class GetDailyBalancesExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new AccountsApi();
+            var accountIds = new List&lt;long?&gt;(); // List&lt;long?&gt; | A comma-separated list of (non-security) account identifiers. If no accounts are specified, all (non-security) accounts of the user are regarded. (optional) 
+            var startDate = startDate_example;  // string | A string in the format 'YYYY-MM-DD'. Note that the requested date range [startDate..endDate] may not exceed 365 days. If startDate is not specified, it defaults to the endDate minus one month. (optional) 
+            var endDate = endDate_example;  // string | A string in the format 'YYYY-MM-DD'. Note that the requested date range [startDate..endDate] may not exceed 365 days. If endDate is not specified, it defaults to today's date. (optional) 
+            var withProjection = true;  // bool? | Whether finAPI should project the first and last actually existing balance of an account into the past and future. When passing 'true', then the result will always contain a daily balance for every day of the entire requested date range, even for days before the first actually existing balance, resp. after the last actually existing balance. Those days will have the same balance as the day of the first actual balance, resp. last actual balance, i.e. the first/last balance will be infinitely projected into the past/the future. When passing 'false', then the result will contain daily balances only from the day on where the first actual balance exists for any of the regarded accounts, and only up to the day where the last actual balance exists for any of the regarded accounts. Note that when in this case there are no actual balances within the requested date range, then an empty array will be returned. Default value for this parameter is 'true'. (optional)  (default to true)
+            var page = 56;  // int? | Result page that you want to retrieve. (optional)  (default to 1)
+            var perPage = 56;  // int? | Maximum number of records per page. By default it's 20. Can be at most 500. NOTE: Due to its validation and visualization, the swagger frontend might show very low performance, or even crashes, when a service responds with a lot of data. It is recommended to use a HTTP client like Postman or DHC instead of our swagger frontend for service calls with large page sizes. (optional)  (default to 20)
+            var order = new List&lt;string&gt;(); // List&lt;string&gt; | Determines the order of the results. You can order the results by 'date', 'balance', 'income' or 'spending'. The default order for this service is 'date,asc'. You can also order by multiple properties. In that case the order of the parameters passed is important. Example: '/accounts/dailyBalances?order=date,desc&amp;order=balance,asc' will return daily balances ordered by 'date' (descending), where items with the same 'date' are ordered by 'balance' (ascending). The general format is: 'property[,asc|desc]', with 'asc' being the default value. Please note that ordering by multiple fields is not supported in our swagger frontend, but you can test this feature with any HTTP tool of your choice (e.g. postman or DHC).  (optional) 
+
+            try
+            {
+                // Get daily balances
+                DailyBalanceList result = apiInstance.GetDailyBalances(accountIds, startDate, endDate, withProjection, page, perPage, order);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling AccountsApi.GetDailyBalances: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters-7">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>accountIds</strong></td>
+<td><a href="long?.md"><strong>List&lt;long?&gt;</strong></a></td>
+<td>A comma-separated list of (non-security) account identifiers. If no accounts are specified, all (non-security) accounts of the user are regarded.</td>
+<td>[optional]</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>startDate</strong></td>
+<td><strong>string</strong></td>
+<td>A string in the format 'YYYY-MM-DD'. Note that the requested date range [startDate..endDate] may not exceed 365 days. If startDate is not specified, it defaults to the endDate minus one month.</td>
+<td>[optional]</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>endDate</strong></td>
+<td><strong>string</strong></td>
+<td>A string in the format 'YYYY-MM-DD'. Note that the requested date range [startDate..endDate] may not exceed 365 days. If endDate is not specified, it defaults to today's date.</td>
+<td>[optional]</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>withProjection</strong></td>
+<td><strong>bool?</strong></td>
+<td>Whether finAPI should project the first and last actually existing balance of an account into the past and future. When passing 'true', then the result will always contain a daily balance for every day of the entire requested date range, even for days before the first actually existing balance, resp. after the last actually existing balance. Those days will have the same balance as the day of the first actual balance, resp. last actual balance, i.e. the first/last balance will be infinitely projected into the past/the future. When passing 'false', then the result will contain daily balances only from the day on where the first actual balance exists for any of the regarded accounts, and only up to the day where the last actual balance exists for any of the regarded accounts. Note that when in this case there are no actual balances within the requested date range, then an empty array will be returned. Default value for this parameter is 'true'.</td>
+<td>[optional] [default to true]</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>page</strong></td>
+<td><strong>int?</strong></td>
+<td>Result page that you want to retrieve.</td>
+<td>[optional] [default to 1]</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>perPage</strong></td>
+<td><strong>int?</strong></td>
+<td>Maximum number of records per page. By default it's 20. Can be at most 500. NOTE: Due to its validation and visualization, the swagger frontend might show very low performance, or even crashes, when a service responds with a lot of data. It is recommended to use a HTTP client like Postman or DHC instead of our swagger frontend for service calls with large page sizes.</td>
+<td>[optional] [default to 20]</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>order</strong></td>
+<td><a href="string.md"><strong>List&lt;string&gt;</strong></a></td>
+<td>Determines the order of the results. You can order the results by 'date', 'balance', 'income' or 'spending'. The default order for this service is 'date,asc'. You can also order by multiple properties. In that case the order of the parameters passed is important. Example: '/accounts/dailyBalances?order=date,desc&amp;order=balance,asc' will return daily balances ordered by 'date' (descending), where items with the same 'date' are ordered by 'balance' (ascending). The general format is: 'property[,asc</td>
+<td>desc]', with 'asc' being the default value. Please note that ordering by multiple fields is not supported in our swagger frontend, but you can test this feature with any HTTP tool of your choice (e.g. postman or DHC).</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type-7">Return type</h3>
+<p><a href="DailyBalanceList.html"><strong>DailyBalanceList</strong></a></p>
+<h3 id="authorization-7">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers-7">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+<p><a name="getmultipleaccounts"></a></p>
+<h1 id="getmultipleaccounts"><strong>GetMultipleAccounts</strong></h1>
+<blockquote>
+<p>AccountList GetMultipleAccounts (List&lt;long?&gt; ids)</p>
+</blockquote>
+<p>Get multiple accounts</p>
+<p>Get a list of multiple bank accounts of the user that is authorized by the access_token. Must pass the accounts' identifiers and the user's access_token. Accounts whose identifiers do not exist or do not relate to the authorized user will not be contained in the result (If this applies to all of the given identifiers, then the result will be an empty list). WARNING: This service is deprecated and will be removed at some point. If you want to get multiple accounts, please instead use the service 'Get and search all accounts' and pass a comma-separated list of identifiers as a parameter 'ids'.</p>
+<h3 id="example-8">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class GetMultipleAccountsExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new AccountsApi();
+            var ids = new List&lt;long?&gt;(); // List&lt;long?&gt; | Comma-separated list of identifiers of requested accounts
+
+            try
+            {
+                // Get multiple accounts
+                AccountList result = apiInstance.GetMultipleAccounts(ids);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling AccountsApi.GetMultipleAccounts: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters-8">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ids</strong></td>
+<td><a href="long?.md"><strong>List&lt;long?&gt;</strong></a></td>
+<td>Comma-separated list of identifiers of requested accounts</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type-8">Return type</h3>
+<p><a href="AccountList.html"><strong>AccountList</strong></a></p>
+<h3 id="authorization-8">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers-8">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+<p><a name="requestsepadirectdebit"></a></p>
+<h1 id="requestsepadirectdebit"><strong>RequestSepaDirectDebit</strong></h1>
+<blockquote>
+<p>DirectDebitOrderingResponse RequestSepaDirectDebit (RequestSepaDirectDebitParams body)</p>
+</blockquote>
+<p>Request SEPA Direct Debit</p>
+<p>Submit a SEPA direct debit order for one or multiple direct debits. Returns an instruction from the bank server that can be displayed to the user (e.g. &quot;Enter TAN&quot;), typically in the language of the bank's country. The order remains valid for execution for only a couple of minutes (the exact validity period depends on the bank). For executing the order, use the /executeSepaDirectDebit service after calling this service. Note that when the order is not executed within the validity period, the bank might take note of that and - if happening too often - ultimately lock the user's online banking access. If there already exists a previously submitted but not yet executed SEPA order for this account (either another direct debit order, or a money transfer order), then that order will be discarded and replaced with the new order that is being created with this service call.<br><br>Notes:<br>• When using a two-step-procedure with flag 'implicitExecute' = true, then this service will immediately execute the direct debit. The response will not contain any challenge message and you won't be required to make a subsequent call to /executeSepaDirectDebit.<br><br>NOTE: Depending on your license, this service may respond with HTTP code 451, containing an error message with a identifier of web form in it. In addition to that the response will also have included a 'Location' header, which contains the URL to the web form. In this case, you must forward your user to finAPI's web form. For a detailed explanation of the Web Form Flow, please refer to this article: <a href='https://finapi.zendesk.com/hc/en-us/articles/360002596391' target='_blank'>finAPI's Web Form Flow</a><br><br>Note that this service only works when your client has payments enabled (see client configuration).<br><br>DEPRECATED: This service will be removed at some point. Please refer to the 'Payments' section of the API instead.</p>
+<h3 id="example-9">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class RequestSepaDirectDebitExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new AccountsApi();
+            var body = new RequestSepaDirectDebitParams(); // RequestSepaDirectDebitParams | Parameters for a SEPA direct debit request
+
+            try
+            {
+                // Request SEPA Direct Debit
+                DirectDebitOrderingResponse result = apiInstance.RequestSepaDirectDebit(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling AccountsApi.RequestSepaDirectDebit: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters-9">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="RequestSepaDirectDebitParams.html"><strong>RequestSepaDirectDebitParams</strong></a></td>
+<td>Parameters for a SEPA direct debit request</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type-9">Return type</h3>
+<p><a href="DirectDebitOrderingResponse.html"><strong>DirectDebitOrderingResponse</strong></a></p>
+<h3 id="authorization-9">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers-9">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+<p><a name="requestsepamoneytransfer"></a></p>
+<h1 id="requestsepamoneytransfer"><strong>RequestSepaMoneyTransfer</strong></h1>
+<blockquote>
+<p>MoneyTransferOrderingResponse RequestSepaMoneyTransfer (RequestSepaMoneyTransferParams body)</p>
+</blockquote>
+<p>Request SEPA Money Transfer</p>
+<p>Submit a SEPA money transfer order for either a single or a collective money transfer. Returns an instruction from the bank server that can be displayed to the user (e.g. &quot;Enter TAN&quot;), typically in the language of the bank's country. The order remains valid for execution for only a couple of minutes (the exact validity period depends on the bank). For executing the order, use the /executeSepaMoneyTransfer service after calling this service. Note that when the order is not executed within the validity period, the bank might take note of that and - if happening too often - ultimately lock the user's online banking access. If there already exists a previously submitted but not yet executed SEPA order for this account (either another money transfer order, or a direct debit order), then that order will be discarded and replaced with the new order that is being created with this service call.<br><br>Notes:<br>• Some banks may require a multi-step authentication, in which case the service will respond with HTTP code 510 and an error message containing a challenge for the user from the bank. You must display the challenge message to the user, and then retry the service call, passing the user's answer to the bank's challenge in the 'multiStepAuthentication.challengeResponse' field.<br>• When using a two-step-procedure with flag 'implicitExecute' = true, then this service will immediately execute the money transfer. The response will not contain any challenge message and you won't be required to make a subsequent call to /executeSepaMoneyTransfer.<br><br>NOTE: Depending on your license, this service may respond with HTTP code 451, containing an error message with a identifier of web form in it. In addition to that the response will also have included a 'Location' header, which contains the URL to the web form. In this case, you must forward your user to finAPI's web form. For a detailed explanation of the Web Form Flow, please refer to this article: <a href='https://finapi.zendesk.com/hc/en-us/articles/360002596391' target='_blank'>finAPI's Web Form Flow</a><br><br>Note that this service only works when your client has payments enabled (see client configuration).<br><br>DEPRECATED: This service will be removed at some point. Please refer to the 'Payments' section of the API instead.</p>
+<h3 id="example-10">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class RequestSepaMoneyTransferExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new AccountsApi();
+            var body = new RequestSepaMoneyTransferParams(); // RequestSepaMoneyTransferParams | Parameters for a SEPA money transfer request
+
+            try
+            {
+                // Request SEPA Money Transfer
+                MoneyTransferOrderingResponse result = apiInstance.RequestSepaMoneyTransfer(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling AccountsApi.RequestSepaMoneyTransfer: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters-10">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="RequestSepaMoneyTransferParams.html"><strong>RequestSepaMoneyTransferParams</strong></a></td>
+<td>Parameters for a SEPA money transfer request</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type-10">Return type</h3>
+<p><a href="MoneyTransferOrderingResponse.html"><strong>MoneyTransferOrderingResponse</strong></a></p>
+<h3 id="authorization-10">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers-10">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Bodoconsult/Bodoconsult.Finance/blob/main/src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/AccountsApi.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -37,10 +37,12 @@ public class FinanzDbUpdaterConsoleStarter : BaseConsoleStarter
     }
     private int StartInternal(IConsoleStarter consoleStarter)
     {
-        if (Args is null || Args.Length == 0)
-        {
-            return RunMainTask(consoleStarter);
-        }
+        return RunMainTask(consoleStarter);
+
+        //if (Args is null || Args.Length == 0)
+        //{
+        //    return RunMainTask(consoleStarter);
+        //}
 
         //switch (Args[0])
         //{
@@ -62,7 +64,7 @@ public class FinanzDbUpdaterConsoleStarter : BaseConsoleStarter
         //        return 0;
         //}
 
-        return 0;
+        //return 0;
     }
 
     /// <summary>

@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>IO.Swagger.Api.BankConnectionsApi | Bodoconsult.AppInfrastructure </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="IO.Swagger.Api.BankConnectionsApi | Bodoconsult.AppInfrastructure ">
+      
+      
+      <link rel="icon" href="../../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Bodoconsult/Bodoconsult.Finance/blob/main/src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/BankConnectionsApi.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../../../index.html">
+            <img id="logo" class="svg" src="../../../../../logo.svg" alt="Bodoconsult.AppInfrastructure">
+            Bodoconsult.AppInfrastructure
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="ioswaggerapibankconnectionsapi">IO.Swagger.Api.BankConnectionsApi</h1>
+
+<p>All URIs are relative to <em>https://localhost</em></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="BankConnectionsApi.html#connectinterface"><strong>ConnectInterface</strong></a></td>
+<td><strong>POST</strong> /api/v1/bankConnections/connectInterface</td>
+<td>Connect a new interface</td>
+</tr>
+<tr>
+<td><a href="BankConnectionsApi.html#deleteallbankconnections"><strong>DeleteAllBankConnections</strong></a></td>
+<td><strong>DELETE</strong> /api/v1/bankConnections</td>
+<td>Delete all bank connections</td>
+</tr>
+<tr>
+<td><a href="BankConnectionsApi.html#deletebankconnection"><strong>DeleteBankConnection</strong></a></td>
+<td><strong>DELETE</strong> /api/v1/bankConnections/{id}</td>
+<td>Delete a bank connection</td>
+</tr>
+<tr>
+<td><a href="BankConnectionsApi.html#editbankconnection"><strong>EditBankConnection</strong></a></td>
+<td><strong>PATCH</strong> /api/v1/bankConnections/{id}</td>
+<td>Edit a bank connection</td>
+</tr>
+<tr>
+<td><a href="BankConnectionsApi.html#getallbankconnections"><strong>GetAllBankConnections</strong></a></td>
+<td><strong>GET</strong> /api/v1/bankConnections</td>
+<td>Get all bank connections</td>
+</tr>
+<tr>
+<td><a href="BankConnectionsApi.html#getbankconnection"><strong>GetBankConnection</strong></a></td>
+<td><strong>GET</strong> /api/v1/bankConnections/{id}</td>
+<td>Get a bank connection</td>
+</tr>
+<tr>
+<td><a href="BankConnectionsApi.html#getmultiplebankconnections"><strong>GetMultipleBankConnections</strong></a></td>
+<td><strong>GET</strong> /api/v1/bankConnections/{ids}</td>
+<td>Get multiple bank connections</td>
+</tr>
+<tr>
+<td><a href="BankConnectionsApi.html#importbankconnection"><strong>ImportBankConnection</strong></a></td>
+<td><strong>POST</strong> /api/v1/bankConnections/import</td>
+<td>Import a new bank connection</td>
+</tr>
+<tr>
+<td><a href="BankConnectionsApi.html#removeinterface"><strong>RemoveInterface</strong></a></td>
+<td><strong>POST</strong> /api/v1/bankConnections/removeInterface</td>
+<td>Remove an interface</td>
+</tr>
+<tr>
+<td><a href="BankConnectionsApi.html#updatebankconnection"><strong>UpdateBankConnection</strong></a></td>
+<td><strong>POST</strong> /api/v1/bankConnections/update</td>
+<td>Update a bank connection</td>
+</tr>
+</tbody>
+</table>
+<p><a name="connectinterface"></a></p>
+<h1 id="connectinterface"><strong>ConnectInterface</strong></h1>
+<blockquote>
+<p>BankConnection ConnectInterface (ConnectInterfaceParams body)</p>
+</blockquote>
+<p>Connect a new interface</p>
+<p>Connects new interface to an existing bank connection for a specific user. Must pass the connection credentials and the user's access_token. All bank accounts will be downloaded and imported with their current balances, transactions and supported two-step-procedures (note that the amount of available transactions may vary between banks, e.g. some banks deliver all transactions from the past year, others only deliver the transactions from the past three months). The balance and transactions download process runs asynchronously, so this service may return before all balances and transactions have been imported. Also, all downloaded transactions will be categorized by a separate background process that runs asynchronously too. To check the status of the balance and transactions download process as well as the background categorization process, see the status flags that are returned by the GET /bankConnections/<id> service.<br><br>NOTE: Depending on your license, this service may respond with HTTP code 451, containing an error message with a identifier of web form in it. In addition to that the response will also have included a 'Location' header, which contains the URL to the web form. In this case, you must forward your user to finAPI's web form. For a detailed explanation of the Web Form Flow, please refer to this article: <a href='https://finapi.zendesk.com/hc/en-us/articles/360002596391' target='_blank'>finAPI's Web Form Flow</a></id></p>
+<h3 id="example">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class ConnectInterfaceExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new BankConnectionsApi();
+            var body = new ConnectInterfaceParams(); // ConnectInterfaceParams | Connect interface parameters
+
+            try
+            {
+                // Connect a new interface
+                BankConnection result = apiInstance.ConnectInterface(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling BankConnectionsApi.ConnectInterface: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="ConnectInterfaceParams.html"><strong>ConnectInterfaceParams</strong></a></td>
+<td>Connect interface parameters</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type">Return type</h3>
+<p><a href="BankConnection.html"><strong>BankConnection</strong></a></p>
+<h3 id="authorization">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+<p><a name="deleteallbankconnections"></a></p>
+<h1 id="deleteallbankconnections"><strong>DeleteAllBankConnections</strong></h1>
+<blockquote>
+<p>IdentifierList DeleteAllBankConnections ()</p>
+</blockquote>
+<p>Delete all bank connections</p>
+<p>Delete all bank connections of the user that is authorized by the access_token. Must pass the user's access_token.<br><br>Notes: <br>- All notification rules that are connected to any specific bank connection will get deleted as well. <br>- If at least one bank connection is busy (currently in the process of import, update, or transactions categorization), then this service will perform no action at all.</p>
+<h3 id="example-1">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class DeleteAllBankConnectionsExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new BankConnectionsApi();
+
+            try
+            {
+                // Delete all bank connections
+                IdentifierList result = apiInstance.DeleteAllBankConnections();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling BankConnectionsApi.DeleteAllBankConnections: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters-1">Parameters</h3>
+<p>This endpoint does not need any parameter.</p>
+<h3 id="return-type-1">Return type</h3>
+<p><a href="IdentifierList.html"><strong>IdentifierList</strong></a></p>
+<h3 id="authorization-1">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers-1">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+<p><a name="deletebankconnection"></a></p>
+<h1 id="deletebankconnection"><strong>DeleteBankConnection</strong></h1>
+<blockquote>
+<p>void DeleteBankConnection (long? id)</p>
+</blockquote>
+<p>Delete a bank connection</p>
+<p>Delete a single bank connection of the user that is authorized by the access_token, including all of its accounts and their transactions and balance data. Must pass the connection's identifier and the user's access_token.<br><br>Notes: <br>- All notification rules that are connected to the bank connection will get adjusted so that they no longer have this connection listed. Notification rules that are connected to just this bank connection (and no other connection) will get deleted altogether. <br>- A bank connection cannot get deleted while it is in the process of import, update, or transactions categorization.</p>
+<h3 id="example-2">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class DeleteBankConnectionExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new BankConnectionsApi();
+            var id = 789;  // long? | Identifier of the bank connection to delete
+
+            try
+            {
+                // Delete a bank connection
+                apiInstance.DeleteBankConnection(id);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling BankConnectionsApi.DeleteBankConnection: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters-2">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>id</strong></td>
+<td><strong>long?</strong></td>
+<td>Identifier of the bank connection to delete</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type-2">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization-2">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers-2">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+<p><a name="editbankconnection"></a></p>
+<h1 id="editbankconnection"><strong>EditBankConnection</strong></h1>
+<blockquote>
+<p>BankConnection EditBankConnection (long? id, EditBankConnectionParams body)</p>
+</blockquote>
+<p>Edit a bank connection</p>
+<p>Edit bank connection data. Must pass the connection's identifier and the user's access_token.<br><br>Note that a bank connection's credentials cannot be changed while it is in the process of import, update, or transactions categorization.<br><br>NOTE: Depending on your license, this service may respond with HTTP code 451, containing an error message with a identifier of web form in it. In addition to that the response will also have included a 'Location' header, which contains the URL to the web form. In this case, you must forward your user to finAPI's web form. For a detailed explanation of the Web Form Flow, please refer to this article: <a href='https://finapi.zendesk.com/hc/en-us/articles/360002596391' target='_blank'>finAPI's Web Form Flow</a></p>
+<h3 id="example-3">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class EditBankConnectionExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new BankConnectionsApi();
+            var id = 789;  // long? | Identifier of the bank connection to change the parameters for
+            var body = new EditBankConnectionParams(); // EditBankConnectionParams | New bank connection parameters
+
+            try
+            {
+                // Edit a bank connection
+                BankConnection result = apiInstance.EditBankConnection(id, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling BankConnectionsApi.EditBankConnection: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters-3">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>id</strong></td>
+<td><strong>long?</strong></td>
+<td>Identifier of the bank connection to change the parameters for</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="EditBankConnectionParams.html"><strong>EditBankConnectionParams</strong></a></td>
+<td>New bank connection parameters</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type-3">Return type</h3>
+<p><a href="BankConnection.html"><strong>BankConnection</strong></a></p>
+<h3 id="authorization-3">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers-3">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+<p><a name="getallbankconnections"></a></p>
+<h1 id="getallbankconnections"><strong>GetAllBankConnections</strong></h1>
+<blockquote>
+<p>BankConnectionList GetAllBankConnections (List&lt;long?&gt; ids = null)</p>
+</blockquote>
+<p>Get all bank connections</p>
+<p>Get bank connections of the user that is authorized by the access_token. Must pass the user's access_token. You can set optional search criteria to get only those bank connections that you are interested in. If you do not specify any search criteria, then this service functions as a 'get all' service.</p>
+<h3 id="example-4">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class GetAllBankConnectionsExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new BankConnectionsApi();
+            var ids = new List&lt;long?&gt;(); // List&lt;long?&gt; | A comma-separated list of bank connection identifiers. If specified, then only bank connections whose identifier match any of the given identifiers will be regarded. The maximum number of identifiers is 1000. (optional) 
+
+            try
+            {
+                // Get all bank connections
+                BankConnectionList result = apiInstance.GetAllBankConnections(ids);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling BankConnectionsApi.GetAllBankConnections: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters-4">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ids</strong></td>
+<td><a href="long?.md"><strong>List&lt;long?&gt;</strong></a></td>
+<td>A comma-separated list of bank connection identifiers. If specified, then only bank connections whose identifier match any of the given identifiers will be regarded. The maximum number of identifiers is 1000.</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type-4">Return type</h3>
+<p><a href="BankConnectionList.html"><strong>BankConnectionList</strong></a></p>
+<h3 id="authorization-4">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers-4">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+<p><a name="getbankconnection"></a></p>
+<h1 id="getbankconnection"><strong>GetBankConnection</strong></h1>
+<blockquote>
+<p>BankConnection GetBankConnection (long? id)</p>
+</blockquote>
+<p>Get a bank connection</p>
+<p>Get a single bank connection of the user that is authorized by the access_token. Must pass the connection's identifier and the user's access_token.</p>
+<h3 id="example-5">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class GetBankConnectionExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new BankConnectionsApi();
+            var id = 789;  // long? | Identifier of requested bank connection
+
+            try
+            {
+                // Get a bank connection
+                BankConnection result = apiInstance.GetBankConnection(id);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling BankConnectionsApi.GetBankConnection: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters-5">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>id</strong></td>
+<td><strong>long?</strong></td>
+<td>Identifier of requested bank connection</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type-5">Return type</h3>
+<p><a href="BankConnection.html"><strong>BankConnection</strong></a></p>
+<h3 id="authorization-5">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers-5">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+<p><a name="getmultiplebankconnections"></a></p>
+<h1 id="getmultiplebankconnections"><strong>GetMultipleBankConnections</strong></h1>
+<blockquote>
+<p>BankConnectionList GetMultipleBankConnections (List&lt;long?&gt; ids)</p>
+</blockquote>
+<p>Get multiple bank connections</p>
+<p>Get a list of multiple bank connections of the user that is authorized by the access_token. Must pass the connections' identifiers and the user's access_token. Connections whose identifiers do not exist or do not relate to the authorized user will not be contained in the result (If this applies to all of the given identifiers, then the result will be an empty list). WARNING: This service is deprecated and will be removed at some point. If you want to get multiple bank connections, please instead use the service 'Get all bank connections' and pass a comma-separated list of identifiers as a parameter 'ids'.</p>
+<h3 id="example-6">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class GetMultipleBankConnectionsExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new BankConnectionsApi();
+            var ids = new List&lt;long?&gt;(); // List&lt;long?&gt; | Comma-separated list of identifiers of requested bank connections
+
+            try
+            {
+                // Get multiple bank connections
+                BankConnectionList result = apiInstance.GetMultipleBankConnections(ids);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling BankConnectionsApi.GetMultipleBankConnections: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters-6">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ids</strong></td>
+<td><a href="long?.md"><strong>List&lt;long?&gt;</strong></a></td>
+<td>Comma-separated list of identifiers of requested bank connections</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type-6">Return type</h3>
+<p><a href="BankConnectionList.html"><strong>BankConnectionList</strong></a></p>
+<h3 id="authorization-6">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers-6">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+<p><a name="importbankconnection"></a></p>
+<h1 id="importbankconnection"><strong>ImportBankConnection</strong></h1>
+<blockquote>
+<p>BankConnection ImportBankConnection (ImportBankConnectionParams body)</p>
+</blockquote>
+<p>Import a new bank connection</p>
+<p>Imports a new bank connection for a specific user. Must pass the connection credentials and the user's access_token. All bank accounts will be downloaded and imported with their current balances, transactions and supported two-step-procedures (note that the amount of available transactions may vary between banks, e.g. some banks deliver all transactions from the past year, others only deliver the transactions from the past three months). The balance and transactions download process runs asynchronously, so this service may return before all balances and transactions have been imported. Also, all downloaded transactions will be categorized by a separate background process that runs asynchronously too. To check the status of the balance and transactions download process as well as the background categorization process, see the status flags that are returned by the GET /bankConnections/<id> service.<br><br>You can also import a &quot;demo connection&quot; which contains a single bank account with some pre-defined transactions. To import the demo connection, you need to pass the identifier of the &quot;finAPI Test Bank&quot;. In case of demo connection import, any other fields besides the bank identifier can remain unset. The bankingUserId, bankingCustomerId, bankingPin, and storeSecrets fields will be stored if you pass them, however they will not be regarded when updating the demo connection (in other words: It doesn't matter what credentials you choose for the demo connection). Note however that if you want to import the demo connection multiple times for the same user, you must use a different bankingUserId and/or bankingCustomerId for each of the imports. Also note that the skipPositionsDownload flag is ignored for the demo bank connection, i.e. when importing the demo bank connection, you will always get the transactions for its account. You can enable multi-step authentication for the demo bank connection by setting the bank connection name to &quot;MSA&quot;.<br><br>The XS2A interface could also be used to initiate a demo connection import.<br>The finAPI demo XS2A allows you to download a test account by using the 'import' or 'connectInterface' services - in general, this XS2A demo account is the FINTS_SERVER demo account, as it has the same account number and origin of balances and transactions.<br>Keep in mind, that calling an XS2A demo connection import will result as a newly created bank connection, when the 'connectInterface' service attaches the XS2A demo account to an existing demo connection.<br>Passing the login credentials is not obligated only for redirect banks, however the demo bank works without any given set of credentials for the XS2A interface. The old API credentials fields (bankingUserId, bankingCustomerId, bankingPin) are DEPRECATED and temporarily mapped on the new credentials data structure, allowing you to use them within the XS2A import. This is not recommended, as those fields are going to be removed at some point later.<br>If you are looking to test the XS2A SCA (Strong Customer Authentication, or MSA (Multi-Step Authentication) in the finAPI context), you need to pass the bank connection name as &quot;MSA&quot; to trigger the SCA flow or as 'DECOUPLED-AUTH' to simulate decoupled authentication. To get better understanding about the Multi-Step Authentication, please refer to the 'Error Messages' section of the swagger documentation.<br><br><b>For a more in-depth understanding of the import process, please also read this article on our Dev Portal: <a href='https://finapi.zendesk.com/hc/en-us/articles/115000296607-Import-Update-of-Bank-Connections-Accounts' target='_blank'>Import &amp; Update of Bank Connections / Accounts</a></b><br><br>NOTE: Depending on your license, this service may respond with HTTP code 451, containing an error message with a identifier of web form in it. In addition to that the response will also have included a 'Location' header, which contains the URL to the web form. In this case, you must forward your user to finAPI's web form. For a detailed explanation of the Web Form Flow, please refer to this article: <a href='https://finapi.zendesk.com/hc/en-us/articles/360002596391' target='_blank'>finAPI's Web Form Flow</a><br><br><b>Attention:</b> Due to changes on the bank's side we have been forced to limit the maxDaysForDownload field to 89 days to reduce the risk of strong customer authentication (SCA) requests. If you have implemented the SCA flow, please contact us, so that we can remove this limitation from your client.</id></p>
+<h3 id="example-7">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class ImportBankConnectionExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new BankConnectionsApi();
+            var body = new ImportBankConnectionParams(); // ImportBankConnectionParams | Import bank connection parameters
+
+            try
+            {
+                // Import a new bank connection
+                BankConnection result = apiInstance.ImportBankConnection(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling BankConnectionsApi.ImportBankConnection: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters-7">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="ImportBankConnectionParams.html"><strong>ImportBankConnectionParams</strong></a></td>
+<td>Import bank connection parameters</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type-7">Return type</h3>
+<p><a href="BankConnection.html"><strong>BankConnection</strong></a></p>
+<h3 id="authorization-7">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers-7">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+<p><a name="removeinterface"></a></p>
+<h1 id="removeinterface"><strong>RemoveInterface</strong></h1>
+<blockquote>
+<p>void RemoveInterface (RemoveInterfaceParams body)</p>
+</blockquote>
+<p>Remove an interface</p>
+<p>Remove an interface from bank connection and from all associated accounts in the bank connection. Notes: <br>- An interface cannot get deleted while it is in the process of import or update.</p>
+<h3 id="example-8">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class RemoveInterfaceExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new BankConnectionsApi();
+            var body = new RemoveInterfaceParams(); // RemoveInterfaceParams | Remove interface parameters
+
+            try
+            {
+                // Remove an interface
+                apiInstance.RemoveInterface(body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling BankConnectionsApi.RemoveInterface: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters-8">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="RemoveInterfaceParams.html"><strong>RemoveInterfaceParams</strong></a></td>
+<td>Remove interface parameters</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type-8">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization-8">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers-8">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+<p><a name="updatebankconnection"></a></p>
+<h1 id="updatebankconnection"><strong>UpdateBankConnection</strong></h1>
+<blockquote>
+<p>BankConnection UpdateBankConnection (UpdateBankConnectionParams body)</p>
+</blockquote>
+<p>Update a bank connection</p>
+<p>Update an existing bank connection of the user that is authorized by the access_token. Downloads and imports the current account balances and new transactions. Note that if the bank connection has several interfaces and some of its accounts was previously imported or updated via an interface which have higher priority than the interface used in the current update, then balances and transactions will not be downloaded for such accounts (The XS2A interface has the highest priority, followed by FINTS_SERVER and finally WEB_SCRAPER). Must pass the connection's identifier and the user's access_token. For more information about the processes of authentication, data download and transactions categorization, see POST /bankConnections/import. Note that supported two-step-procedures are updated as well. It may unset the current default two-step-procedure of the given bank connection (but only if this procedure is not supported anymore by the bank). You can also update the &quot;demo connection&quot; (in this case, the fields 'bankingPin', 'importNewAccounts', and 'skipPositionsDownload' will be ignored).<br><br>Note that you cannot trigger an update of a bank connection as long as there is still a previously triggered update running.<br><br><b>For a more in-depth understanding of the update process, please also read this article on our Dev Portal: <a href='https://finapi.zendesk.com/hc/en-us/articles/115000296607-Import-Update-of-Bank-Connections-Accounts' target='_blank'>Import &amp; Update of Bank Connections / Accounts</a></b><br><br>NOTE: Depending on your license, this service may respond with HTTP code 451, containing an error message with a identifier of web form in it. In addition to that the response will also have included a 'Location' header, which contains the URL to the web form. In this case, you must forward your user to finAPI's web form. For a detailed explanation of the Web Form Flow, please refer to this article: <a href='https://finapi.zendesk.com/hc/en-us/articles/360002596391' target='_blank'>finAPI's Web Form Flow</a><br><br><b>Attention:</b> Due to changes on the bank's side we have been forced to limit the transaction download time frame to 89 days. Now any update of a bank connection will fetch the last three months of transactions per account. If the last successful update was more than 3 months ago, an adjusting entry ('Zwischensaldo' transaction) will be created.</p>
+<h3 id="example-9">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class UpdateBankConnectionExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new BankConnectionsApi();
+            var body = new UpdateBankConnectionParams(); // UpdateBankConnectionParams | Update bank connection parameters
+
+            try
+            {
+                // Update a bank connection
+                BankConnection result = apiInstance.UpdateBankConnection(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling BankConnectionsApi.UpdateBankConnection: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters-9">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="UpdateBankConnectionParams.html"><strong>UpdateBankConnectionParams</strong></a></td>
+<td>Update bank connection parameters</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type-9">Return type</h3>
+<p><a href="BankConnection.html"><strong>BankConnection</strong></a></p>
+<h3 id="authorization-9">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers-9">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Bodoconsult/Bodoconsult.Finance/blob/main/src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/BankConnectionsApi.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

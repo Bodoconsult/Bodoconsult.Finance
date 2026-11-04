@@ -12,7 +12,7 @@
 		<PackageTags>Finance payment</PackageTags>
 		<Description>Base library for finance and payment handling</Description>
 		<PackageReleaseNotes>Minor refactoring</PackageReleaseNotes>
-
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
@@ -34,7 +34,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Bodoconsult.Pdf" Version="1.0.11" />
-		<PackageReference Include="System.Drawing.Common" Version="10.0.13" />
+		<PackageReference Include="System.Drawing.Common" Version="10.0.14" />
 	</ItemGroup>
 
 	<ItemGroup>

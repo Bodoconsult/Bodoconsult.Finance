@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>IO.Swagger.Api.MandatorAdministrationApi | Bodoconsult.AppInfrastructure </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="IO.Swagger.Api.MandatorAdministrationApi | Bodoconsult.AppInfrastructure ">
+      
+      
+      <link rel="icon" href="../../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Bodoconsult/Bodoconsult.Finance/blob/main/src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/MandatorAdministrationApi.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../../../index.html">
+            <img id="logo" class="svg" src="../../../../../logo.svg" alt="Bodoconsult.AppInfrastructure">
+            Bodoconsult.AppInfrastructure
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="ioswaggerapimandatoradministrationapi">IO.Swagger.Api.MandatorAdministrationApi</h1>
+
+<p>All URIs are relative to <em>https://localhost</em></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="MandatorAdministrationApi.html#changeclientcredentials"><strong>ChangeClientCredentials</strong></a></td>
+<td><strong>POST</strong> /api/v1/mandatorAdmin/changeClientCredentials</td>
+<td>Change client credentials</td>
+</tr>
+<tr>
+<td><a href="MandatorAdministrationApi.html#createibanrules"><strong>CreateIbanRules</strong></a></td>
+<td><strong>POST</strong> /api/v1/mandatorAdmin/ibanRules</td>
+<td>Create IBAN rules</td>
+</tr>
+<tr>
+<td><a href="MandatorAdministrationApi.html#createkeywordrules"><strong>CreateKeywordRules</strong></a></td>
+<td><strong>POST</strong> /api/v1/mandatorAdmin/keywordRules</td>
+<td>Create keyword rules</td>
+</tr>
+<tr>
+<td><a href="MandatorAdministrationApi.html#deleteibanrules"><strong>DeleteIbanRules</strong></a></td>
+<td><strong>POST</strong> /api/v1/mandatorAdmin/ibanRules/delete</td>
+<td>Delete IBAN rules</td>
+</tr>
+<tr>
+<td><a href="MandatorAdministrationApi.html#deletekeywordrules"><strong>DeleteKeywordRules</strong></a></td>
+<td><strong>POST</strong> /api/v1/mandatorAdmin/keywordRules/delete</td>
+<td>Delete keyword rules</td>
+</tr>
+<tr>
+<td><a href="MandatorAdministrationApi.html#deleteusers"><strong>DeleteUsers</strong></a></td>
+<td><strong>POST</strong> /api/v1/mandatorAdmin/deleteUsers</td>
+<td>Delete users</td>
+</tr>
+<tr>
+<td><a href="MandatorAdministrationApi.html#getibanrulelist"><strong>GetIbanRuleList</strong></a></td>
+<td><strong>GET</strong> /api/v1/mandatorAdmin/ibanRules</td>
+<td>Get IBAN rules</td>
+</tr>
+<tr>
+<td><a href="MandatorAdministrationApi.html#getkeywordrulelist"><strong>GetKeywordRuleList</strong></a></td>
+<td><strong>GET</strong> /api/v1/mandatorAdmin/keywordRules</td>
+<td>Get keyword rules</td>
+</tr>
+<tr>
+<td><a href="MandatorAdministrationApi.html#getuserlist"><strong>GetUserList</strong></a></td>
+<td><strong>GET</strong> /api/v1/mandatorAdmin/getUserList</td>
+<td>Get user list</td>
+</tr>
+</tbody>
+</table>
+<p><a name="changeclientcredentials"></a></p>
+<h1 id="changeclientcredentials"><strong>ChangeClientCredentials</strong></h1>
+<blockquote>
+<p>void ChangeClientCredentials (ChangeClientCredentialsParams body)</p>
+</blockquote>
+<p>Change client credentials</p>
+<p>Change the client_secret for any of your clients, including the mandator admin client. Must pass the <a href='https://finapi.zendesk.com/hc/en-us/articles/115003661827-Difference-between-app-clients-and-mandator-admin-client'>mandator admin client</a>'s access_token. <br><br>NOTES:<br>• When you change a client's secret, then all of its existing access tokens will be revoked. User access tokens are not affected.<br>• finAPI is storing client secrets with a one-way encryption. A lost client secret can NOT be recovered.</p>
+<h3 id="example">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class ChangeClientCredentialsExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new MandatorAdministrationApi();
+            var body = new ChangeClientCredentialsParams(); // ChangeClientCredentialsParams | Parameters for changing client credentials
+
+            try
+            {
+                // Change client credentials
+                apiInstance.ChangeClientCredentials(body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling MandatorAdministrationApi.ChangeClientCredentials: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="ChangeClientCredentialsParams.html"><strong>ChangeClientCredentialsParams</strong></a></td>
+<td>Parameters for changing client credentials</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type">Return type</h3>
+<p>void (empty response body)</p>
+<h3 id="authorization">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+<p><a name="createibanrules"></a></p>
+<h1 id="createibanrules"><strong>CreateIbanRules</strong></h1>
+<blockquote>
+<p>IbanRuleList CreateIbanRules (IbanRulesParams body)</p>
+</blockquote>
+<p>Create IBAN rules</p>
+<p>This service can be used to define IBAN rules for finAPI's transaction categorization system. The transaction categorization is run automatically whenever new transactions are imported, as well as when you call the services 'Check categorization' or 'Trigger categorization'. <br><br>An IBAN rule maps an IBAN to a certain category. finAPI's categorization system will pick the category as a candidate for any transaction whose counterpart's account matches the IBAN. It is not guaranteed though that this candidate will actually be applied, as there could be other categorization rules that have higher priority or that are an even better match for the transaction.<br><br>Note that the rules that you define here will be applied to all of your users. They have higher priority than finAPI's default categorization rules, but lower priority than user-specific rules (User-specific rules are created implicitly whenever a category is manually assigned to a transaction via the PATCH /transactions services). IBAN rules have a higher priority than keyword rules (see the 'Create keyword rules' service).</p>
+<h3 id="example-1">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class CreateIbanRulesExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new MandatorAdministrationApi();
+            var body = new IbanRulesParams(); // IbanRulesParams | IBAN rule definitions
+
+            try
+            {
+                // Create IBAN rules
+                IbanRuleList result = apiInstance.CreateIbanRules(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling MandatorAdministrationApi.CreateIbanRules: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters-1">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="IbanRulesParams.html"><strong>IbanRulesParams</strong></a></td>
+<td>IBAN rule definitions</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type-1">Return type</h3>
+<p><a href="IbanRuleList.html"><strong>IbanRuleList</strong></a></p>
+<h3 id="authorization-1">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers-1">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+<p><a name="createkeywordrules"></a></p>
+<h1 id="createkeywordrules"><strong>CreateKeywordRules</strong></h1>
+<blockquote>
+<p>KeywordRuleList CreateKeywordRules (KeywordRulesParams body)</p>
+</blockquote>
+<p>Create keyword rules</p>
+<p>This service can be used to define keyword rules for finAPI's transaction categorization system. The transaction categorization is run automatically whenever new transactions are imported, as well as when you call the services 'Check categorization' or 'Trigger categorization'. <br><br>A keyword rule maps a set of keywords to a certain category. finAPI's categorization system will pick the category as a candidate for any transaction that contains at least one of the defined keywords in its purpose or counterpart information. It is not guaranteed though that this candidate will actually be applied, as there could be other categorization rules that have higher priority or that are an even better match for the transaction. If there are multiple keyword rules that match a transaction, finAPI will pick the one with the highest count of matched keywords.<br><br>Note that the rules that you define here will be applied to all of your users. They have higher priority than finAPI's default categorization rules, but lower priority than user-specific rules (User-specific rules are created implicitly whenever a category is manually assigned to a transaction via the PATCH /transactions services). Keyword rules have a lower priority than IBAN rules (see the 'Create IBAN rules' service).</p>
+<h3 id="example-2">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class CreateKeywordRulesExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new MandatorAdministrationApi();
+            var body = new KeywordRulesParams(); // KeywordRulesParams | Keyword rule definitions
+
+            try
+            {
+                // Create keyword rules
+                KeywordRuleList result = apiInstance.CreateKeywordRules(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling MandatorAdministrationApi.CreateKeywordRules: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters-2">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="KeywordRulesParams.html"><strong>KeywordRulesParams</strong></a></td>
+<td>Keyword rule definitions</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type-2">Return type</h3>
+<p><a href="KeywordRuleList.html"><strong>KeywordRuleList</strong></a></p>
+<h3 id="authorization-2">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers-2">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+<p><a name="deleteibanrules"></a></p>
+<h1 id="deleteibanrules"><strong>DeleteIbanRules</strong></h1>
+<blockquote>
+<p>IdentifierList DeleteIbanRules (IdentifiersParams body)</p>
+</blockquote>
+<p>Delete IBAN rules</p>
+<p>Delete one or multiple IBAN rules that you have previously created via the 'Create IBAN rules' service.</p>
+<h3 id="example-3">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class DeleteIbanRulesExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new MandatorAdministrationApi();
+            var body = new IdentifiersParams(); // IdentifiersParams | List of IBAN rules identifiers.The maximum number of identifiers is 100.
+
+            try
+            {
+                // Delete IBAN rules
+                IdentifierList result = apiInstance.DeleteIbanRules(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling MandatorAdministrationApi.DeleteIbanRules: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters-3">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="IdentifiersParams.html"><strong>IdentifiersParams</strong></a></td>
+<td>List of IBAN rules identifiers.The maximum number of identifiers is 100.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type-3">Return type</h3>
+<p><a href="IdentifierList.html"><strong>IdentifierList</strong></a></p>
+<h3 id="authorization-3">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers-3">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+<p><a name="deletekeywordrules"></a></p>
+<h1 id="deletekeywordrules"><strong>DeleteKeywordRules</strong></h1>
+<blockquote>
+<p>IdentifierList DeleteKeywordRules (IdentifiersParams body)</p>
+</blockquote>
+<p>Delete keyword rules</p>
+<p>Delete one or multiple keyword rules that you have previously created via the 'Create keyword rules' service.</p>
+<h3 id="example-4">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class DeleteKeywordRulesExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new MandatorAdministrationApi();
+            var body = new IdentifiersParams(); // IdentifiersParams | List of keyword rule identifiers.The maximum number of identifiers is 100.
+
+            try
+            {
+                // Delete keyword rules
+                IdentifierList result = apiInstance.DeleteKeywordRules(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling MandatorAdministrationApi.DeleteKeywordRules: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters-4">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="IdentifiersParams.html"><strong>IdentifiersParams</strong></a></td>
+<td>List of keyword rule identifiers.The maximum number of identifiers is 100.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type-4">Return type</h3>
+<p><a href="IdentifierList.html"><strong>IdentifierList</strong></a></p>
+<h3 id="authorization-4">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers-4">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+<p><a name="deleteusers"></a></p>
+<h1 id="deleteusers"><strong>DeleteUsers</strong></h1>
+<blockquote>
+<p>UserIdentifiersList DeleteUsers (UserIdentifiersParams body)</p>
+</blockquote>
+<p>Delete users</p>
+<p>Delete one or several users, which are specified by a given list of identifiers. Must pass the <a href='https://finapi.zendesk.com/hc/en-us/articles/115003661827-Difference-between-app-clients-and-mandator-admin-client' target='_blank'>mandator admin client</a>'s access_token. <br><br><b>NOTE</b>: finAPI may fail to delete one (or several, or all) of the specified users. A user cannot get deleted when his data is currently locked by an internal process (for instance, update of a bank connection or transactions categorization). The response contains the identifiers of all users that could not get deleted, and all users that could get deleted, separated in two lists. The mandator admin client can retry the request at a later time for the users who could not get deleted.<br> Note that non-existing user identifiers will be ignored entirely, meaning that those identifiers will not appear in the response at all.</p>
+<h3 id="example-5">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class DeleteUsersExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new MandatorAdministrationApi();
+            var body = new UserIdentifiersParams(); // UserIdentifiersParams | List of user identifiers
+
+            try
+            {
+                // Delete users
+                UserIdentifiersList result = apiInstance.DeleteUsers(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling MandatorAdministrationApi.DeleteUsers: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters-5">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="UserIdentifiersParams.html"><strong>UserIdentifiersParams</strong></a></td>
+<td>List of user identifiers</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type-5">Return type</h3>
+<p><a href="UserIdentifiersList.html"><strong>UserIdentifiersList</strong></a></p>
+<h3 id="authorization-5">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers-5">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+<p><a name="getibanrulelist"></a></p>
+<h1 id="getibanrulelist"><strong>GetIbanRuleList</strong></h1>
+<blockquote>
+<p>PageableIbanRuleList GetIbanRuleList (int? page = null, int? perPage = null)</p>
+</blockquote>
+<p>Get IBAN rules</p>
+<p>Returns all IBAN-based categorization rules that you have defined for your users via the 'Create IBAN rules' service.</p>
+<h3 id="example-6">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class GetIbanRuleListExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new MandatorAdministrationApi();
+            var page = 56;  // int? | Result page that you want to retrieve (optional)  (default to 1)
+            var perPage = 56;  // int? | Maximum number of records per page. By default it's 20. Can be at most 500. NOTE: Due to its validation and visualization, the swagger frontend might show very low performance, or even crashes, when a service responds with a lot of data. It is recommended to use a HTTP client like Postman or DHC instead of our swagger frontend for service calls with large page sizes. (optional)  (default to 20)
+
+            try
+            {
+                // Get IBAN rules
+                PageableIbanRuleList result = apiInstance.GetIbanRuleList(page, perPage);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling MandatorAdministrationApi.GetIbanRuleList: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters-6">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>page</strong></td>
+<td><strong>int?</strong></td>
+<td>Result page that you want to retrieve</td>
+<td>[optional] [default to 1]</td>
+</tr>
+<tr>
+<td><strong>perPage</strong></td>
+<td><strong>int?</strong></td>
+<td>Maximum number of records per page. By default it's 20. Can be at most 500. NOTE: Due to its validation and visualization, the swagger frontend might show very low performance, or even crashes, when a service responds with a lot of data. It is recommended to use a HTTP client like Postman or DHC instead of our swagger frontend for service calls with large page sizes.</td>
+<td>[optional] [default to 20]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type-6">Return type</h3>
+<p><a href="PageableIbanRuleList.html"><strong>PageableIbanRuleList</strong></a></p>
+<h3 id="authorization-6">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers-6">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+<p><a name="getkeywordrulelist"></a></p>
+<h1 id="getkeywordrulelist"><strong>GetKeywordRuleList</strong></h1>
+<blockquote>
+<p>PageableKeywordRuleList GetKeywordRuleList (int? page = null, int? perPage = null)</p>
+</blockquote>
+<p>Get keyword rules</p>
+<p>Returns all keyword-based categorization rules that you have defined for your users via the 'Create keyword rules' service.</p>
+<h3 id="example-7">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class GetKeywordRuleListExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new MandatorAdministrationApi();
+            var page = 56;  // int? | Result page that you want to retrieve (optional)  (default to 1)
+            var perPage = 56;  // int? | Maximum number of records per page. By default it's 20. Can be at most 500. NOTE: Due to its validation and visualization, the swagger frontend might show very low performance, or even crashes, when a service responds with a lot of data. It is recommended to use a HTTP client like Postman or DHC instead of our swagger frontend for service calls with large page sizes. (optional)  (default to 20)
+
+            try
+            {
+                // Get keyword rules
+                PageableKeywordRuleList result = apiInstance.GetKeywordRuleList(page, perPage);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling MandatorAdministrationApi.GetKeywordRuleList: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters-7">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>page</strong></td>
+<td><strong>int?</strong></td>
+<td>Result page that you want to retrieve</td>
+<td>[optional] [default to 1]</td>
+</tr>
+<tr>
+<td><strong>perPage</strong></td>
+<td><strong>int?</strong></td>
+<td>Maximum number of records per page. By default it's 20. Can be at most 500. NOTE: Due to its validation and visualization, the swagger frontend might show very low performance, or even crashes, when a service responds with a lot of data. It is recommended to use a HTTP client like Postman or DHC instead of our swagger frontend for service calls with large page sizes.</td>
+<td>[optional] [default to 20]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type-7">Return type</h3>
+<p><a href="PageableKeywordRuleList.html"><strong>PageableKeywordRuleList</strong></a></p>
+<h3 id="authorization-7">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers-7">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+<p><a name="getuserlist"></a></p>
+<h1 id="getuserlist"><strong>GetUserList</strong></h1>
+<blockquote>
+<p>PageableUserInfoList GetUserList (string minRegistrationDate = null, string maxRegistrationDate = null, string minDeletionDate = null, string maxDeletionDate = null, string minLastActiveDate = null, string maxLastActiveDate = null, bool? includeMonthlyStats = null, string monthlyStatsStartDate = null, string monthlyStatsEndDate = null, int? minBankConnectionCountInMonthlyStats = null, string userId = null, bool? isDeleted = null, bool? isLocked = null, int? page = null, int? perPage = null, List<string> order = null)</string></p>
+</blockquote>
+<p>Get user list</p>
+<p>Get a list of the users of the mandator that is authorized by the access_token. Must pass the <a href='https://finapi.zendesk.com/hc/en-us/articles/115003661827-Difference-between-app-clients-and-mandator-admin-client' target='_blank'>mandator admin client</a>'s access_token. You can set optional search criteria to get only those users that you are interested in. If you do not specify any search criteria, then this service functions as a 'get all' service.</p><p>Note that the original user id is no longer available in finAPI once a user has been deleted. Because of this, the userId of deleted users will be a distorted version of the original userId. For example, if the deleted user's id was originally 'user', then this service will return 'uXXr' as the userId.</p>
+<h3 id="example-8">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class GetUserListExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new MandatorAdministrationApi();
+            var minRegistrationDate = minRegistrationDate_example;  // string | Lower bound for a user's registration date, in the format 'YYYY-MM-DD' (e.g. '2016-01-01'). If specified, then only users whose 'registrationDate' is equal to or later than the given date will be regarded. (optional) 
+            var maxRegistrationDate = maxRegistrationDate_example;  // string | Upper bound for a user's registration date, in the format 'YYYY-MM-DD' (e.g. '2016-01-01'). If specified, then only users whose 'registrationDate' is equal to or earlier than the given date will be regarded. (optional) 
+            var minDeletionDate = minDeletionDate_example;  // string | Lower bound for a user's deletion date, in the format 'YYYY-MM-DD' (e.g. '2016-01-01'). If specified, then only users whose 'deletionDate' is not null, and is equal to or later than the given date will be regarded. (optional) 
+            var maxDeletionDate = maxDeletionDate_example;  // string | Upper bound for a user's deletion date, in the format 'YYYY-MM-DD' (e.g. '2016-01-01'). If specified, then only users whose 'deletionDate' is null, or is equal to or earlier than the given date will be regarded. (optional) 
+            var minLastActiveDate = minLastActiveDate_example;  // string | Lower bound for a user's last active date, in the format 'YYYY-MM-DD' (e.g. '2016-01-01'). If specified, then only users whose 'lastActiveDate' is not null, and is equal to or later than the given date will be regarded. (optional) 
+            var maxLastActiveDate = maxLastActiveDate_example;  // string | Upper bound for a user's last active date, in the format 'YYYY-MM-DD' (e.g. '2016-01-01'). If specified, then only users whose 'lastActiveDate' is null, or is equal to or earlier than the given date will be regarded. (optional) 
+            var includeMonthlyStats = true;  // bool? | Whether to include the 'monthlyStats' for the returned users. If not specified, then the field defaults to 'false'. (optional)  (default to false)
+            var monthlyStatsStartDate = monthlyStatsStartDate_example;  // string | Minimum bound for the monthly stats (=oldest month that should be included). Must be passed in the format 'YYYY-MM'. If not specified, then the monthly stats will go back up to the first month in which the user existed (date of the user's registration). Note that this field is only regarded if 'includeMonthlyStats' = true. (optional) 
+            var monthlyStatsEndDate = monthlyStatsEndDate_example;  // string | Maximum bound for the monthly stats (=latest month that should be included). Must be passed in the format 'YYYY-MM'. If not specified, then the monthly stats will go up to either the current month (for active users), or up to the month of deletion (for deleted users). Note that this field is only regarded if  'includeMonthlyStats' = true. (optional) 
+            var minBankConnectionCountInMonthlyStats = 56;  // int? | A value of X means that the service will return only those users which had at least X bank connections imported at any time within the returned monthly stats set. This field is only regarded when 'includeMonthlyStats' is set to 'true'. The default value for this field is 0. (optional)  (default to 0)
+            var userId = userId_example;  // string | The identifier of a user to search for. If specified, then only the user with the given id will be regarded. If no user can be found for the passed userId (because the user was deleted or his username was misspelled), then the result list will be empty. (optional) 
+            var isDeleted = true;  // bool? | If NOT specified, then the service will regard both active and deleted users in the search. If set to 'true', then ONLY deleted users will be regarded. If set to 'false', then ONLY active users will be regarded. (optional) 
+            var isLocked = true;  // bool? | If NOT specified, then the service will regard both locked and not locked users in the search. If set to 'true', then ONLY locked users will be regarded. If set to 'false', then ONLY not locked users will be regarded. (optional) 
+            var page = 56;  // int? | Result page that you want to retrieve (optional)  (default to 1)
+            var perPage = 56;  // int? | Maximum number of records per page. By default it's 20. Can be at most 500. NOTE: Due to its validation and visualization, the swagger frontend might show very low performance, or even crashes, when a service responds with a lot of data. It is recommended to use a HTTP client like Postman or DHC instead of our swagger frontend for service calls with large page sizes. (optional)  (default to 20)
+            var order = new List&lt;string&gt;(); // List&lt;string&gt; | Determines the order of the results. You can order the results by 'userId'. The default order for this service is 'userId,asc'. The general format is: 'property[,asc|desc]', with 'asc' being the default value.  (optional) 
+
+            try
+            {
+                // Get user list
+                PageableUserInfoList result = apiInstance.GetUserList(minRegistrationDate, maxRegistrationDate, minDeletionDate, maxDeletionDate, minLastActiveDate, maxLastActiveDate, includeMonthlyStats, monthlyStatsStartDate, monthlyStatsEndDate, minBankConnectionCountInMonthlyStats, userId, isDeleted, isLocked, page, perPage, order);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling MandatorAdministrationApi.GetUserList: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters-8">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>minRegistrationDate</strong></td>
+<td><strong>string</strong></td>
+<td>Lower bound for a user's registration date, in the format 'YYYY-MM-DD' (e.g. '2016-01-01'). If specified, then only users whose 'registrationDate' is equal to or later than the given date will be regarded.</td>
+<td>[optional]</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>maxRegistrationDate</strong></td>
+<td><strong>string</strong></td>
+<td>Upper bound for a user's registration date, in the format 'YYYY-MM-DD' (e.g. '2016-01-01'). If specified, then only users whose 'registrationDate' is equal to or earlier than the given date will be regarded.</td>
+<td>[optional]</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>minDeletionDate</strong></td>
+<td><strong>string</strong></td>
+<td>Lower bound for a user's deletion date, in the format 'YYYY-MM-DD' (e.g. '2016-01-01'). If specified, then only users whose 'deletionDate' is not null, and is equal to or later than the given date will be regarded.</td>
+<td>[optional]</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>maxDeletionDate</strong></td>
+<td><strong>string</strong></td>
+<td>Upper bound for a user's deletion date, in the format 'YYYY-MM-DD' (e.g. '2016-01-01'). If specified, then only users whose 'deletionDate' is null, or is equal to or earlier than the given date will be regarded.</td>
+<td>[optional]</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>minLastActiveDate</strong></td>
+<td><strong>string</strong></td>
+<td>Lower bound for a user's last active date, in the format 'YYYY-MM-DD' (e.g. '2016-01-01'). If specified, then only users whose 'lastActiveDate' is not null, and is equal to or later than the given date will be regarded.</td>
+<td>[optional]</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>maxLastActiveDate</strong></td>
+<td><strong>string</strong></td>
+<td>Upper bound for a user's last active date, in the format 'YYYY-MM-DD' (e.g. '2016-01-01'). If specified, then only users whose 'lastActiveDate' is null, or is equal to or earlier than the given date will be regarded.</td>
+<td>[optional]</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>includeMonthlyStats</strong></td>
+<td><strong>bool?</strong></td>
+<td>Whether to include the 'monthlyStats' for the returned users. If not specified, then the field defaults to 'false'.</td>
+<td>[optional] [default to false]</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>monthlyStatsStartDate</strong></td>
+<td><strong>string</strong></td>
+<td>Minimum bound for the monthly stats (=oldest month that should be included). Must be passed in the format 'YYYY-MM'. If not specified, then the monthly stats will go back up to the first month in which the user existed (date of the user's registration). Note that this field is only regarded if 'includeMonthlyStats' = true.</td>
+<td>[optional]</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>monthlyStatsEndDate</strong></td>
+<td><strong>string</strong></td>
+<td>Maximum bound for the monthly stats (=latest month that should be included). Must be passed in the format 'YYYY-MM'. If not specified, then the monthly stats will go up to either the current month (for active users), or up to the month of deletion (for deleted users). Note that this field is only regarded if  'includeMonthlyStats' = true.</td>
+<td>[optional]</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>minBankConnectionCountInMonthlyStats</strong></td>
+<td><strong>int?</strong></td>
+<td>A value of X means that the service will return only those users which had at least X bank connections imported at any time within the returned monthly stats set. This field is only regarded when 'includeMonthlyStats' is set to 'true'. The default value for this field is 0.</td>
+<td>[optional] [default to 0]</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>userId</strong></td>
+<td><strong>string</strong></td>
+<td>The identifier of a user to search for. If specified, then only the user with the given id will be regarded. If no user can be found for the passed userId (because the user was deleted or his username was misspelled), then the result list will be empty.</td>
+<td>[optional]</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>isDeleted</strong></td>
+<td><strong>bool?</strong></td>
+<td>If NOT specified, then the service will regard both active and deleted users in the search. If set to 'true', then ONLY deleted users will be regarded. If set to 'false', then ONLY active users will be regarded.</td>
+<td>[optional]</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>isLocked</strong></td>
+<td><strong>bool?</strong></td>
+<td>If NOT specified, then the service will regard both locked and not locked users in the search. If set to 'true', then ONLY locked users will be regarded. If set to 'false', then ONLY not locked users will be regarded.</td>
+<td>[optional]</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>page</strong></td>
+<td><strong>int?</strong></td>
+<td>Result page that you want to retrieve</td>
+<td>[optional] [default to 1]</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>perPage</strong></td>
+<td><strong>int?</strong></td>
+<td>Maximum number of records per page. By default it's 20. Can be at most 500. NOTE: Due to its validation and visualization, the swagger frontend might show very low performance, or even crashes, when a service responds with a lot of data. It is recommended to use a HTTP client like Postman or DHC instead of our swagger frontend for service calls with large page sizes.</td>
+<td>[optional] [default to 20]</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>order</strong></td>
+<td><a href="string.md"><strong>List&lt;string&gt;</strong></a></td>
+<td>Determines the order of the results. You can order the results by 'userId'. The default order for this service is 'userId,asc'. The general format is: 'property[,asc</td>
+<td>desc]', with 'asc' being the default value.</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type-8">Return type</h3>
+<p><a href="PageableUserInfoList.html"><strong>PageableUserInfoList</strong></a></p>
+<h3 id="authorization-8">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers-8">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Bodoconsult/Bodoconsult.Finance/blob/main/src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/MandatorAdministrationApi.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

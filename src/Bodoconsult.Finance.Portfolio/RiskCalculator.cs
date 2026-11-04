@@ -1,4 +1,11 @@
-﻿using System;
+﻿
+///Get the covarianz matrix as arrayusing System;
+///Get the covarianz matrix as ar
+///
+/// ///Calcuate risk///Risk in percent as double (0.1 means 10%)1 means 10%)1 means 10%///Get covariance matrix as arraystem.Data;
+/// ///Calcuate risk///Risk in percent as double (0.1 means 10%)1 means 10%)1 means 10%///Get covariance matrix as arrayCstem.Data;
+
+using System;
 using System.Data;
 using MathNet.Numerics.LinearAlgebra;
 
@@ -10,7 +17,9 @@ namespace Bodoconsult.Finance.Portfolio;
 //[ImplementPropertyChanged]
 public class RiskCalculator
 {
-
+    /// <summary>
+    /// Risk in percent (0.1 means 10%)
+    /// </summary>
     public double Risk { get; private set; }
 
     /// <summary>
@@ -26,7 +35,10 @@ public class RiskCalculator
 
     internal Matrix<double> CovarianceMatrix { get; private set; }
 
-
+    /// <summary>
+    /// Get the covariance matrix as array
+    /// </summary>
+    /// <returns>Covariance matrix as array</returns>
     public double[,] GetCovarianceMatrixAsArray()
     {
         return CovarianceMatrix.ToArray();
@@ -38,9 +50,7 @@ public class RiskCalculator
     /// <param name="vectorA"></param>
     public void LoadVectorA(Vector<double> vectorA)
     {
-
         VectorA = vectorA;
-
         VectorB = Matrix<double>.Build.DenseOfColumnVectors(VectorA).Transpose().Row(0);
     }
 

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>IO.Swagger.Api.BanksApi | Bodoconsult.AppInfrastructure </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="IO.Swagger.Api.BanksApi | Bodoconsult.AppInfrastructure ">
+      
+      
+      <link rel="icon" href="../../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Bodoconsult/Bodoconsult.Finance/blob/main/src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/BanksApi.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../../../index.html">
+            <img id="logo" class="svg" src="../../../../../logo.svg" alt="Bodoconsult.AppInfrastructure">
+            Bodoconsult.AppInfrastructure
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="ioswaggerapibanksapi">IO.Swagger.Api.BanksApi</h1>
+
+<p>All URIs are relative to <em>https://localhost</em></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="BanksApi.html#getandsearchallbanks"><strong>GetAndSearchAllBanks</strong></a></td>
+<td><strong>GET</strong> /api/v1/banks</td>
+<td>Get and search all banks</td>
+</tr>
+<tr>
+<td><a href="BanksApi.html#getbank"><strong>GetBank</strong></a></td>
+<td><strong>GET</strong> /api/v1/banks/{id}</td>
+<td>Get a bank</td>
+</tr>
+<tr>
+<td><a href="BanksApi.html#getmultiplebanks"><strong>GetMultipleBanks</strong></a></td>
+<td><strong>GET</strong> /api/v1/banks/{ids}</td>
+<td>Get multiple banks</td>
+</tr>
+</tbody>
+</table>
+<p><a name="getandsearchallbanks"></a></p>
+<h1 id="getandsearchallbanks"><strong>GetAndSearchAllBanks</strong></h1>
+<blockquote>
+<p>PageableBankList GetAndSearchAllBanks (List&lt;long?&gt; ids = null, string search = null, bool? isSupported = null, bool? pinsAreVolatile = null, List<string> supportedDataSources = null, List<string> supportedInterfaces = null, List<string> location = null, List&lt;long?&gt; tppAuthenticationGroupIds = null, bool? isTestBank = null, int? page = null, int? perPage = null, List<string> order = null)</string></string></string></string></p>
+</blockquote>
+<p>Get and search all banks</p>
+<p>Get and search banks from finAPI's database of banks. Must pass the authorized user's access_token, or your client's access_token. You can set optional search criteria to get only those banks that you are interested in. If you do not specify any search criteria, then this service functions as a 'get all' service.</p>
+<h3 id="example">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class GetAndSearchAllBanksExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new BanksApi();
+            var ids = new List&lt;long?&gt;(); // List&lt;long?&gt; | A comma-separated list of bank identifiers. If specified, then only banks whose identifier match any of the given identifiers will be regarded. The maximum number of identifiers is 1000. (optional) 
+            var search = search_example;  // string | If specified, then only those banks will be contained in the result whose 'name', 'blz', 'bic' or 'city' contains the given search string (the matching works case-insensitive). If no banks contain the search string in any of the regarded fields, then the result will be an empty list. Note that you may also pass an IBAN in this field, in which case finAPI will try to find the related bank in its database and regard only this bank for the search. Also note: If the given search string consists of several terms (separated by whitespace), then ALL of these terms must apply to a bank in order for it to get included into the result. (optional) 
+            var isSupported = true;  // bool? | If specified, then only supported (in case of 'true' value) or unsupported (in case of 'false' value) banks will be regarded.  NOTE: This field is deprecated and will be removed at some point. Please refer to field 'supportedInterfaces' instead. (optional) 
+            var pinsAreVolatile = true;  // bool? | If specified, then only those banks will be regarded that have the given value (true or false) for their 'pinsAreVolatile' field.  NOTE: This field is deprecated and will be removed at some point. (optional) 
+            var supportedDataSources = new List&lt;string&gt;(); // List&lt;string&gt; | Comma-separated list of data sources. Possible values: WEB_SCRAPER,FINTS_SERVER. If this parameter is specified, then only those banks will be regarded in the search that support ALL of the given data sources. Note that this does NOT imply that those data sources must be the only data sources that are supported by a bank.  NOTE: This field is deprecated and will be removed at some point. Please refer to field 'supportedInterfaces' instead. (optional) 
+            var supportedInterfaces = new List&lt;string&gt;(); // List&lt;string&gt; | Comma-separated list of bank interfaces. Possible values: FINTS_SERVER,WEB_SCRAPER,XS2A. If this parameter is specified, then all the banks that support at least one of the given interfaces will be returned. Note that this does NOT imply that those interfaces must be the only ones that are supported by a bank. (optional) 
+            var location = new List&lt;string&gt;(); // List&lt;string&gt; | Comma-separated list of two-letter country codes (ISO 3166 ALPHA-2). If set, then only those banks will be regarded in the search that are located in the specified countries. Notes: Banks which do not have a location set (i.e. international institutes) will ALWAYS be regarded in the search, independent of what you specify for this field. When you pass a country code that doesn't exist in the ISO 3166 ALPHA-2 standard, then the service will respond with 400 BAD_REQUEST. (optional) 
+            var tppAuthenticationGroupIds = new List&lt;long?&gt;(); // List&lt;long?&gt; | A comma-separated list of TPP authentication group identifiers. If specified, then only banks who have at least one interface belonging to one of the given groups will be regarded. The maximum number of identifiers is 1000. (optional) 
+            var isTestBank = true;  // bool? | If specified, then only those banks will be regarded that have the given value (true or false) for their 'isTestBank' field. (optional) 
+            var page = 56;  // int? | Result page that you want to retrieve. (optional)  (default to 1)
+            var perPage = 56;  // int? | Maximum number of records per page. By default it's 20. Can be at most 500. NOTE: Due to its validation and visualization, the swagger frontend might show very low performance, or even crashes, when a service responds with a lot of data. It is recommended to use a HTTP client like Postman or DHC instead of our swagger frontend for service calls with large page sizes. (optional)  (default to 20)
+            var order = new List&lt;string&gt;(); // List&lt;string&gt; | Determines the order of the results. You can order the results by 'id', 'name', 'blz', 'bic' or 'popularity'. The default order for all services is 'id,asc'. You can also order by multiple properties. In that case the order of the parameters passed is important. Example: '/banks?order=name,desc&amp;order=id,asc' will return banks ordered by 'name' (descending), where banks with the same 'name' are ordered by 'id' (ascending). The general format is: 'property[,asc|desc]', with 'asc' being the default value. Please note that ordering by multiple fields is not supported in our swagger frontend, but you can test this feature with any HTTP tool of your choice (e.g. postman or DHC).  (optional) 
+
+            try
+            {
+                // Get and search all banks
+                PageableBankList result = apiInstance.GetAndSearchAllBanks(ids, search, isSupported, pinsAreVolatile, supportedDataSources, supportedInterfaces, location, tppAuthenticationGroupIds, isTestBank, page, perPage, order);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling BanksApi.GetAndSearchAllBanks: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ids</strong></td>
+<td><a href="long?.md"><strong>List&lt;long?&gt;</strong></a></td>
+<td>A comma-separated list of bank identifiers. If specified, then only banks whose identifier match any of the given identifiers will be regarded. The maximum number of identifiers is 1000.</td>
+<td>[optional]</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>search</strong></td>
+<td><strong>string</strong></td>
+<td>If specified, then only those banks will be contained in the result whose 'name', 'blz', 'bic' or 'city' contains the given search string (the matching works case-insensitive). If no banks contain the search string in any of the regarded fields, then the result will be an empty list. Note that you may also pass an IBAN in this field, in which case finAPI will try to find the related bank in its database and regard only this bank for the search. Also note: If the given search string consists of several terms (separated by whitespace), then ALL of these terms must apply to a bank in order for it to get included into the result.</td>
+<td>[optional]</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>isSupported</strong></td>
+<td><strong>bool?</strong></td>
+<td>If specified, then only supported (in case of 'true' value) or unsupported (in case of 'false' value) banks will be regarded.  NOTE: This field is deprecated and will be removed at some point. Please refer to field 'supportedInterfaces' instead.</td>
+<td>[optional]</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>pinsAreVolatile</strong></td>
+<td><strong>bool?</strong></td>
+<td>If specified, then only those banks will be regarded that have the given value (true or false) for their 'pinsAreVolatile' field.  NOTE: This field is deprecated and will be removed at some point.</td>
+<td>[optional]</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>supportedDataSources</strong></td>
+<td><a href="string.md"><strong>List&lt;string&gt;</strong></a></td>
+<td>Comma-separated list of data sources. Possible values: WEB_SCRAPER,FINTS_SERVER. If this parameter is specified, then only those banks will be regarded in the search that support ALL of the given data sources. Note that this does NOT imply that those data sources must be the only data sources that are supported by a bank.  NOTE: This field is deprecated and will be removed at some point. Please refer to field 'supportedInterfaces' instead.</td>
+<td>[optional]</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>supportedInterfaces</strong></td>
+<td><a href="string.md"><strong>List&lt;string&gt;</strong></a></td>
+<td>Comma-separated list of bank interfaces. Possible values: FINTS_SERVER,WEB_SCRAPER,XS2A. If this parameter is specified, then all the banks that support at least one of the given interfaces will be returned. Note that this does NOT imply that those interfaces must be the only ones that are supported by a bank.</td>
+<td>[optional]</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>location</strong></td>
+<td><a href="string.md"><strong>List&lt;string&gt;</strong></a></td>
+<td>Comma-separated list of two-letter country codes (ISO 3166 ALPHA-2). If set, then only those banks will be regarded in the search that are located in the specified countries. Notes: Banks which do not have a location set (i.e. international institutes) will ALWAYS be regarded in the search, independent of what you specify for this field. When you pass a country code that doesn't exist in the ISO 3166 ALPHA-2 standard, then the service will respond with 400 BAD_REQUEST.</td>
+<td>[optional]</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>tppAuthenticationGroupIds</strong></td>
+<td><a href="long?.md"><strong>List&lt;long?&gt;</strong></a></td>
+<td>A comma-separated list of TPP authentication group identifiers. If specified, then only banks who have at least one interface belonging to one of the given groups will be regarded. The maximum number of identifiers is 1000.</td>
+<td>[optional]</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>isTestBank</strong></td>
+<td><strong>bool?</strong></td>
+<td>If specified, then only those banks will be regarded that have the given value (true or false) for their 'isTestBank' field.</td>
+<td>[optional]</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>page</strong></td>
+<td><strong>int?</strong></td>
+<td>Result page that you want to retrieve.</td>
+<td>[optional] [default to 1]</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>perPage</strong></td>
+<td><strong>int?</strong></td>
+<td>Maximum number of records per page. By default it's 20. Can be at most 500. NOTE: Due to its validation and visualization, the swagger frontend might show very low performance, or even crashes, when a service responds with a lot of data. It is recommended to use a HTTP client like Postman or DHC instead of our swagger frontend for service calls with large page sizes.</td>
+<td>[optional] [default to 20]</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>order</strong></td>
+<td><a href="string.md"><strong>List&lt;string&gt;</strong></a></td>
+<td>Determines the order of the results. You can order the results by 'id', 'name', 'blz', 'bic' or 'popularity'. The default order for all services is 'id,asc'. You can also order by multiple properties. In that case the order of the parameters passed is important. Example: '/banks?order=name,desc&amp;order=id,asc' will return banks ordered by 'name' (descending), where banks with the same 'name' are ordered by 'id' (ascending). The general format is: 'property[,asc</td>
+<td>desc]', with 'asc' being the default value. Please note that ordering by multiple fields is not supported in our swagger frontend, but you can test this feature with any HTTP tool of your choice (e.g. postman or DHC).</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type">Return type</h3>
+<p><a href="PageableBankList.html"><strong>PageableBankList</strong></a></p>
+<h3 id="authorization">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+<p><a name="getbank"></a></p>
+<h1 id="getbank"><strong>GetBank</strong></h1>
+<blockquote>
+<p>Bank GetBank (long? id)</p>
+</blockquote>
+<p>Get a bank</p>
+<p>Get a single bank from finAPI's database of banks. You have to pass the bank's identifier, and either the authorized user's access_token, or your client's access token.</p>
+<h3 id="example-1">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class GetBankExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new BanksApi();
+            var id = 789;  // long? | Identifier of requested bank
+
+            try
+            {
+                // Get a bank
+                Bank result = apiInstance.GetBank(id);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling BanksApi.GetBank: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters-1">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>id</strong></td>
+<td><strong>long?</strong></td>
+<td>Identifier of requested bank</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type-1">Return type</h3>
+<p><a href="Bank.html"><strong>Bank</strong></a></p>
+<h3 id="authorization-1">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers-1">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+<p><a name="getmultiplebanks"></a></p>
+<h1 id="getmultiplebanks"><strong>GetMultipleBanks</strong></h1>
+<blockquote>
+<p>BankList GetMultipleBanks (List&lt;long?&gt; ids)</p>
+</blockquote>
+<p>Get multiple banks</p>
+<p>Get a list of multiple banks from finAPI's database of banks. You have to pass a list of bank identifiers, and either the authorized user's access_token, or your client's access token. Note that banks whose identifiers do not exist will not be contained in the result (If this applies to all of the given identifiers, then the result will be an empty list).<br><br><b>WARNING</b>: This service is deprecated and will be removed at some point. If you want to get multiple banks, please instead use the service 'Get and search all banks' and pass a comma-separated list of identifiers with the parameter 'ids'.</p>
+<h3 id="example-2">Example</h3>
+<pre><code class="lang-csharp">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class GetMultipleBanksExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: finapi_auth
+            Configuration.Default.AccessToken = &quot;YOUR_ACCESS_TOKEN&quot;;
+
+            var apiInstance = new BanksApi();
+            var ids = new List&lt;long?&gt;(); // List&lt;long?&gt; | Comma-separated list of identifiers of requested banks
+
+            try
+            {
+                // Get multiple banks
+                BankList result = apiInstance.GetMultipleBanks(ids);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(&quot;Exception when calling BanksApi.GetMultipleBanks: &quot; + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="parameters-2">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ids</strong></td>
+<td><a href="long?.md"><strong>List&lt;long?&gt;</strong></a></td>
+<td>Comma-separated list of identifiers of requested banks</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type-2">Return type</h3>
+<p><a href="BankList.html"><strong>BankList</strong></a></p>
+<h3 id="authorization-2">Authorization</h3>
+<p><a href="../README.html#finapi_auth">finapi_auth</a></p>
+<h3 id="http-request-headers-2">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: Not defined</li>
+</ul>
+<p><a href="#">[Back to top]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html">[Back to README]</a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Bodoconsult/Bodoconsult.Finance/blob/main/src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/BanksApi.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

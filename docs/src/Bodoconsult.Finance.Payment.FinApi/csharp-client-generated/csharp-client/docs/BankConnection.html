@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>IO.Swagger.Model.BankConnection | Bodoconsult.AppInfrastructure </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="IO.Swagger.Model.BankConnection | Bodoconsult.AppInfrastructure ">
+      
+      
+      <link rel="icon" href="../../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Bodoconsult/Bodoconsult.Finance/blob/main/src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/BankConnection.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../../../index.html">
+            <img id="logo" class="svg" src="../../../../../logo.svg" alt="Bodoconsult.AppInfrastructure">
+            Bodoconsult.AppInfrastructure
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="ioswaggermodelbankconnection">IO.Swagger.Model.BankConnection</h1>
+
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Id</strong></td>
+<td><strong>long?</strong></td>
+<td>Bank connection identifier</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>BankId</strong></td>
+<td><strong>long?</strong></td>
+<td>Identifier of the bank that this connection belongs to. NOTE: This field is DEPRECATED and will get removed at some point. Please refer to the 'bank' field instead.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Name</strong></td>
+<td><strong>string</strong></td>
+<td>Custom name for the bank connection. You can set this field with the 'Edit a bank connection' service, as well as during the initial import of the bank connection. Maximum length is 64.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>BankingUserId</strong></td>
+<td><strong>string</strong></td>
+<td>NOTE: This field is deprecated and will be removed at some point. Please refer to the 'loginCredentials' in the 'interfaces' field instead.&lt;br&gt;&lt;br&gt;Stored online banking user ID credential. This field may be null for the 'demo connection'. If your client has no license for processing banking credentials then a banking user ID will always be 'XXXXX'</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>BankingCustomerId</strong></td>
+<td><strong>string</strong></td>
+<td>NOTE: This field is deprecated and will be removed at some point. Please refer to the 'loginCredentials' in the 'interfaces' field instead.&lt;br&gt;&lt;br&gt;Stored online banking customer ID credential. If your client has no license for processing banking credentials or if this field contains a value that requires password protection (see field ‘isCustomerIdPassword’ in Bank Resource) then the banking customer ID will always be 'XXXXX</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>BankingPin</strong></td>
+<td><strong>string</strong></td>
+<td>NOTE: This field is deprecated and will be removed at some point. Please refer to the 'loginCredentials' in the 'interfaces' field instead.&lt;br&gt;&lt;br&gt;Stored online banking PIN. If a PIN is stored, this will always be 'XXXXX'</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td><strong>string</strong></td>
+<td>Bank connection type</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>UpdateStatus</strong></td>
+<td><strong>string</strong></td>
+<td>Current status of data download (account balances and transactions/securities). The POST /bankConnections/import and POST /bankConnections/&lt;id&gt;/update services will set this flag to IN_PROGRESS before they return. Once the import or update has finished, the status will be changed to READY.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>CategorizationStatus</strong></td>
+<td><strong>string</strong></td>
+<td>Current status of transactions categorization. The asynchronous download process that is triggered by a call of the POST /bankConnections/import and POST /bankConnections/&lt;id&gt;/update services (and also by finAPI's auto update, if enabled) will set this flag to PENDING once the download has finished and a categorization is scheduled for the imported transactions. A separate categorization thread will then start to categorize the transactions (during this process, the status is IN_PROGRESS). When categorization has finished, the status will be (re-)set to READY. Note that the current categorization status should only be queried after the download has finished, i.e. once the download status has switched from IN_PROGRESS to READY.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>LastManualUpdate</strong></td>
+<td><a href="UpdateResult.html"><strong>UpdateResult</strong></a></td>
+<td>NOTE: This field is deprecated and will be removed at some point. Please refer to corresponding field in 'interfaces' instead.&lt;br&gt;&lt;br&gt;Result of the last manual update of this bank connection. If no manual update has ever been done so far, then this field will not be set.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>LastAutoUpdate</strong></td>
+<td><a href="UpdateResult.html"><strong>UpdateResult</strong></a></td>
+<td>NOTE: This field is deprecated and will be removed at some point. Please refer to corresponding field in 'interfaces' instead.&lt;br&gt;&lt;br&gt;Result of the last auto update of this bank connection (ran by finAPI's automatic batch update process). If no auto update has ever been done so far, then this field will not be set.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>IbanOnlyMoneyTransferSupported</strong></td>
+<td><strong>bool?</strong></td>
+<td>NOTE: This field is deprecated and will be removed at some point. Please refer to the account capabilities instead.&lt;br&gt;&lt;br&gt;Whether this bank connection accepts money transfer requests where the recipient's account is defined just by the IBAN (without an additional BIC). This field is re-evaluated each time this bank connection is updated. &lt;br/&gt;See also: /accounts/requestSepaMoneyTransfer</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>IbanOnlyDirectDebitSupported</strong></td>
+<td><strong>bool?</strong></td>
+<td>NOTE: This field is deprecated and will be removed at some point. Please refer to the account capabilities instead.&lt;br&gt;&lt;br&gt;Whether this bank connection accepts direct debit requests where the debitor's account is defined just by the IBAN (without an additional BIC). This field is re-evaluated each time this bank connection is updated. &lt;br/&gt;See also: /accounts/requestSepaDirectDebit</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>CollectiveMoneyTransferSupported</strong></td>
+<td><strong>bool?</strong></td>
+<td>NOTE: This field is deprecated and will be removed at some point. Please refer to the account capabilities instead.&lt;br&gt;&lt;br&gt;Whether this bank connection supports submitting collective money transfers. This field is re-evaluated each time this bank connection is updated. &lt;br/&gt;See also: /accounts/requestSepaMoneyTransfer</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DefaultTwoStepProcedureId</strong></td>
+<td><strong>string</strong></td>
+<td>NOTE: This field is deprecated and will be removed at some point. Please refer to corresponding field in 'interfaces' instead.&lt;br&gt;&lt;br&gt;The default two-step-procedure. Must match one of the available 'procedureId's from the 'twoStepProcedures' list. When this field is set, you can execute two-step-procedures (accounts/requestSepaMoneyTransfer or /requestSepaDirectDebit) without having to explicitly set a procedure. finAPI will use the default procedure in such cases. Note that the list of available procedures of a bank connection may change as a result of an update of the connection, and if this field references a procedure that is no longer available after an update, finAPI will automatically clear the default procedure (set it to null).s</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>TwoStepProcedures</strong></td>
+<td><a href="TwoStepProcedure.html"><strong>List&lt;TwoStepProcedure&gt;</strong></a></td>
+<td>NOTE: This field is deprecated and will be removed at some point. Please refer to corresponding field in 'interfaces' instead.&lt;br&gt;&lt;br&gt;Available two-step-procedures for this bank connection, used for submitting a money transfer or direct debit request (see /accounts/requestSepaMoneyTransfer or /requestSepaDirectDebit). The available two-step-procedures are re-evaluated each time this bank connection is updated (/bankConnections/update). This means that this list may change as a result of an update.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>Interfaces</strong></td>
+<td><a href="BankConnectionInterface.html"><strong>List&lt;BankConnectionInterface&gt;</strong></a></td>
+<td>Set of interfaces that are connected for this bank connection.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>AccountIds</strong></td>
+<td><strong>List&lt;long?&gt;</strong></td>
+<td>Identifiers of the accounts that belong to this bank connection</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Owners</strong></td>
+<td><a href="BankConnectionOwner.html"><strong>List&lt;BankConnectionOwner&gt;</strong></a></td>
+<td>Information about the owner(s) of the bank connection</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>Bank</strong></td>
+<td><a href="Bank.html"><strong>Bank</strong></a></td>
+<td>Bank that this connection belongs to</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>FurtherLoginNotRecommended</strong></td>
+<td><strong>bool?</strong></td>
+<td>This field indicates whether the last communication with the bank failed with an error that requires the user's attention or multi-step authentication error. If 'furtherLoginNotRecommended' is true, finAPI will stop auto updates of this bank connection to mitigate the risk of the user's bank account getting locked by the bank. Every communication with the bank (via updates, money_transfers, direct debits. etc.) can change the value of this flag. If this field is true, we recommend the user to check his credentials and try a manual update of the bank connection. If the update is successful without any multi-step authentication error, the 'furtherLoginNotRecommended' field will be set to false and the bank connection will be reincluded in the next batch update process. A manual update of the bank connection with incorrect credentials or if multi-step authentication error happens will set this field to true and lead to the exclusion of the bank connection from the following batch updates.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html">[Back to README]</a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Bodoconsult/Bodoconsult.Finance/blob/main/src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/BankConnection.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

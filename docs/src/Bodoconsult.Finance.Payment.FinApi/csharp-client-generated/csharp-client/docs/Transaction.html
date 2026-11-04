@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>IO.Swagger.Model.Transaction | Bodoconsult.AppInfrastructure </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="IO.Swagger.Model.Transaction | Bodoconsult.AppInfrastructure ">
+      
+      
+      <link rel="icon" href="../../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Bodoconsult/Bodoconsult.Finance/blob/main/src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/Transaction.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../../../index.html">
+            <img id="logo" class="svg" src="../../../../../logo.svg" alt="Bodoconsult.AppInfrastructure">
+            Bodoconsult.AppInfrastructure
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="ioswaggermodeltransaction">IO.Swagger.Model.Transaction</h1>
+
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Id</strong></td>
+<td><strong>long?</strong></td>
+<td>Transaction identifier</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>ParentId</strong></td>
+<td><strong>long?</strong></td>
+<td>Parent transaction identifier</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>AccountId</strong></td>
+<td><strong>long?</strong></td>
+<td>Account identifier</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>ValueDate</strong></td>
+<td><strong>string</strong></td>
+<td>Value date in the format 'YYYY-MM-DD HH:MM:SS.SSS' (german time).</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>BankBookingDate</strong></td>
+<td><strong>string</strong></td>
+<td>Bank booking date in the format 'YYYY-MM-DD HH:MM:SS.SSS' (german time).</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>FinapiBookingDate</strong></td>
+<td><strong>string</strong></td>
+<td>finAPI Booking date in the format 'YYYY-MM-DD HH:MM:SS.SSS' (german time). NOTE: In some cases, banks may deliver transactions that are booked in future, but already included in the current account balance. To keep the account balance consistent with the set of transactions, such &amp;quot;future transactions&amp;quot; will be imported with their finapiBookingDate set to the current date (i.e.: date of import). The finapiBookingDate will automatically get adjusted towards the bankBookingDate each time the associated bank account is updated. Example: A transaction is imported on July, 3rd, with a bank reported booking date of July, 6th. The transaction will be imported with its finapiBookingDate set to July, 3rd. Then, on July 4th, the associated account is updated. During this update, the transaction's finapiBookingDate will be automatically adjusted to July 4th. This adjustment of the finapiBookingDate takes place on each update until the bank account is updated on July 6th or later, in which case the transaction's finapiBookingDate will be adjusted to its final value, July 6th.&lt;br/&gt; The finapiBookingDate is the date that is used by the finAPI PFM services. E.g. when you calculate the spendings of an account for the current month, and have a transaction with finapiBookingDate in the current month but bankBookingDate at the beginning of the next month, then this transaction is included in the calculations (as the bank has this transaction's amount included in the current account balance as well).</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Amount</strong></td>
+<td><strong>decimal?</strong></td>
+<td>Transaction amount</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Purpose</strong></td>
+<td><strong>string</strong></td>
+<td>Transaction purpose. Maximum length: 2000</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>CounterpartName</strong></td>
+<td><strong>string</strong></td>
+<td>Counterpart name. Maximum length: 80</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>CounterpartAccountNumber</strong></td>
+<td><strong>string</strong></td>
+<td>Counterpart account number</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>CounterpartIban</strong></td>
+<td><strong>string</strong></td>
+<td>Counterpart IBAN</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>CounterpartBlz</strong></td>
+<td><strong>string</strong></td>
+<td>Counterpart BLZ</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>CounterpartBic</strong></td>
+<td><strong>string</strong></td>
+<td>Counterpart BIC</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>CounterpartBankName</strong></td>
+<td><strong>string</strong></td>
+<td>Counterpart Bank name</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>CounterpartMandateReference</strong></td>
+<td><strong>string</strong></td>
+<td>The mandate reference of the counterpart</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>CounterpartCustomerReference</strong></td>
+<td><strong>string</strong></td>
+<td>The customer reference of the counterpart</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>CounterpartCreditorId</strong></td>
+<td><strong>string</strong></td>
+<td>The creditor ID of the counterpart. Exists only for SEPA direct debit transactions (&amp;quot;Lastschrift&amp;quot;).</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>CounterpartDebitorId</strong></td>
+<td><strong>string</strong></td>
+<td>The originator's identification code. Exists only for SEPA money transfer transactions (&amp;quot;Überweisung&amp;quot;).</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td><strong>string</strong></td>
+<td>Transaction type, according to the bank. If set, this will contain a German term that you can display to the user. Some examples of common values are: &amp;quot;Lastschrift&amp;quot;, &amp;quot;Auslands&amp;uuml;berweisung&amp;quot;, &amp;quot;Geb&amp;uuml;hren&amp;quot;, &amp;quot;Zinsen&amp;quot;. The maximum possible length of this field is 255 characters.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>TypeCodeZka</strong></td>
+<td><strong>string</strong></td>
+<td>ZKA business transaction code which relates to the transaction's type. Possible values range from 1 through 999. If no information about the ZKA type code is available, then this field will be null.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>TypeCodeSwift</strong></td>
+<td><strong>string</strong></td>
+<td>SWIFT transaction type code. If no information about the SWIFT code is available, then this field will be null.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>SepaPurposeCode</strong></td>
+<td><strong>string</strong></td>
+<td>SEPA purpose code, according to ISO 20022</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>Primanota</strong></td>
+<td><strong>string</strong></td>
+<td>Transaction primanota (bank side identification number)</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>Category</strong></td>
+<td><a href="Category.html"><strong>Category</strong></a></td>
+<td>Transaction category, if any is assigned. Note: Recently imported transactions that have currently no category assigned might still get categorized by the background categorization process. To check the status of the background categorization, see GET /bankConnections. Manual category assignments to a transaction will remove the transaction from the background categorization process (i.e. the background categorization process will never overwrite a manual category assignment).</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>Labels</strong></td>
+<td><a href="Label.html"><strong>List&lt;Label&gt;</strong></a></td>
+<td>Array of assigned labels</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>IsPotentialDuplicate</strong></td>
+<td><strong>bool?</strong></td>
+<td>While finAPI uses a well-elaborated algorithm for uniquely identifying transactions, there is still the possibility that during an account update, a transaction that was imported previously may be imported a second time as a new transaction. For example, this can happen if some transaction data changes on the bank server side. However, finAPI also includes an algorithm of identifying such &amp;quot;potential duplicate&amp;quot; transactions. If this field is set to true, it means that finAPI detected a similar transaction that might actually be the same. It is recommended to communicate this information to the end user, and give him an option to delete the transaction in case he confirms that it really is a duplicate.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>IsAdjustingEntry</strong></td>
+<td><strong>bool?</strong></td>
+<td>Indicating whether this transaction is an adjusting entry ('Zwischensaldo').&lt;br/&gt;&lt;br/&gt;Adjusting entries do not originate from the bank, but are added by finAPI during an account update when the bank reported account balance does not add up to the set of transactions that finAPI receives for the account. In this case, the adjusting entry will fix the deviation between the balance and the received transactions so that both adds up again.&lt;br/&gt;&lt;br/&gt;Possible causes for such deviations are:&lt;br/&gt;- Inconsistencies in how the bank calculates the balance, for instance when not yet booked transactions are already included in the balance, but not included in the set of transactions&lt;br/&gt;- Gaps in the transaction history that finAPI receives, for instance because the account has not been updated for a while and older transactions are no longer available</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>IsNew</strong></td>
+<td><strong>bool?</strong></td>
+<td>Indicating whether this transaction is 'new' or not. Any newly imported transaction will have this flag initially set to true. How you use this field is up to your interpretation. For example, you might want to set it to false once a user has clicked on/seen the transaction. You can change this flag to 'false' with the PATCH method.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>ImportDate</strong></td>
+<td><strong>string</strong></td>
+<td>Date of transaction import, in the format 'YYYY-MM-DD HH:MM:SS.SSS' (german time).</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Children</strong></td>
+<td><strong>List&lt;long?&gt;</strong></td>
+<td>Sub-transactions identifiers (if this transaction is split)</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>PaypalData</strong></td>
+<td><a href="PaypalTransactionData.html"><strong>PaypalTransactionData</strong></a></td>
+<td>Additional, PayPal-specific transaction data. This field is only set for transactions that belong to an account of the 'PayPal' bank (BLZ 'PAYPAL').&lt;br/&gt;NOTE: This field is deprecated as the bank with blz 'PAYPAL' is no longer supported. Do not use this field, as it will be removed at some point.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>EndToEndReference</strong></td>
+<td><strong>string</strong></td>
+<td>End-To-End reference</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>CompensationAmount</strong></td>
+<td><strong>decimal?</strong></td>
+<td>Compensation Amount. Sum of reimbursement of out-of-pocket expenses plus processing brokerage in case of a national return / refund debit as well as an optional interest equalisation. Exists predominantly for SEPA direct debit returns.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>OriginalAmount</strong></td>
+<td><strong>decimal?</strong></td>
+<td>Original Amount of the original direct debit. Exists predominantly for SEPA direct debit returns.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>DifferentDebitor</strong></td>
+<td><strong>string</strong></td>
+<td>Payer's/debtor's reference party (in the case of a credit transfer) or payee's/creditor's reference party (in the case of a direct debit)</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>DifferentCreditor</strong></td>
+<td><strong>string</strong></td>
+<td>Payee's/creditor's reference party (in the case of a credit transfer) or payer's/debtor's reference party (in the case of a direct debit)</td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<p><a href="../README.html#documentation-for-models">[Back to Model list]</a> <a href="../README.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="../README.html">[Back to README]</a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Bodoconsult/Bodoconsult.Finance/blob/main/src/Bodoconsult.Finance.Payment.FinApi/csharp-client-generated/csharp-client/docs/Transaction.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
