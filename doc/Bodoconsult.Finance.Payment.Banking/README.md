@@ -1,11 +1,13 @@
-Bodoconsult.App.DataProtection
+Bodoconsult.Finance.Payment.Banking
 ================
 
 # Overview
 
 ## What does the library
 
-Bodoconsult.App.DataProtection is a library with providing tools to handle credentials for console apps, WinForm apps, WPF apps, Avalonia apps etc. based on ASPNetCore features. Requires .NET installed with ASPNetCore.
+Bodoconsult.Finance.Payment.Banking is a library for payment handling based on HBCI and EBICS intended for the use in Germany.
+
+It is based on a Nuget package based on DDBAC by B+S Banksysteme AG. See https://bs-ag.com/. Contact them if you are interested in licensing the DDBAC library.
 
 ## How to use the library
 

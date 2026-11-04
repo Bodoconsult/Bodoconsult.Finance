@@ -9,7 +9,7 @@
 
 		<PackageId>Bodoconsult.Finance.Portfolio</PackageId>
 		<PackageTags>Tools for financial portfolio management</PackageTags>
-		<Description>Library for financila portfolio management</Description>
+		<Description>Library for financial portfolio management</Description>
 		<PackageReleaseNotes>New link for Bundesbank EURIBOR download</PackageReleaseNotes>
 
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>

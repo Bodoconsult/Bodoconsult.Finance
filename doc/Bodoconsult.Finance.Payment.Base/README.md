@@ -1,11 +1,11 @@
-Bodoconsult.App.DataProtection
+Bodoconsult.Finance.Payment.Base
 ================
 
 # Overview
 
 ## What does the library
 
-Bodoconsult.App.DataProtection is a library with providing tools to handle credentials for console apps, WinForm apps, WPF apps, Avalonia apps etc. based on ASPNetCore features. Requires .NET installed with ASPNetCore.
+Bodoconsult.Finance.Payment.Base is a base library providing tools for payment handling.
 
 ## How to use the library
 

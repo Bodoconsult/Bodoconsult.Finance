@@ -5,6 +5,7 @@
     <GenerateAssemblyInfo>True</GenerateAssemblyInfo>
     <Deterministic>False</Deterministic>
     <AssemblyName>BodoMoneyTransfer.Dal</AssemblyName>
+	  <PackageLicenseExpression>AGPL-3.0-only</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>

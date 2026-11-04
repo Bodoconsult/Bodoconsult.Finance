@@ -7,7 +7,7 @@
 		<Nullable>disable</Nullable>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 
-		<!--<RepositoryUrl>https://github.com/RobertLeisner/Finance</RepositoryUrl>-->
+		<PackageLicenseExpression>AGPL-3.0-only</PackageLicenseExpression>
 		<PackageId>Bodoconsult.Finance.Base</PackageId>
 		<PackageTags>Finance payment</PackageTags>
 		<Description>Base library for finance and payment handling</Description>

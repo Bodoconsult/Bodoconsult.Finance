@@ -1,11 +1,11 @@
-Bodoconsult.App.DataProtection
+Bodoconsult.Finance.Portfolio
 ================
 
 # Overview
 
 ## What does the library
 
-Bodoconsult.App.DataProtection is a library with providing tools to handle credentials for console apps, WinForm apps, WPF apps, Avalonia apps etc. based on ASPNetCore features. Requires .NET installed with ASPNetCore.
+Bodoconsult.Finance.Portfolio is a library providing tools for securities portfolio management.
 
 ## How to use the library
 

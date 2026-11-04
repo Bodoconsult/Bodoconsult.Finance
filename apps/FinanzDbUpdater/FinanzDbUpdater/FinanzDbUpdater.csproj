@@ -8,6 +8,7 @@
 	  <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
 	  <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
 	  <Nullable>disable</Nullable>
+	  <PackageLicenseExpression>AGPL-3.0-only</PackageLicenseExpression>
     <!--<CodeAnalysisRuleSet>codeanalysis.ruleset</CodeAnalysisRuleSet>-->
   </PropertyGroup>
 
