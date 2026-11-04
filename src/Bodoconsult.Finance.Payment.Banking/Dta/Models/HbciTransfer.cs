@@ -1,0 +1,11 @@
+﻿//namespace Bodoconsult.Finance.Payment.Banking.Dta.Models;
+
+//public struct HbciTransfer
+//{
+//    public string Kontonummer1;
+//    public string Kreditinstitutcode1;
+//    public string EmpfaengerNameEins1;
+//    public decimal Wert1;
+//    public string Waehrung1;
+//    public string Verwendungszweck;
+//}

@@ -1,0 +1,88 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+		<Deterministic>False</Deterministic>
+		
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
+		<PackageId>Bodoconsult.Finance.Banking</PackageId>
+		<PackageTags>Finance payment HBCI EBICS</PackageTags>
+		<Description>Library for HBCI and EBICS payment handling; DDBAC 5.10.18</Description>
+		<PackageReleaseNotes>Account states uses CAMT now instead of MT940</PackageReleaseNotes>
+
+
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+
+		<!-- PDB Configuration -->
+		<DebugType>portable</DebugType>
+		<DebugSymbols>true</DebugSymbols>
+		<EmbedAllSources>false</EmbedAllSources>
+
+		<!-- Allow PDBs in the main package -->
+		<!--
+		<AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>-->
+
+		<!-- Generate symbols package (.snupkg) -->
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<!-- Modern symbols package format -->
+
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="Hbci\Models\**" />
+		<EmbeddedResource Remove="Hbci\Models\**" />
+		<None Remove="Hbci\Models\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Bodoconsult.App" Version="1.0.11" />
+		<PackageReference Include="Bodoconsult.Pdf" Version="1.0.11" />
+		<PackageReference Include="DDBAC.Net" Version="5.10.76" />
+		<PackageReference Include="DDBAC.Net.Ebics" Version="5.10.76" />
+		<PackageReference Include="System.Drawing.Common" Version="10.0.13" />
+		<PackageReference Include="System.Security.Cryptography.Xml" Version="10.0.13" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Bodoconsult.Finance.Payment.Base\Bodoconsult.Finance.Payment.Base.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="ICSharpCode.SharpZipLib.dll" PrivateAssets="All">
+			<HintPath>lib\ICSharpCode.SharpZipLib.dll</HintPath>
+			<Private>True</Private>
+		</Reference>
+	</ItemGroup>
+
+	<PropertyGroup>
+		<TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+	</PropertyGroup>
+
+	<Target Name="CopyReferencesToPackage" DependsOnTargets="BuildOnlySettings;ResolveReferences">
+		<ItemGroup>
+			<!-- Filter out unnecessary files -->
+			<_ReferenceCopyLocalPaths Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'Reference')-&gt;WithMetadataValue('PrivateAssets', 'All'))" />
+		</ItemGroup>
+
+		<!-- Print batches for debug purposes -->
+		<Message Text="Batch for .nupkg: ReferenceCopyLocalPaths = @(_ReferenceCopyLocalPaths), ReferenceCopyLocalPaths.DestinationSubDirectory = %(_ReferenceCopyLocalPaths.DestinationSubDirectory) Filename = %(_ReferenceCopyLocalPaths.Filename) Extension = %(_ReferenceCopyLocalPaths.Extension)" Importance="High" Condition="'@(_ReferenceCopyLocalPaths)' != ''" />
+
+		<ItemGroup>
+			<!-- Add file to package with consideration of sub folder. If empty, the root folder is chosen. -->
+			<BuildOutputInPackage Include="@(_ReferenceCopyLocalPaths)" TargetPath="%(_ReferenceCopyLocalPaths.DestinationSubDirectory)" />
+		</ItemGroup>
+	</Target>
+
+	<ItemGroup>
+		<None Include="..\..\doc\Bodoconsult.Finance.Payment.Banking\LICENSE.md" Link="LICENSE.md">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Include="..\..\doc\Bodoconsult.Finance.Payment.Banking\README.md" Link="README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
+
+</Project>

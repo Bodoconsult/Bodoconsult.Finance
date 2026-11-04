@@ -1,0 +1,7 @@
+﻿{"AlphaVantageApiToken":"918c9589-8102-4b78-8eb8-c2b91c39a435","HbciContacts":[
+{"ContactType":"HBCI","Name":"testAccount","Passphrase":null,"AccountName":null,"AccountNr":"12345","Iban":"DE23123456666776676778877666","Bic":"GENODEF1ZOR","Pin":null}
+]
+,"EbicsContacts":[
+{"ContactType":"EBICS","Name":"testAccount","Passphrase":null,"AccountName":null,"AccountNr":"12345","Iban":"DE23123456666776676778877666","Bic":"GENODEF1ZOR","Pin":null}
+]
+}

@@ -1,0 +1,24 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.0"
+  },
+  "targets": {
+    ".NETCoreApp,Version=v2.0": {
+      "Newtonsoft.Json/12.0.3": {
+        "runtime": {
+          "lib/netstandard1.3/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.3.0",
+            "fileVersion": "12.0.3.23909"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Newtonsoft.Json/12.0.3": {
+      "type": "package",
+      "serviceable": false,
+      "sha512": string.Empty
+    }
+  }
+}

@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="_091114" xml:space="preserve">
+    <value>Die übergebene Auftragsnummer ist unbekannt.</value>
+  </data>
+  <data name="_091204" xml:space="preserve">
+    <value>Die Schlüssellänge des bankfachlichen Signaturschlüssels wird vom Kreditinstitut nicht unterstützt.</value>
+  </data>
+  <data name="_091303" xml:space="preserve">
+    <value>Die Vorabprüfung des Kontobetragslimits ist fehlgeschlagen.</value>
+  </data>
+  <data name="_091209" xml:space="preserve">
+    <value>Das Zertifikat ist noch nicht gültig, da das Gültig-ab-Datum noch nicht erreicht ist.</value>
+  </data>
+  <data name="_091116" xml:space="preserve">
+    <value>Bei der Verarbeitung des EBICS-Requests sind sonstige fachliche Fehler aufgetreten.</value>
+  </data>
+  <data name="_091206" xml:space="preserve">
+    <value>Die Schlüssellänge des Verschlüsselungsschlüssels wird vom Kreditinstitut nicht unterstützt.</value>
+  </data>
+  <data name="_091203" xml:space="preserve">
+    <value>Die Algorithmenversion des Verschlüsselungsschlüssels wird vom Kreditinstitut nicht unterstützt.</value>
+  </data>
+  <data name="_091306" xml:space="preserve">
+    <value>Der Unterzeichner hat den vorliegenden Auftrag bereits unterschrieben.</value>
+  </data>
+  <data name="_090004" xml:space="preserve">
+    <value>Die übergebenen Auftragsdaten entsprechen nicht dem festgelegten Format.</value>
+  </data>
+  <data name="_011301" xml:space="preserve">
+    <value>Die optionale Vorabprüfung wird vom Banksystem nicht unterstützt.</value>
+  </data>
+  <data name="_090005" xml:space="preserve">
+    <value>Für die gewählte Download-Auftragsart sind derzeit keine Daten verfügbar.</value>
+  </data>
+  <data name="_091002" xml:space="preserve">
+    <value>Das Banksystem unterstützt für den vorliegenden Auftrag nur unsignierte Download-Auftragsdaten.</value>
+  </data>
+  <data name="_091214" xml:space="preserve">
+    <value>Die Zertifikatskette kann wegen einer unbekannten Zertifizierungsinstanz (Certificate Authority (CA)) nicht verifiziert werden.</value>
+  </data>
+  <data name="_091211" xml:space="preserve">
+    <value>Bei der Prüfung des Zertifikatsalgorithmus (Signaturalgorithmus) wurde festgestellt, dass das Zertifikat nicht für den aktuellen Einsatzzweck ausgegeben wurde.</value>
+  </data>
+  <data name="_091302" xml:space="preserve">
+    <value>Die Vorabprüfung der Kontoberechtigung ist fehlgeschlagen.</value>
+  </data>
+  <data name="_091217" xml:space="preserve">
+    <value>Im Falle von Zertifikaten unterstützt das Banksystem ausschließlich die Auswertung von X509-Daten.</value>
+  </data>
+  <data name="_090006" xml:space="preserve">
+    <value>Das Banksystem unterstützt für den konkreten Geschäftsvorfall des Auftrags die gewählte Auftragsanfrage nicht.</value>
+  </data>
+  <data name="_091305" xml:space="preserve">
+    <value>Der Zustand eines Unterzeichners des vorliegenden Auftrags ist nicht zulässig.</value>
+  </data>
+  <data name="_091105" xml:space="preserve">
+    <value>Das Banksystem unterstützt Recovery nicht.</value>
+  </data>
+  <data name="_091208" xml:space="preserve">
+    <value>Das Zertifikat ist abgelaufen und daher ungültig.</value>
+  </data>
+  <data name="_091202" xml:space="preserve">
+    <value>Die Algorithmenversion des Authentifikationsschlüssels wird vom Kreditinstitut nicht unterstützt.</value>
+  </data>
+  <data name="_091205" xml:space="preserve">
+    <value>Die Schlüssellänge des Authentifikationsschlüssels wird vom Kreditinstitut nicht unterstützt.</value>
+  </data>
+  <data name="_090003" xml:space="preserve">
+    <value>Der Teilnehmer ist nicht zur Einreichung des Auftrags mit der gewählten Auftragsart befugt.</value>
+  </data>
+  <data name="_091207" xml:space="preserve">
+    <value>Das Banksystem unterstützt nicht die Auswertung von X.509-Daten.</value>
+  </data>
+  <data name="_091301" xml:space="preserve">
+    <value>Die Verifikation einer EU ist fehlgeschlagen. Bei asynchron durchgeführten Aufträgen kann der Fehler während der Vorabprüfung auftreten.</value>
+  </data>
+  <data name="_091111" xml:space="preserve">
+    <value>Die übergebenen EU-Dateien entsprechen nicht dem festgelegten Format.</value>
+  </data>
+  <data name="_091210" xml:space="preserve">
+    <value>Bei der Zertifikatsprüfung wurde festgestellt, dass das Zertifikat nicht für den aktuellen Einsatzzweck ausgegeben wurde.</value>
+  </data>
+  <data name="_091201" xml:space="preserve">
+    <value>Die Algorithmenversion des bankfachlichen Signaturschlüssels wird vom Kreditinstitut nicht unterstützt.</value>
+  </data>
+  <data name="_091304" xml:space="preserve">
+    <value>Ein Unterzeichner des vorliegenden Auftrags ist kein gültiger Teilnehmer.</value>
+  </data>
+  <data name="_091001" xml:space="preserve">
+    <value>Das Banksystem unterstützt für den vorliegenden Auftrag nur bankfachlich signierte Download-Auftragsdaten.</value>
+  </data>
+  <data name="_091218" xml:space="preserve">
+    <value>Während eines Requests des Schlüsselmamagements wurde festgestellt, dass der Schlüssel oder das Zertifikat (die Authentifikation oder die Verschlüsselung betreffend) gleich dem Schlüssel/Zertifikat für die EU ist.</value>
+  </data>
+  <data name="_091115" xml:space="preserve">
+    <value>Die übergebene Auftragsnummer ist bereits vorhanden.</value>
+  </data>
+  <data name="_091219" xml:space="preserve">
+    <value>Der Bankrechner ist nicht in der Lage, das Zertifikat (EU Schlüssel) den vorher mitgeteilten Informationen automatisch zuzuodnen.</value>
+  </data>
+  <data name="_091213" xml:space="preserve">
+    <value>Bei der Zertifikatsprüfung wurde festgestellt, dass die Certificate Trust List (CTL) nicht gültig ist, da sie beispielsweise abgelaufen ist.</value>
+  </data>
+</root>

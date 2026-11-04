@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BodoMoneyTransfer.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ArchivePath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">d:\temp\BodoMoneyTransfer\Archive</Value>
+    </Setting>
+    <Setting Name="ErrorMailer" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">robert.leisner@bodoconsult.de</Value>
+    </Setting>
+    <Setting Name="QuotationFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">d:\tmp\BodoMoneyTransfer\quotation.json</Value>
+    </Setting>
+    <Setting Name="DBConn" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=192.168.10.125;Initial Catalog=BodoMoneyTransfer;Trusted_Connection=True;</Value>
+    </Setting>
+    <Setting Name="OriginalArchivePath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">d:\temp\BodoMoneyTransfer\Originals</Value>
+    </Setting>
+    <Setting Name="BtfTransferDay" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

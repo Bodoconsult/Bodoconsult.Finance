@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?><Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.052.001.02" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:camt.052.001.02 camt.052.001.02.xsd">
+  <BkToCstmrAcctRpt>
+    <GrpHdr>
+      <MsgId>052D2019-07-05T06:02:26.0N190000014</MsgId>
+      <CreDtTm>2019-07-05T06:02:21.0+02:00</CreDtTm>
+      <MsgPgntn>
+          <PgNb>001</PgNb>
+        <LastPgInd>true</LastPgInd>
+      </MsgPgntn>
+    </GrpHdr>
+    <Rpt>
+      <Id>0185C522019070506022607</Id>
+      <CreDtTm>2019-07-05T06:02:21.0+02:00</CreDtTm>
+      <Acct>
+        <Id>
+          <IBAN>DE39701696190100046370</IBAN>
+        </Id>
+        <Ccy>EUR</Ccy>
+        <Ownr>
+          <Nm>BODO PRIVATE Verm gensverw. KG</Nm>
+        </Ownr>
+        <Svcr>
+          <FinInstnId>
+            <BIC>GENODEF1ZOR</BIC>
+            <Nm>Raiffeisenbank</Nm>
+            <Othr>
+              <Id>DE 131204290</Id>
+              <Issr>UmsStId</Issr>
+            </Othr>
+          </FinInstnId>
+        </Svcr>
+      </Acct>
+      <Bal>
+        <Tp>
+          <CdOrPrtry>
+            <Cd>PRCD</Cd>
+          </CdOrPrtry>
+        </Tp>
+        <Amt Ccy="EUR">9959.71</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt>
+          <Dt>2019-07-05</Dt>
+        </Dt>
+      </Bal>
+      <Bal>
+        <Tp>
+          <CdOrPrtry>
+            <Cd>CLBD</Cd>
+          </CdOrPrtry>
+        </Tp>
+        <Amt Ccy="EUR">10434.06</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt>
+          <Dt>2019-07-05</Dt>
+        </Dt>
+      </Bal>
+      <Ntry>
+        <Amt Ccy="EUR">474.35</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts>BOOK</Sts>
+        <BookgDt>
+          <Dt>2019-07-05</Dt>
+        </BookgDt>
+        <ValDt>
+          <Dt>2019-07-04</Dt>
+        </ValDt>
+        <AcctSvcrRef>2019070500483768000</AcctSvcrRef>
+            <BkTxCd>
+              <Prtry>
+                <Cd>NMSC+303+00925</Cd>
+                 <Issr>DK</Issr>
+              </Prtry>
+            </BkTxCd>
+        <NtryDtls>
+          <TxDtls>
+            <BkTxCd>
+              <Prtry>
+                <Cd>NMSC+303+00925</Cd>
+                 <Issr>DK</Issr>
+              </Prtry>
+            </BkTxCd>
+            <RltdPties>
+              <Dbtr>
+                <Nm>RBK ZORNEDING EG</Nm>
+              </Dbtr>
+              <DbtrAcct>
+                <Id>
+                <Othr>  
+                  <Id>  701696190039915001</Id>
+                  <SchmeNm>  
+                    <Cd>BBAN</Cd>  
+                  </SchmeNm>  
+                </Othr>  
+                </Id>
+              </DbtrAcct>
+            </RltdPties>
+            <RmtInf>
+              <Ustrd>WP-ERTR GNISGUTSCHRIFT DIVIDENDE WKN A1EWXA / DE000A1EWXA4 ABO INVEST AG DEPOTNR.: 619104637 MENGE 64428,0000 KAPST 161,07 SOLZ 8,86 ABRECHN</Ustrd>
+              <Ustrd>.NR. 68540443660</Ustrd>
+            </RmtInf>
+          </TxDtls>
+        </NtryDtls>
+         <AddtlNtryInf>EFFEKTEN</AddtlNtryInf> 
+      </Ntry>
+    </Rpt>
+  </BkToCstmrAcctRpt>
+</Document>

@@ -1,0 +1,19 @@
+<Project>
+	<PropertyGroup>
+		<Version>3.0.0</Version>
+		
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<PackageOutputPath>..\..\packages\</PackageOutputPath>
+		<PackageProjectUrl>https://github.com/Bodoconsult/Bodoconsult.Finance</PackageProjectUrl>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+
+		<Company>Bodoconsult EDV-Dienstleistungen GmbH</Company>
+		<Copyright>Bodoconsult EDV-Dienstleistungen GmbH</Copyright>
+		<Authors>Robert Leisner</Authors>
+
+		<RepositoryUrl>https://github.com/Bodoconsult/Bodoconsult.Finance</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<NeutralLanguage>en</NeutralLanguage>
+	</PropertyGroup>
+</Project>

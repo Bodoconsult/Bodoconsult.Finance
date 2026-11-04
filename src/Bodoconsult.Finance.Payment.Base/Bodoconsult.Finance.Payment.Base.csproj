@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+		<Deterministic>False</Deterministic>
+		<Nullable>disable</Nullable>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
+		<!--<RepositoryUrl>https://github.com/RobertLeisner/Finance</RepositoryUrl>-->
+		<PackageId>Bodoconsult.Finance.Base</PackageId>
+		<PackageTags>Finance payment</PackageTags>
+		<Description>Base library for finance and payment handling</Description>
+		<PackageReleaseNotes>Minor refactoring</PackageReleaseNotes>
+
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+
+		<!-- PDB Configuration -->
+		<DebugType>portable</DebugType>
+		<DebugSymbols>true</DebugSymbols>
+		<EmbedAllSources>false</EmbedAllSources>
+
+		<!-- Allow PDBs in the main package -->
+		<!--
+		<AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>-->
+
+		<!-- Generate symbols package (.snupkg) -->
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<!-- Modern symbols package format -->
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Bodoconsult.Pdf" Version="1.0.11" />
+		<PackageReference Include="System.Drawing.Common" Version="10.0.13" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\..\doc\Bodoconsult.Finance.Payment.Base\LICENSE.md" Link="LICENSE.md">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Include="..\..\doc\Bodoconsult.Finance.Payment.Base\README.md" Link="README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,24 @@
+
+https://sandbox.finapi.io
+
+Download SDK (for csharp)
+
+Extract ZIP
+
+Go to src folder in the extract
+
+Copy content of folders Api and Model to the respective folders in the project
+
+Copy content of folders Client only to the respective folders in the project. Reason: ApiClient needs adjustemenst for cient handling
+
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
+            ServicePointManager.ServerCertificateValidationCallback +=
+                (sender, certificate, chain, sslPolicyErrors) => true;
+
+            Configuration = Client.Configuration.Default;
+            RestClient = new RestClient("https://localhost");
+
+Adjust nameespace for whole project (takes time!!)
+
+Files ApiClient, ApiExecption and Configuration are adjusted

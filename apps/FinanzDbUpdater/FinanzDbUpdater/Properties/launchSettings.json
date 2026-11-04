@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "FinanzDbUpdater": {
+      "commandName": "Project",
+      "commandLineArgs": "4"
+    }
+  }
+}

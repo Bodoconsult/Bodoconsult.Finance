@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?><Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.052.001.02" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:camt.052.001.02 camt.052.001.02.xsd">
+  <BkToCstmrAcctRpt>
+    <GrpHdr>
+      <MsgId>052D2019-07-08T06:03:07.0N190000015</MsgId>
+      <CreDtTm>2019-07-08T06:02:59.0+02:00</CreDtTm>
+      <MsgPgntn>
+          <PgNb>001</PgNb>
+        <LastPgInd>true</LastPgInd>
+      </MsgPgntn>
+    </GrpHdr>
+    <Rpt>
+      <Id>0185C522019070806030787</Id>
+      <CreDtTm>2019-07-08T06:02:59.0+02:00</CreDtTm>
+      <Acct>
+        <Id>
+          <IBAN>DE39701696190100046370</IBAN>
+        </Id>
+        <Ccy>EUR</Ccy>
+        <Ownr>
+          <Nm>BODO PRIVATE Verm gensverw. KG</Nm>
+        </Ownr>
+        <Svcr>
+          <FinInstnId>
+            <BIC>GENODEF1ZOR</BIC>
+            <Nm>Raiffeisenbank</Nm>
+            <Othr>
+              <Id>DE 131204290</Id>
+              <Issr>UmsStId</Issr>
+            </Othr>
+          </FinInstnId>
+        </Svcr>
+      </Acct>
+      <Bal>
+        <Tp>
+          <CdOrPrtry>
+            <Cd>PRCD</Cd>
+          </CdOrPrtry>
+        </Tp>
+        <Amt Ccy="EUR">10434.06</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt>
+          <Dt>2019-07-08</Dt>
+        </Dt>
+      </Bal>
+      <Bal>
+        <Tp>
+          <CdOrPrtry>
+            <Cd>CLBD</Cd>
+          </CdOrPrtry>
+        </Tp>
+        <Amt Ccy="EUR">13037.99</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt>
+          <Dt>2019-07-08</Dt>
+        </Dt>
+      </Bal>
+      <Ntry>
+        <Amt Ccy="EUR">2603.93</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts>BOOK</Sts>
+        <BookgDt>
+          <Dt>2019-07-08</Dt>
+        </BookgDt>
+        <ValDt>
+          <Dt>2019-07-08</Dt>
+        </ValDt>
+        <AcctSvcrRef>2019070800043781000</AcctSvcrRef>
+            <BkTxCd>
+              <Prtry>
+                <Cd>NMSC+303+00925</Cd>
+                 <Issr>DK</Issr>
+              </Prtry>
+            </BkTxCd>
+        <NtryDtls>
+          <TxDtls>
+            <BkTxCd>
+              <Prtry>
+                <Cd>NMSC+303+00925</Cd>
+                 <Issr>DK</Issr>
+              </Prtry>
+            </BkTxCd>
+            <RltdPties>
+              <Dbtr>
+                <Nm>RBK ZORNEDING EG</Nm>
+              </Dbtr>
+              <DbtrAcct>
+                <Id>
+                <Othr>  
+                  <Id>  701696190039915001</Id>
+                  <SchmeNm>  
+                    <Cd>BBAN</Cd>  
+                  </SchmeNm>  
+                </Othr>  
+                </Id>
+              </DbtrAcct>
+            </RltdPties>
+            <RmtInf>
+              <Ustrd>WP-ERTR GNISGUTSCHRIFT DIVIDENDE WKN 605283 / DE0006052830 MASCH.BERT.HER. O.N. VZO DEPOTNR.: 619004637 MENGE 235,0000 KAPST 884,19 SOLZ 48,</Ustrd>
+              <Ustrd>63 ABRECHN.NR. 68643065500</Ustrd>
+            </RmtInf>
+          </TxDtls>
+        </NtryDtls>
+         <AddtlNtryInf>EFFEKTEN</AddtlNtryInf> 
+      </Ntry>
+    </Rpt>
+  </BkToCstmrAcctRpt>
+</Document>

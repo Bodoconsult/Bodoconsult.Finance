@@ -1,0 +1,31 @@
+﻿
+				}
+				
+
+
+
+				
+-- Einzelüberweisung
+				
+				BACSegment oHKUEB = DDBAC.CreateTransactionSegment("HKUEB");
+				DDBAC.SetAuftraggeberKontoverbindung (oHKUEB);
+
+				// Hier wird die Kontoverbindung des Empfängers eingestellt. Für das
+				// Empfängerkonto können wir kein Unterkontomerkmal wissen, und geben deshalb
+				// auch keines an.
+
+				oHKUEB["EmpfaengerKontoverbindung1", "Kontonummer1"] = txtEmpfaengerKonto.Text;
+				oHKUEB["EmpfaengerKontoverbindung1", "Laenderkennzeichen1"] = 280;
+				oHKUEB["EmpfaengerKontoverbindung1", "Kreditinstitutcode1"] = txtEmpfaengerBLZ.Text;
+
+				oHKUEB["EmpfaengerNameEins1",1] = txtEmpfaengerName.Text;
+				oHKUEB["Zahlungsbetrag1", "Wert1"] = txtBetrag.Text;
+				oHKUEB["Zahlungsbetrag1", "Waehrung1"] = "EUR";
+				oHKUEB["Textschluessel1",1] = 51;
+				oHKUEB["Textschluesselergaenzung1",1] = string.Empty;
+
+				oHKUEB["Verwendungszweck1", "Zeile1"] = txtVerwendungszweck1.Text;
+				oHKUEB["Verwendungszweck1", "Zeile2"] = txtVerwendungszweck2.Text;
+
+				IBACMessage oMessage = DDBAC.Dialog.ExecuteSegment(oHKUEB);
+				DDBAC.ReportResult (oMessage);

@@ -1,0 +1,5 @@
+[*.cs]
+file_header_template = Copyright (c) Bodoconsult EDV-Dienstleistungen GmbH.  All rights reserved.
+
+# IDE0063: 'using' statement can be simplified
+csharp_prefer_simple_using_statement = false:suggestion

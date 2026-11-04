@@ -1,0 +1,137 @@
+﻿[
+	{
+		"$type": "Bodoconsult.Finance.Payment.Base.Models.SafekeepingItem, Bodoconsult.Finance.Payment.Base",
+		"Wkn": "A0LEQL",
+		"Isin": null,
+		"Title": "ISHSII-ASIA PROP.YLD DLD",
+		"Quantity": 2371.0,
+		"PricePerUnitAmount": 20.04,
+		"PricePerUnitCurrencyCode": "EUR"
+	},
+	{
+		"$type": "Bodoconsult.Finance.Payment.Base.Models.SafekeepingItem, Bodoconsult.Finance.Payment.Base",
+		"Wkn": "263530",
+		"Isin": null,
+		"Title": "ISH.STOX.EUROPE 600 U.ETF",
+		"Quantity": 3231.0,
+		"PricePerUnitAmount": 35.755,
+		"PricePerUnitCurrencyCode": "EUR"
+	},
+	{
+		"$type": "Bodoconsult.Finance.Payment.Base.Models.SafekeepingItem, Bodoconsult.Finance.Payment.Base",
+		"Wkn": "605283",
+		"Isin": null,
+		"Title": "MASCH.BERT.HER. O.N. VZO",
+		"Quantity": 235.0,
+		"PricePerUnitAmount": 209.0,
+		"PricePerUnitCurrencyCode": "EUR"
+	},
+	{
+		"$type": "Bodoconsult.Finance.Payment.Base.Models.SafekeepingItem, Bodoconsult.Finance.Payment.Base",
+		"Wkn": "A0LEW6",
+		"Isin": null,
+		"Title": "ISHSII-US PROP.YLD DLDIS",
+		"Quantity": 2015.0,
+		"PricePerUnitAmount": 20.425,
+		"PricePerUnitCurrencyCode": "EUR"
+	},
+	{
+		"$type": "Bodoconsult.Finance.Payment.Base.Models.SafekeepingItem, Bodoconsult.Finance.Payment.Base",
+		"Wkn": "982280",
+		"Isin": null,
+		"Title": "PRECIOUS W.HLDG NA  SF  1",
+		"Quantity": 1975.0,
+		"PricePerUnitAmount": 0.0,
+		"PricePerUnitCurrencyCode": null
+	},
+	{
+		"$type": "Bodoconsult.Finance.Payment.Base.Models.SafekeepingItem, Bodoconsult.Finance.Payment.Base",
+		"Wkn": "A0YEDR",
+		"Isin": null,
+		"Title": "ISHSVII-C.MSCI P.XJPDLACC",
+		"Quantity": 234.0,
+		"PricePerUnitAmount": 122.16,
+		"PricePerUnitCurrencyCode": "EUR"
+	},
+	{
+		"$type": "Bodoconsult.Finance.Payment.Base.Models.SafekeepingItem, Bodoconsult.Finance.Payment.Base",
+		"Wkn": "609500",
+		"Isin": null,
+		"Title": "ENCAVIS AG  INH. O.N.",
+		"Quantity": 5565.0,
+		"PricePerUnitAmount": 17.06,
+		"PricePerUnitCurrencyCode": "EUR"
+	},
+	{
+		"$type": "Bodoconsult.Finance.Payment.Base.Models.SafekeepingItem, Bodoconsult.Finance.Payment.Base",
+		"Wkn": "A1H44S",
+		"Isin": null,
+		"Title": "IIV MIKROFINANZFONDSI",
+		"Quantity": 35.0,
+		"PricePerUnitAmount": 965.0,
+		"PricePerUnitCurrencyCode": "EUR"
+	},
+	{
+		"$type": "Bodoconsult.Finance.Payment.Base.Models.SafekeepingItem, Bodoconsult.Finance.Payment.Base",
+		"Wkn": "A1EWXA",
+		"Isin": null,
+		"Title": "ABO INVEST AG",
+		"Quantity": 64428.0,
+		"PricePerUnitAmount": 2.12,
+		"PricePerUnitCurrencyCode": "EUR"
+	},
+	{
+		"$type": "Bodoconsult.Finance.Payment.Base.Models.SafekeepingItem, Bodoconsult.Finance.Payment.Base",
+		"Wkn": "A111X9",
+		"Isin": null,
+		"Title": "IS C.MSCI EMIMI U.ETF DLA",
+		"Quantity": 1000.0,
+		"PricePerUnitAmount": 26.393,
+		"PricePerUnitCurrencyCode": "EUR"
+	},
+	{
+		"$type": "Bodoconsult.Finance.Payment.Base.Models.SafekeepingItem, Bodoconsult.Finance.Payment.Base",
+		"Wkn": "580265",
+		"Isin": null,
+		"Title": "GREEN EFFECTS NAI-WERTE",
+		"Quantity": 190.0,
+		"PricePerUnitAmount": 306.5,
+		"PricePerUnitCurrencyCode": "EUR"
+	},
+	{
+		"$type": "Bodoconsult.Finance.Payment.Base.Models.SafekeepingItem, Bodoconsult.Finance.Payment.Base",
+		"Wkn": "A0PL0R",
+		"Isin": null,
+		"Title": "ALCEDA S.FOC.GLOB.ZT.UND.",
+		"Quantity": 277.0,
+		"PricePerUnitAmount": 0.0,
+		"PricePerUnitCurrencyCode": null
+	},
+	{
+		"$type": "Bodoconsult.Finance.Payment.Base.Models.SafekeepingItem, Bodoconsult.Finance.Payment.Base",
+		"Wkn": "EWG0LD",
+		"Isin": null,
+		"Title": "BOERSE STUTTG. EUWAX-GOLD",
+		"Quantity": 200.0,
+		"PricePerUnitAmount": 53.01,
+		"PricePerUnitCurrencyCode": "EUR"
+	},
+	{
+		"$type": "Bodoconsult.Finance.Payment.Base.Models.SafekeepingItem, Bodoconsult.Finance.Payment.Base",
+		"Wkn": "A0HGV5",
+		"Isin": null,
+		"Title": "IS EUR.PROP.YI.U.ETF EOD",
+		"Quantity": 500.0,
+		"PricePerUnitAmount": 36.255,
+		"PricePerUnitCurrencyCode": "EUR"
+	},
+	{
+		"$type": "Bodoconsult.Finance.Payment.Base.Models.SafekeepingItem, Bodoconsult.Finance.Payment.Base",
+		"Wkn": "830350",
+		"Isin": null,
+		"Title": "TAG IMMOBILIEN AG",
+		"Quantity": 475.0,
+		"PricePerUnitAmount": 26.26,
+		"PricePerUnitCurrencyCode": "EUR"
+	}
+]

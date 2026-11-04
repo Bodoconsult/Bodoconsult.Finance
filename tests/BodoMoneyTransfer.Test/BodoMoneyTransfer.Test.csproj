@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows10.0.17763</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <RootNamespace>BodoMoneyTransfer.Test</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="appSettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appSettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="log4net" Version="3.5.0" />
+    <PackageReference Include="NUnit" Version="5.0.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="6.3.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.11.0" />
+    <PackageReference Include="System.Drawing.Common" Version="10.0.13" />
+    <PackageReference Include="Bodoconsult.App" Version="1.0.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\apps\BodoMoneyTransfer\BodoMoneyTransfer.Dal\BodoMoneyTransfer.Dal.csproj" />
+    <ProjectReference Include="..\..\apps\BodoMoneyTransfer\BodoMoneyTransfer\BodoMoneyTransfer.csproj" />
+    <ProjectReference Include="..\..\src\Bodoconsult.Finance.Payment.Banking\Bodoconsult.Finance.Payment.Banking.csproj" />
+    <ProjectReference Include="..\..\src\Bodoconsult.Finance.Payment.Base\Bodoconsult.Finance.Payment.Base.csproj" />
+    <ProjectReference Include="..\BaseTests\BaseTests.csproj" />
+  </ItemGroup>
+
+</Project>

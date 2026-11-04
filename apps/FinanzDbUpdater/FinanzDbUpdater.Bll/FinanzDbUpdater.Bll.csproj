@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0-windows10.0.17763</TargetFramework>
+		<GenerateAssemblyInfo>True</GenerateAssemblyInfo>
+		<Deterministic>False</Deterministic>
+		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+		<GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+		<!--<CodeAnalysisRuleSet>codeanalysis.ruleset</CodeAnalysisRuleSet>-->
+		<Nullable>disable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Bodoconsult.App" Version="1.0.11" />
+		<PackageReference Include="Bodoconsult.Database" Version="1.0.11" />
+		<PackageReference Include="Bodoconsult.Database.SqlClient" Version="1.0.11" />
+		<PackageReference Include="Bodoconsult.Pdf" Version="1.0.11" />
+		<PackageReference Include="HtmlAgilityPack" Version="1.13.1" />
+		<PackageReference Include="MathNet.Numerics" Version="5.0.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\src\Bodoconsult.Finance.Payment.Base\Bodoconsult.Finance.Payment.Base.csproj" />
+		<ProjectReference Include="..\..\..\src\Bodoconsult.Finance.Portfolio\Bodoconsult.Finance.Portfolio.csproj" />
+		<ProjectReference Include="..\..\..\src\Bodoconsult.Finance.Quotations\Bodoconsult.Finance.Quotations.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Properties\" />
+	</ItemGroup>
+
+</Project>

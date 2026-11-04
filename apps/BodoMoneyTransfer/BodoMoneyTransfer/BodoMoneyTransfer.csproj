@@ -1,0 +1,70 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0-windows10.0.17763</TargetFramework>
+    <GenerateAssemblyInfo>True</GenerateAssemblyInfo>
+    <Deterministic>False</Deterministic>
+    <RootNamespace>BodoMoneyTransfer</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="MoneyTransferPainFile.cs" />
+    <Compile Remove="MoneyTransferSepa.cs" />
+    <Compile Remove="Properties\Settings.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="app.config" />
+    <None Remove="appSettings.json" />
+    <None Remove="log4net.config" />
+    <None Remove="Properties\Settings.settings" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appSettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <!--<ItemGroup>
+    <Content Include="..\..\Bodoconsult.Finance.Payment.Banking\Bodoconsult.Finance.Payment.Banking\lib\ICSharpCode.SharpZipLib.dll" Link="ICSharpCode.SharpZipLib.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>-->
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Identity" Version="1.21.0" />
+    <PackageReference Include="log4net" Version="3.5.0" />
+    <PackageReference Include="System.Drawing.Common" Version="10.0.13" />
+    <PackageReference Include="Bodoconsult.App" Version="1.0.11" />
+    <PackageReference Include="Bodoconsult.App.Windows" Version="1.0.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BodoMoneyTransfer.Dal\BodoMoneyTransfer.Dal.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Program.cs">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Verteilen.bat">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+
+  <ItemGroup>
+	  <Reference Include="ICSharpCode.SharpZipLib.dll" Pack="true" PackagePath="lib">
+		  <HintPath>lib\ICSharpCode.SharpZipLib.dll</HintPath>
+	  </Reference>
+  </ItemGroup>
+
+</Project>

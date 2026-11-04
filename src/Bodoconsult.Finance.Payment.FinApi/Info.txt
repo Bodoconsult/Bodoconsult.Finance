@@ -1,0 +1,43 @@
+﻿public async void getData(Action<IRestResponse> onDone)
+{           
+    RestRequest request = new RestRequest("getData", Method.GET);
+
+    //Execute ASYNC the rest request
+    m_Client.ExecuteAsync (request, response =>
+    {
+        //Do my stuff with headers.
+        string lCookie = response.Headers.ToList().Find(x => x.Name == "Cookie").Value.ToString();
+
+        // Execute the onDone action with the received response
+        onDone(response);
+    });
+
+}
+
+
+public async Task<IRestResponse> getData()
+{           
+    RestRequest request = new RestRequest("getData", Method.GET);
+
+    var cancellationTokenSource = new CancellationTokenSource();
+
+    var restResponse = await client.ExecuteTaskAsync(request, cancellationTokenSource.Token);
+
+    //Do my stuff with headers.
+    string lCookie = restResponse.Headers.ToList().Find(x => x.Name == "Cookie").Value.ToString();
+
+    return restResponse;
+}
+
+
+https://www.c-sharpcorner.com/UploadFile/b1df45/web-api-self-hosting-using-windows-service/
+
+https://developer.okta.com/blog/2019/04/10/build-rest-api-with-aspnetcore
+
+https://damienbod.com/2013/11/13/signalr-messaging-a-complete-client-with-a-console-application/
+
+https://www.codeproject.com/articles/28998/how-to-get-notifications-from-a-net-web-service
+
+https://www.codeguru.com/columns/experts/how-to-push-data-from-server-to-client-using-signalr.htm
+
+

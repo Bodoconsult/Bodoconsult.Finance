@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0-windows10.0.17763</TargetFramework>
+	  <GenerateAssemblyInfo>True</GenerateAssemblyInfo>
+	  <Deterministic>False</Deterministic>
+	  <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+	  <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+	  <Nullable>disable</Nullable>
+    <!--<CodeAnalysisRuleSet>codeanalysis.ruleset</CodeAnalysisRuleSet>-->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="appSettings.json" />
+    <None Remove="log4net.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appSettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bodoconsult.App" Version="1.0.11" />
+    <PackageReference Include="Bodoconsult.App.Windows" Version="1.0.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FinanzDbUpdater.Bll\FinanzDbUpdater.Bll.csproj" />
+  </ItemGroup>
+
+</Project>

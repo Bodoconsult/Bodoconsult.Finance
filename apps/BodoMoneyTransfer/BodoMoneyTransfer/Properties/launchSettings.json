@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "BodoMoneyTransfer": {
+      "commandName": "Project",
+      "commandLineArgs": "\\u"
+    }
+  }
+}
