@@ -161,15 +161,7 @@ public class PaymentHandler : IPaymentHandler
             // *****************************
 
             // Save quotations
-            if (File.Exists(AppGlobals.QuotationFileName))
-            {
-                File.Delete(AppGlobals.QuotationFileName);
-            }
-            if (AppGlobals.SafekeepingItems.Count > 0)
-            {
-                ArgumentException.ThrowIfNullOrEmpty(AppGlobals.QuotationFileName);
-                JsonHelper.SaveAsFile(AppGlobals.QuotationFileName, AppGlobals.SafekeepingItems);
-            }
+            SaveSafeKeepingsFile();
 
             SendState("Job done!");
         }
@@ -186,6 +178,30 @@ public class PaymentHandler : IPaymentHandler
     }
 
     /// <summary>
+    /// Save the safekeeping items to a JSON file
+    /// </summary>
+    public void SaveSafeKeepingsFile()
+    {
+        if (string.IsNullOrEmpty(AppGlobals.QuotationFileName))
+        {
+            AppGlobals.Logger?.LogWarning("No valid path given for AppGlobals.QuotationFileName");
+            return;
+        }
+
+        if (AppGlobals.SafekeepingItems.Count <= 0)
+        {
+            return;
+        }
+
+        if (File.Exists(AppGlobals.QuotationFileName))
+        {
+            File.Delete(AppGlobals.QuotationFileName);
+        }
+
+        JsonHelper.SaveAsFile(AppGlobals.QuotationFileName, AppGlobals.SafekeepingItems);
+    }
+
+    /// <summary>
     /// Send all error messages in one mail
     /// </summary>
     public void SendErrorMails()
@@ -199,7 +215,6 @@ public class PaymentHandler : IPaymentHandler
 
         foreach (var message in ErrorMessages.OrderByDescending(x => x.ErrorCode))
         {
-
             msg.Append($"<h1>Banking-Message {message.ErrorCode1} // {message.ErrorCode}</h1><p>{message.Message}</p>");
 
             if (!string.IsNullOrEmpty(message.ApprovalUrl))
@@ -250,6 +265,6 @@ public class PaymentHandler : IPaymentHandler
 
     private void SendState(string message)
     {
-        AppGlobals.StatusMessageDelegate.Invoke(message);
+        AppGlobals.StatusMessageDelegate?.Invoke(message);
     }
 }
