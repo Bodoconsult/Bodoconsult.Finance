@@ -159,11 +159,6 @@ public class PaymentHandler : IPaymentHandler
             // *****************************
             // Finalize
             // *****************************
-
-            // Save quotations
-            SaveSafeKeepingsFile();
-
-            SendState("Job done!");
         }
         catch (Exception e)
         {
@@ -182,6 +177,8 @@ public class PaymentHandler : IPaymentHandler
     /// </summary>
     public void SaveSafeKeepingsFile()
     {
+        SendState("Save safekeepings...");
+
         if (string.IsNullOrEmpty(AppGlobals.QuotationFileName))
         {
             AppGlobals.Logger?.LogWarning("No valid path given for AppGlobals.QuotationFileName");

@@ -102,6 +102,7 @@ public class BodoMoneyTransferService : IApplicationService
 
         ph.StartJobCollector();
         ph.ProcessAllWorkloads();
+        ph.SaveSafeKeepingsFile();
 
         ph.SendErrorMails();
 
@@ -167,23 +168,20 @@ public class BodoMoneyTransferService : IApplicationService
 
         _isStopped = true;
 
+        //// Do all needed to stop youe app correctly
+        //var di = AppGlobals.DiContainer;
 
-
-        // Do all needed to stop youe app correctly
-        var di = AppGlobals.DiContainer;
-
-        try
-        {
-            // Stop performance logging
-            var perflog = di.Get<IPerformanceLoggerManager>();
-            perflog?.StopLogging();
-        }
-        catch (Exception e)
-        {
-            Debug.Print(e.Message);
-            //_appLogger.LogError($"Performance logging could not be stopped", new object[]{e});
-        }
-
+        //try
+        //{
+        //    // Stop performance logging
+        //    var perflog = di.Get<IPerformanceLoggerManager>();
+        //    perflog?.StopLogging();
+        //}
+        //catch (Exception e)
+        //{
+        //    Debug.Print(e.Message);
+        //    //_appLogger.LogError($"Performance logging could not be stopped", new object[]{e});
+        //}
 
         //var gms = di.Get<IGeneralAppManagementManager>();
         //var request = new EmptyBusinessTransactionRequestData();
@@ -221,7 +219,6 @@ public class BodoMoneyTransferService : IApplicationService
         {
             // Do nothing
         }
-
     }
 
     /// <summary>

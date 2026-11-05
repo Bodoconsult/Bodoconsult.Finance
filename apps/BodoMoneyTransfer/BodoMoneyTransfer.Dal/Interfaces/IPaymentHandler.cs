@@ -42,6 +42,11 @@ public interface IPaymentHandler
     void ProcessAllWorkloads();
 
     /// <summary>
+    /// Save the safekeeping items to a JSON file
+    /// </summary>
+    void SaveSafeKeepingsFile();
+
+    /// <summary>
     /// Send all error mails
     /// </summary>
     void SendErrorMails();

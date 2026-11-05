@@ -27,14 +27,12 @@ namespace BodoMoneyTransfer.Dal.Implementations;
 [SupportedOSPlatform("windows")]
 public class WorkloadHandler : IWorkloadHandler
 {
-    //private readonly IPaymentHandler _paymentHandler;
     private readonly IDataHandler _dataHandler;
     private readonly WorkloadTask _workload;
     private readonly IAppLoggerProxy _logger;
     private readonly IBodoMoneyTransferAppGlobals _appGlobals;
     private readonly ShowPaymentMessageDelegate _setImportantMessageDelegate;
-
-
+    
     /// <summary>
     /// Default ctor
     /// </summary>
@@ -72,6 +70,7 @@ public class WorkloadHandler : IWorkloadHandler
     /// </summary>
     public IList<SafekeepingItem> SafekeepingItems { get; } = new List<SafekeepingItem>();
 
+    /// <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</summary>
     public void Dispose()
     {
         PaymentService.Dispose();
@@ -82,7 +81,6 @@ public class WorkloadHandler : IWorkloadHandler
     /// </summary>
     public void CheckVopMoneyTransfers()
     {
-
         if (PaymentService is not IBankingService bankingService)
         {
             return;
@@ -105,7 +103,6 @@ public class WorkloadHandler : IWorkloadHandler
     /// </summary>
     public void RunMoneyTransfers()
     {
-
         if (!_workload.RunTransfers)
         {
             // SetStatus($"     -> MONEY TRANSFER {_workload.BankCode} / {_workload.AccountNr} NOT REQUIRED");
@@ -145,7 +142,6 @@ public class WorkloadHandler : IWorkloadHandler
 
             _logger.LogError(pm.Message);
             _setImportantMessageDelegate.Invoke(pm);
-
         }
     }
 
@@ -158,56 +154,55 @@ public class WorkloadHandler : IWorkloadHandler
     {
         var erg = PaymentService.TransferVopOutOut(ta);
 
-        if (erg.ErrorCode is >= 0 and < 4000)
-        {
-            foreach (var t in ta)
-            {
-                var message = t.Result;
-                // erfolgreich
-                if (message.ErrorCode is >= 0 and < 4000)
-                {
-                    var msg = $"SEPA-TransferTransaction {t.Guid}: {message.ErrorCode1} // {message.ErrorCode} // {message.Message}";
-
-                    if (!string.IsNullOrEmpty(msg))
-                    {
-                        _logger.LogDebug(msg);
-                    }
-
-                    _dataHandler.MoveTransactionToArchive(t.Guid);
-
-                    if (string.IsNullOrEmpty(t.ExecOnSuccess) == false)
-                    {
-                        _dataHandler.Exec(t.ExecOnSuccess);
-                    }
-
-                }
-                else // mit Fehlern
-                {
-                    var msg = $"SEPA-TransferTransaction {t.Guid}: {message.ErrorCode1} // {message.ErrorCode} // {message.Message}";
-
-                    if (!string.IsNullOrEmpty(msg))
-                    {
-
-                        var pm = new PaymentMessage
-                        {
-                            ErrorCode = 9900,
-                            Message = $"RunBankingTransfersForAnAccount:{PaymentService.PaymentContact.ToReadableString()}:Payment errors: {msg}"
-                        };
-
-                        _logger.LogError(pm.Message);
-                        _setImportantMessageDelegate.Invoke(pm);
-                    }
-
-                    if (string.IsNullOrEmpty(t.ExecOnFailure) == false)
-                    {
-                        _dataHandler.Exec(t.ExecOnFailure);
-                    }
-                }
-            }
-        }
-        else
+        if (erg.ErrorCode is < 0 or >= 4000)
         {
             throw new Exception(string.Format("HbciError:ErrorCode{1}/{2}:{0}", erg.Message, erg.ErrorCode, erg.ErrorCode1));
+        }
+
+        foreach (var t in ta)
+        {
+            var message = t.Result;
+            // erfolgreich
+            if (message.ErrorCode is >= 0 and < 4000)
+            {
+                var msg =
+                    $"SEPA-TransferTransaction {t.Guid}: {message.ErrorCode1} // {message.ErrorCode} // {message.Message}";
+
+                if (!string.IsNullOrEmpty(msg))
+                {
+                    _logger.LogDebug(msg);
+                }
+
+                _dataHandler.MoveTransactionToArchive(t.Guid);
+
+                if (string.IsNullOrEmpty(t.ExecOnSuccess) == false)
+                {
+                    _dataHandler.Exec(t.ExecOnSuccess);
+                }
+            }
+            else // mit Fehlern
+            {
+                var msg =
+                    $"SEPA-TransferTransaction {t.Guid}: {message.ErrorCode1} // {message.ErrorCode} // {message.Message}";
+
+                if (!string.IsNullOrEmpty(msg))
+                {
+                    var pm = new PaymentMessage
+                    {
+                        ErrorCode = 9900,
+                        Message =
+                            $"RunBankingTransfersForAnAccount:{PaymentService.PaymentContact.ToReadableString()}:Payment errors: {msg}"
+                    };
+
+                    _logger.LogError(pm.Message);
+                    _setImportantMessageDelegate.Invoke(pm);
+                }
+
+                if (string.IsNullOrEmpty(t.ExecOnFailure) == false)
+                {
+                    _dataHandler.Exec(t.ExecOnFailure);
+                }
+            }
         }
     }
 
@@ -220,51 +215,50 @@ public class WorkloadHandler : IWorkloadHandler
     {
         var erg = PaymentService.TransferVop(ta);
 
-        if (erg.ErrorCode is >= 0 and < 4000)
-        {
-            foreach (var t in ta)
-            {
-                var message = t.Result;
-                // erfolgreich
-                if (message.ErrorCode is >= 0 and < 4000)
-                {
-                    var msg = $"SEPA-TransferTransaction {t.Guid}: {message.ErrorCode1} // {message.ErrorCode} // {message.Message}";
-
-                    if (!string.IsNullOrEmpty(msg))
-                    {
-                        _logger.LogDebug(msg);
-                    }
-
-                    _dataHandler.SetTransactionStatus(t.Guid, TransactionState.DeliveredToBank);
-
-                }
-                else // mit Fehlern
-                {
-                    var msg = $"SEPA-TransferTransaction {t.Guid}: {message.ErrorCode1} // {message.ErrorCode} // {message.Message}";
-
-                    if (!string.IsNullOrEmpty(msg))
-                    {
-
-                        var pm = new PaymentMessage
-                        {
-                            ErrorCode = 9900,
-                            Message = $"RunBankingTransfersForAnAccount:{PaymentService.PaymentContact.ToReadableString()}:Payment errors: {msg}"
-                        };
-
-                        _logger.LogError(pm.Message);
-                        _setImportantMessageDelegate.Invoke(pm);
-                    }
-
-                    if (string.IsNullOrEmpty(t.ExecOnFailure) == false)
-                    {
-                        _dataHandler.Exec(t.ExecOnFailure);
-                    }
-                }
-            }
-        }
-        else
+        if (erg.ErrorCode is < 0 or >= 4000)
         {
             throw new Exception(string.Format("HbciError:ErrorCode{1}/{2}:{0}", erg.Message, erg.ErrorCode, erg.ErrorCode1));
+        }
+
+        foreach (var t in ta)
+        {
+            var message = t.Result;
+            // erfolgreich
+            if (message.ErrorCode is >= 0 and < 4000)
+            {
+                var msg =
+                    $"SEPA-TransferTransaction {t.Guid}: {message.ErrorCode1} // {message.ErrorCode} // {message.Message}";
+
+                if (!string.IsNullOrEmpty(msg))
+                {
+                    _logger.LogDebug(msg);
+                }
+
+                _dataHandler.SetTransactionStatus(t.Guid, TransactionState.DeliveredToBank);
+            }
+            else // mit Fehlern
+            {
+                var msg =
+                    $"SEPA-TransferTransaction {t.Guid}: {message.ErrorCode1} // {message.ErrorCode} // {message.Message}";
+
+                if (!string.IsNullOrEmpty(msg))
+                {
+                    var pm = new PaymentMessage
+                    {
+                        ErrorCode = 9900,
+                        Message =
+                            $"RunBankingTransfersForAnAccount:{PaymentService.PaymentContact.ToReadableString()}:Payment errors: {msg}"
+                    };
+
+                    _logger.LogError(pm.Message);
+                    _setImportantMessageDelegate.Invoke(pm);
+                }
+
+                if (string.IsNullOrEmpty(t.ExecOnFailure) == false)
+                {
+                    _dataHandler.Exec(t.ExecOnFailure);
+                }
+            }
         }
     }
 
