@@ -3,11 +3,12 @@
 using BaseTests;
 using BaseTests.Apps;
 using Bodoconsult.Finance.Payment.Banking.Hbci;
+using Bodoconsult.Finance.Payment.Banking.Test.Helpers;
+using Bodoconsult.Finance.Payment.Base.Helpers;
 using NUnit.Framework;
 using System;
 using System.Diagnostics;
 using System.Runtime.Versioning;
-using Bodoconsult.Finance.Payment.Banking.Test.Helpers;
 
 // ReSharper disable InconsistentNaming
 
@@ -29,7 +30,7 @@ public class HbciBankingServiceDepotTests
     [SetUp]
     public void SetUp()
     {
-        _banking = new HbciBankingService();
+        _banking = new HbciBankingService(_credentials.ProductName, PaymentAppHelper.GetProductVersion());
 
         var bankingContact = _credentials.HbciContacts[2];
 

@@ -1,19 +1,20 @@
 ﻿// Copyright (c) Bodoconsult EDV-Dienstleistungen GmbH. All rights reserved.
 
+using BaseTests;
+using BaseTests.Apps;
+using Bodoconsult.App.Helpers;
+using Bodoconsult.Finance.Payment.Banking.Ebics;
+using Bodoconsult.Finance.Payment.Banking.Hbci;
+using Bodoconsult.Finance.Payment.Banking.Models;
+using Bodoconsult.Finance.Payment.Banking.Test.Helpers;
+using Bodoconsult.Finance.Payment.Base.Helpers;
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using Bodoconsult.Finance.Payment.Banking.Ebics;
-using Bodoconsult.Finance.Payment.Banking.Models;
-using NUnit.Framework;
 using System.Runtime.Versioning;
-using BaseTests;
-using BaseTests.Apps;
-using Bodoconsult.App.Helpers;
-using Bodoconsult.Finance.Payment.Banking.Hbci;
-using Bodoconsult.Finance.Payment.Banking.Test.Helpers;
 
 namespace Bodoconsult.Finance.Payment.Banking.Test;
 
@@ -37,7 +38,7 @@ public class EbicsBankingTests
     [SetUp]
     public void SetUp()
     {
-        var service =  new EbicsBankingService();
+        var service =  new EbicsBankingService(_credentials.ProductName, PaymentAppHelper.GetProductVersion());
         _banking = service;
 
         var bankingContact = _credentials.EbicsContacts[0];

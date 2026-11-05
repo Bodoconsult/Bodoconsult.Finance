@@ -5,6 +5,7 @@ using BodoMoneyTransfer.Dal.Interfaces;
 using BodoMoneyTransfer.Dal.Model;
 using System;
 using System.Runtime.Versioning;
+using Bodoconsult.App.Abstractions.Delegates;
 using Bodoconsult.App.Abstractions.Interfaces;
 
 namespace BodoMoneyTransfer.Dal.Implementations;
@@ -14,27 +15,36 @@ public class WorkloadProcessor : IWorkloadProcessor
 {
     private readonly IWorkloadHandlerFactory _workloadHandlerFactory;
     private readonly IDataHandler _dataHandler;
-    private readonly IOptions _options;
+    private readonly IBodoMoneyTransferAppGlobals _options;
+    private readonly StatusMessageDelegate _statusMessageDelegate = Console.WriteLine;
 
     /// <summary>
     /// Default ctor
     /// </summary>
     /// <param name="dataHandler">Current data handöer instance</param>
-    /// <param name="options">Banking options</param>
-    /// <param name="logger">Current app logger</param>
+    /// <param name="appGlobals">Banking options</param>
     /// <param name="workloadHandlerFactory">Current workload handler factory</param>
     public WorkloadProcessor(
         //FinApiService finApiService,
-        IDataHandler dataHandler, IOptions options, IAppLoggerProxy logger, IWorkloadHandlerFactory workloadHandlerFactory)
+        IDataHandler dataHandler, IAppGlobals appGlobals, IWorkloadHandlerFactory workloadHandlerFactory)
     {
         _workloadHandlerFactory = workloadHandlerFactory;
         //_workloadHandlerFactory = new WorkloadHandlerFactory(
         //    //finApiService,
         //    dataHandler, options, logger);
 
-        _dataHandler = dataHandler;
+        if (appGlobals is not IBodoMoneyTransferAppGlobals globals)
+        {
+            throw new ArgumentException("AppGlobals is not IBodoMoneyTransferAppGlobals");
+        }
 
-        _options = options;
+        _dataHandler = dataHandler;
+        _options = globals;
+
+        if (globals.StatusMessageDelegate is not null)
+        {
+            _statusMessageDelegate = globals.StatusMessageDelegate;
+        }
     }
 
     /// <summary>
@@ -47,11 +57,11 @@ public class WorkloadProcessor : IWorkloadProcessor
         var dt = _dataHandler.GetContactsForWorkload();
         foreach (var r in dt)
         {
-            _options.StatusMessageDelegate.Invoke($"Processing contact {r} started...");
+            _statusMessageDelegate.Invoke($"Processing contact {r} started...");
 
             ProcessWorkloadForAContact(r);
 
-            _options.StatusMessageDelegate.Invoke($"Processing contact {r} finished");
+            _statusMessageDelegate.Invoke($"Processing contact {r} finished");
         }
     }
 

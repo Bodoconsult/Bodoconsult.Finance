@@ -5,6 +5,7 @@ using BaseTests.Apps;
 using Bodoconsult.App.Helpers;
 using Bodoconsult.Finance.Payment.Banking.Hbci;
 using Bodoconsult.Finance.Payment.Banking.Test.Helpers;
+using Bodoconsult.Finance.Payment.Base.Helpers;
 using Bodoconsult.Finance.Payment.Base.Models;
 using NUnit.Framework;
 using System;
@@ -32,8 +33,7 @@ public class HbciBankingTests
     [SetUp]
     public void SetUp()
     {
-        _banking = new HbciBankingService();
-        _banking.ProductName = _credentials.ProductName;
+        _banking = new HbciBankingService(_credentials.ProductName, PaymentAppHelper.GetProductVersion());
 
         var bankingContact = _credentials.HbciContacts[0];
 

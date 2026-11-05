@@ -5,6 +5,8 @@ using BodoMoneyTransfer.Dal.App;
 using BodoMoneyTransfer.Dal.Interfaces;
 using NUnit.Framework;
 using System;
+using System.Diagnostics;
+using BodoMoneyTransfer.Test.App;
 
 namespace BodoMoneyTransfer.Test;
 
@@ -23,22 +25,15 @@ public static class AssemblySetup
         AppHelper.LoadPasswordData();
 
         var globals = (IBodoMoneyTransferAppGlobals)App.Globals.Instance;
-
-        var temp = System.IO.Path.GetTempPath();
-
-        globals.Options.ArchivePath = System.IO.Path.Combine(temp, "BodoMoneyTransfer\\Archive");
-        globals.Options.ErrorMailer = "test@bodoconsult.de";
-        globals.Options.OriginalArchivePath = System.IO.Path.Combine(temp, "BodoMoneyTransfer\\Originals");
-        globals.Options.QuotationFileName = System.IO.Path.Combine(temp, "BodoMoneyTransfer\\QuotationFile.json");
-
         globals.LoggingConfig.AddDefaultLoggerProviderConfiguratorsForUiApp();
+        globals.StatusMessageDelegate = message => Debug.Print(message);
 
         // Set additional app start parameters as required
         var param = globals.AppStartParameter;
-        param.AppName = "WinAppTests: Demo app";
+        param.AppName = "BodoMoneyTransfer.Test";
         param.SoftwareTeam = "Robert Leisner";
         //param.LogoRessourcePath = "WinFormsConsoleApp1.Resources.logo.jpg";
-        param.AppFolderName = "WinAppTests";
+        param.AppFolderName = "BodoMoneyTransfer.Test";
 
         // Now start the app building process
         var builder = new MyDebugAppBuilder(globals);

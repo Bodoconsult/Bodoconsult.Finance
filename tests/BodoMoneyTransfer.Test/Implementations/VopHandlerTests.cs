@@ -8,12 +8,15 @@ using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using Bodoconsult.Finance.Payment.Banking.Enums;
+using BodoMoneyTransfer.Test.App;
 
 namespace BodoMoneyTransfer.Test.Implementations;
 
 [TestFixture]
 internal class VopHandlerTests
 {
+    private Globals _appGlobals = Globals.Instance;
+
     private List<Payment> GetPayments()
     {
         var data = new List<Payment>
@@ -83,15 +86,8 @@ internal class VopHandlerTests
 
         var workload = new List<WorkloadTask>();
 
-        var options = new Options
-        {
-            ArchivePath = @"d:\temp\BodoMoneyTransfer\Archive",
-            OriginalArchivePath = @"d:\temp\BodoMoneyTransfer\Originals",
-            QuotationFileName = @"d:\temp\BodoMoneyTransfer\QuotationFile.json",
-            ErrorMailer = "Test@Test.de"
-        };
 
-        var dataHandler = new DummyDataHandler(options, workload, payments);
+        var dataHandler = new DummyDataHandler(workload, payments);
 
         // Act  
         var voph = new VopHandler(payments, bankingService, dataHandler);
@@ -136,15 +132,7 @@ internal class VopHandlerTests
 
         var workload = new List<WorkloadTask>();
 
-        var options = new Options
-        {
-            ArchivePath = @"d:\temp\BodoMoneyTransfer\Archive",
-            OriginalArchivePath = @"d:\temp\BodoMoneyTransfer\Originals",
-            QuotationFileName = @"d:\temp\BodoMoneyTransfer\QuotationFile.json",
-            ErrorMailer = "Test@Test.de"
-        };
-
-        var dataHandler = new DummyDataHandler(options, workload, payments);
+        var dataHandler = new DummyDataHandler(workload, payments);
 
         var voph = new VopHandler(payments, bankingService, dataHandler);
 
@@ -173,15 +161,7 @@ internal class VopHandlerTests
 
         var workload = new List<WorkloadTask>();
 
-        var options = new Options
-        {
-            ArchivePath = @"d:\temp\BodoMoneyTransfer\Archive",
-            OriginalArchivePath = @"d:\temp\BodoMoneyTransfer\Originals",
-            QuotationFileName = @"d:\temp\BodoMoneyTransfer\QuotationFile.json",
-            ErrorMailer = "Test@Test.de"
-        };
-
-        var dataHandler = new DummyDataHandler(options, workload, payments);
+        var dataHandler = new DummyDataHandler(workload, payments);
 
         var voph = new VopHandler(payments, bankingService, dataHandler);
         voph.DownloadVpz();
@@ -210,15 +190,7 @@ internal class VopHandlerTests
 
         var workload = new List<WorkloadTask>();
 
-        var options = new Options
-        {
-            ArchivePath = @"d:\temp\BodoMoneyTransfer\Archive",
-            OriginalArchivePath = @"d:\temp\BodoMoneyTransfer\Originals",
-            QuotationFileName = @"d:\temp\BodoMoneyTransfer\QuotationFile.json",
-            ErrorMailer = "Test@Test.de"
-        };
-
-        var dataHandler = new DummyDataHandler(options, workload, payments);
+        var dataHandler = new DummyDataHandler(workload, payments);
 
         var voph = new VopHandler(payments, bankingService, dataHandler);
         voph.DownloadVpz();
@@ -247,15 +219,7 @@ internal class VopHandlerTests
 
         var workload = new List<WorkloadTask>();
 
-        var options = new Options
-        {
-            ArchivePath = @"d:\temp\BodoMoneyTransfer\Archive",
-            OriginalArchivePath = @"d:\temp\BodoMoneyTransfer\Originals",
-            QuotationFileName = @"d:\temp\BodoMoneyTransfer\QuotationFile.json",
-            ErrorMailer = "Test@Test.de"
-        };
-
-        var dataHandler = new DummyDataHandler(options, workload, payments);
+        var dataHandler = new DummyDataHandler(workload, payments);
 
         var voph = new VopHandler(payments, bankingService, dataHandler);
         voph.DownloadVpz();
@@ -284,15 +248,7 @@ internal class VopHandlerTests
 
         var workload = new List<WorkloadTask>();
 
-        var options = new Options
-        {
-            ArchivePath = @"d:\temp\BodoMoneyTransfer\Archive",
-            OriginalArchivePath = @"d:\temp\BodoMoneyTransfer\Originals",
-            QuotationFileName = @"d:\temp\BodoMoneyTransfer\QuotationFile.json",
-            ErrorMailer = "Test@Test.de"
-        };
-
-        var dataHandler = new DummyDataHandler(options, workload, payments);
+        var dataHandler = new DummyDataHandler(workload, payments);
 
         var voph = new VopHandler(payments, bankingService, dataHandler);
         voph.DownloadVpz();
@@ -321,15 +277,7 @@ internal class VopHandlerTests
 
         var workload = new List<WorkloadTask>();
 
-        var options = new Options
-        {
-            ArchivePath = @"d:\temp\BodoMoneyTransfer\Archive",
-            OriginalArchivePath = @"d:\temp\BodoMoneyTransfer\Originals",
-            QuotationFileName = @"d:\temp\BodoMoneyTransfer\QuotationFile.json",
-            ErrorMailer = "Test@Test.de"
-        };
-
-        var dataHandler = new DummyDataHandler(options, workload, payments);
+        var dataHandler = new DummyDataHandler(workload, payments);
 
         var voph = new VopHandler(payments, bankingService, dataHandler);
         voph.DownloadVpz();
@@ -358,15 +306,7 @@ internal class VopHandlerTests
 
         var workload = new List<WorkloadTask>();
 
-        var options = new Options
-        {
-            ArchivePath = @"d:\temp\BodoMoneyTransfer\Archive",
-            OriginalArchivePath = @"d:\temp\BodoMoneyTransfer\Originals",
-            QuotationFileName = @"d:\temp\BodoMoneyTransfer\QuotationFile.json",
-            ErrorMailer = "Test@Test.de"
-        };
-
-        var dataHandler = new DummyDataHandler(options, workload, payments);
+        var dataHandler = new DummyDataHandler(workload, payments);
 
         var voph = new VopHandler(payments, bankingService, dataHandler);
         voph.DownloadVpz();
@@ -397,15 +337,7 @@ internal class VopHandlerTests
 
         var workload = new List<WorkloadTask>();
 
-        var options = new Options
-        {
-            ArchivePath = @"d:\temp\BodoMoneyTransfer\Archive",
-            OriginalArchivePath = @"d:\temp\BodoMoneyTransfer\Originals",
-            QuotationFileName = @"d:\temp\BodoMoneyTransfer\QuotationFile.json",
-            ErrorMailer = "Test@Test.de"
-        };
-
-        var dataHandler = new DummyDataHandler(options, workload, payments);
+        var dataHandler = new DummyDataHandler(workload, payments);
 
         var voph = new VopHandler(payments, bankingService, dataHandler);
         voph.DownloadVpz();
@@ -439,15 +371,7 @@ internal class VopHandlerTests
 
         var workload = new List<WorkloadTask>();
 
-        var options = new Options
-        {
-            ArchivePath = @"d:\temp\BodoMoneyTransfer\Archive",
-            OriginalArchivePath = @"d:\temp\BodoMoneyTransfer\Originals",
-            QuotationFileName = @"d:\temp\BodoMoneyTransfer\QuotationFile.json",
-            ErrorMailer = "Test@Test.de"
-        };
-
-        var dataHandler = new DummyDataHandler(options, workload, payments);
+        var dataHandler = new DummyDataHandler(workload, payments);
 
         var voph = new VopHandler(payments, bankingService, dataHandler);
         voph.DownloadVpz();

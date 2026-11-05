@@ -11,6 +11,7 @@ using Bodoconsult.App.Helpers;
 using Bodoconsult.App.Interfaces;
 using Bodoconsult.App.Windows.ConsoleTools;
 using Bodoconsult.App.Windows.System;
+using Bodoconsult.Finance.Payment.Base.Helpers;
 using BodoMoneyTransfer.Dal.App;
 
 namespace BodoMoneyTransfer;
@@ -35,10 +36,11 @@ public class BodoMoneyTransferConsoleStarter : BaseConsoleStarter
         AppHelper.LoadPasswordData();
 
         _globals = Globals.Instance;
+        _globals.StatusMessageDelegate = SetStatus;
         _globals.LoggingConfig.AddDefaultLoggerProviderConfiguratorsForConsoleApp();
 
         ArgumentNullException.ThrowIfNull(AppPath);
-        CredentialsImportFileName = Path.Combine(AppPath, "cred.json");
+        CredentialsImportFileName = Path.Combine(AppPath, "workload.json");
 
         ArgumentNullException.ThrowIfNull(DataPath);
         CredentialsFileName = Path.Combine(DataPath, "data2.dat");
@@ -72,11 +74,10 @@ public class BodoMoneyTransferConsoleStarter : BaseConsoleStarter
                 return RunMainTask(consoleStarter);
             case "/u":
             case "--u":
-                var options = _globals.Options;
-                options.IsArchiveAccountStatements = false;
-                options.IsArchiveOriginalAccountStatements = false;
-                options.IsGetSafekeepingItems = false;
-                options.IsGetAccountStatement = false;
+                _globals.IsArchiveAccountStatements = false;
+                _globals.IsArchiveOriginalAccountStatements = false;
+                _globals.IsGetSafekeepingItems = false;
+                _globals.IsGetAccountStatement = false;
                 return RunMainTask(consoleStarter);
             case "/c":
             case "--c":
@@ -170,6 +171,6 @@ public class BodoMoneyTransferConsoleStarter : BaseConsoleStarter
         }
 
         _globals.ProductName = Workload.ProductName;
-        _globals.ProductVersion = AppHelper.GetProductVersion();
+        _globals.ProductVersion = PaymentAppHelper.GetProductVersion();
     }
 }

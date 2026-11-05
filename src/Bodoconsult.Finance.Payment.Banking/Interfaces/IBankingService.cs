@@ -18,13 +18,13 @@ public interface IBankingService: IPaymentService
     /// <summary>
     /// FINTS-Registriernummer as product name since 1.8.2019
     /// </summary>
-    string ProductName { get; set; }
+    string ProductName { get; }
 
     /// <summary>
     /// Product version (max. length 5 chars)
     /// </summary>
     [MaxLength(5)]
-    string ProductVersion { get; set; }
+    string ProductVersion { get; }
 
     /// <summary>
     /// Load an MT940 data file and create a PDF account statement for it

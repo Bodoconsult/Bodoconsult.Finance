@@ -107,6 +107,24 @@ internal class BodoMoneyTransferConsoleStarterTests
         }
     }
 
+
+    [Test]
+    public void Start_ValidDefaultSetup_Successful()
+    {
+        // Arrange 
+        var starter = new BodoMoneyTransferConsoleStarter([], true);
+        starter.LoadWorkload();
+
+        // Act  
+        var result = starter.Start();
+
+        using (Assert.EnterMultipleScope())
+        {
+            // Assert
+            Assert.That(result, Is.Zero);
+        }
+    }
+
     //[Test]
     //public void Start_ValidImportFile_WorkloadProcessed()
     //{

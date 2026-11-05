@@ -11,6 +11,9 @@ using NUnit.Framework;
 using System.Diagnostics;
 using System.Runtime.Versioning;
 using BaseTests.Apps;
+using Bodoconsult.Database.SqlClient;
+using Bodoconsult.Finance.Payment.Base.Helpers;
+using BodoMoneyTransfer.Dal.App;
 
 namespace BodoMoneyTransfer.Test.Implementations;
 
@@ -19,7 +22,7 @@ namespace BodoMoneyTransfer.Test.Implementations;
 internal class WorkloadHandlerTests
 {
     private readonly WorkloadHandler _workloadHandler;
-    private readonly IAppLoggerProxy _appLoggerProxy = TestHelper.GetFakeAppLoggerProxy();
+    private readonly Globals _appGlobals = Globals.Instance;
 
     public WorkloadHandlerTests()
     {
@@ -27,7 +30,7 @@ internal class WorkloadHandlerTests
         ArgumentNullException.ThrowIfNull(credentials);
         var contact = credentials.EbicsContacts[0];
 
-        IPaymentService banking = new EbicsBankingService();
+        IPaymentService banking = new EbicsBankingService(credentials.ProductName, PaymentAppHelper.GetProductVersion());
         var bankingContact = new EbicsBankingContact
         {
             Name = contact.Name,
@@ -41,18 +44,11 @@ internal class WorkloadHandlerTests
 
         var workload = new WorkloadTask();
 
-        var options = new Options
-        {
-            ArchivePath = @"d:\temp\BodoMoneyTransfer\Archive",
-            OriginalArchivePath = @"d:\temp\BodoMoneyTransfer\Originals",
-            QuotationFileName = @"d:\temp\BodoMoneyTransfer\QuotationFile.json",
-            ErrorMailer = "Test@Test.de",
-            ConnectionString = TestHelper.ConnectionString
-        };
+        var db = new SqlClientConnManager(Globals.Instance.AppStartParameter.DefaultConnectionString);
 
-        var dataHandler = new DataHandler(options, _appLoggerProxy);
+        var dataHandler = new DataHandler(Globals.Instance, db);
 
-        _workloadHandler = new WorkloadHandler(dataHandler, banking, workload, options, _appLoggerProxy);
+        _workloadHandler = new WorkloadHandler(dataHandler, banking, workload, _appGlobals);
     }
 
     private void _banking_StatusChange(string msg)

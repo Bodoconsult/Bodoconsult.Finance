@@ -31,7 +31,7 @@ public class WorkloadHandler : IWorkloadHandler
     private readonly IDataHandler _dataHandler;
     private readonly WorkloadTask _workload;
     private readonly IAppLoggerProxy _logger;
-    private readonly IOptions _options;
+    private readonly IBodoMoneyTransferAppGlobals _appGlobals;
     private readonly ShowPaymentMessageDelegate _setImportantMessageDelegate;
 
 
@@ -41,19 +41,23 @@ public class WorkloadHandler : IWorkloadHandler
     /// <param name="dataHandler">Database connection handler</param>
     /// <param name="paymentService">Payment service used for payment transactions</param>
     /// <param name="workload">Current workload</param>
-    /// <param name="options">Current options</param>
-    /// <param name="logger">Current app logger</param>
-    public WorkloadHandler(IDataHandler dataHandler, IPaymentService paymentService, WorkloadTask workload, IOptions options, IAppLoggerProxy logger)
+    /// <param name="appGlobals">Current options</param>
+    public WorkloadHandler(IDataHandler dataHandler, IPaymentService paymentService, WorkloadTask workload, IAppGlobals appGlobals)
     {
         _dataHandler = dataHandler;
         PaymentService = paymentService;
         _workload = workload;
 
-        ArgumentNullException.ThrowIfNull(options.SetImportantMessageDelegate);
-        _setImportantMessageDelegate = options.SetImportantMessageDelegate;
+        if (appGlobals is not IBodoMoneyTransferAppGlobals globals)
+        {
+            throw new ArgumentException("AppGlobals is not IBodoMoneyTransferAppGlobals");
+        }
 
-        _options = options;
-        _logger = logger;
+        ArgumentNullException.ThrowIfNull(globals.SetImportantMessageDelegate);
+        _setImportantMessageDelegate = globals.SetImportantMessageDelegate;
+
+        _appGlobals = globals;
+        _logger = globals.Logger;
 
         //Logger.Info("Hallo");
     }
@@ -471,7 +475,7 @@ public class WorkloadHandler : IWorkloadHandler
         {
             SetStatus($"     -> MT940 {_workload.BankCode} / {_workload.AccountNr}");
 
-            var path = Path.Combine(_options.ArchivePath, $"{_workload.BankCode}_{_workload.AccountNr}");
+            var path = Path.Combine(_appGlobals.ArchivePath, $"{_workload.BankCode}_{_workload.AccountNr}");
 
 
             //SetStatus($"     -> MT940 {path}");
@@ -531,7 +535,7 @@ public class WorkloadHandler : IWorkloadHandler
         var account = _workload.AccountNr.Trim();
         var bc = _workload.BankCode.Trim();
 
-        var path = Path.Combine(_options.OriginalArchivePath, $"{bc}_{account}");
+        var path = Path.Combine(_appGlobals.OriginalArchivePath, $"{bc}_{account}");
 
         if (!Directory.Exists(path))
         {
@@ -626,9 +630,9 @@ public class WorkloadHandler : IWorkloadHandler
             return;
         }
 
-        foreach (var h in erg.Where(x => _options.SafekeepingItems.All(y => y.Wkn != x.Wkn)))
+        foreach (var h in erg.Where(x => _appGlobals.SafekeepingItems.All(y => y.Wkn != x.Wkn)))
         {
-            _options.SafekeepingItems.Add(h);
+            _appGlobals.SafekeepingItems.Add(h);
         }
     }
 
@@ -685,6 +689,6 @@ public class WorkloadHandler : IWorkloadHandler
     private void SetStatus(string msg)
     {
         _logger.LogInformation(msg);
-        _options.StatusMessageDelegate.Invoke(msg);
+        _appGlobals.StatusMessageDelegate.Invoke(msg);
     }
 }

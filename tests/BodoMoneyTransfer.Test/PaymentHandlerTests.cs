@@ -1,13 +1,13 @@
 ﻿// Copyright (c) Bodoconsult EDV-Dienstleistungen GmbH. All rights reserved.
 
+using Bodoconsult.App.Abstractions.Interfaces;
+using Bodoconsult.Database.SqlClient;
+using BodoMoneyTransfer.Dal.App;
 using BodoMoneyTransfer.Dal.Implementations;
 using BodoMoneyTransfer.Dal.Interfaces;
-using NUnit.Framework;
-using System;
-using System.Runtime.Versioning;
-using Bodoconsult.App.Abstractions.Interfaces;
-using BodoMoneyTransfer.Dal.App;
 using BodoMoneyTransfer.Test.Helpers;
+using NUnit.Framework;
+using System.Runtime.Versioning;
 
 namespace BodoMoneyTransfer.Test;
 
@@ -19,19 +19,18 @@ public class PaymentHandlerTests
     private readonly IAppLoggerProxy _logger = TestHelper.GetFakeAppLoggerProxy();
     private IDataHandler _dataHandler;
     private IWorkloadProcessorFactory _workloadProcessorFactory;
+    private readonly Globals _appGlobals = Globals.Instance;
 
     [SetUp]
     public void SetUp()
     {
-
         // Options
-        var options = Globals.Instance.Options;
+        var db = new SqlClientConnManager(_appGlobals.AppStartParameter.DefaultConnectionString);
 
-        _dataHandler = new DataHandler(options, _logger);
-        IWorkloadHandlerFactory workloadProcessorFactory = new WorkloadHandlerFactory(_dataHandler, options, _logger);
-        _workloadProcessorFactory = new WorkloadProcessorFactory(_dataHandler, options, _logger, workloadProcessorFactory);
-        _handler = new PaymentHandler(_dataHandler, options, _logger, _workloadProcessorFactory);
-        options.StatusMessageDelegate = ShowMessage;
+        _dataHandler = new DataHandler(_appGlobals, db);
+        IWorkloadHandlerFactory workloadProcessorFactory = new WorkloadHandlerFactory(_dataHandler, _appGlobals, _logger);
+        _workloadProcessorFactory = new WorkloadProcessorFactory(_dataHandler, _appGlobals, workloadProcessorFactory);
+        _handler = new PaymentHandler(_dataHandler, _appGlobals, _workloadProcessorFactory);
     }
 
     //[Test]
@@ -189,10 +188,4 @@ public class PaymentHandlerTests
 
     //    Assert.That(result.Count == 1);
     //}
-
-
-    private static void ShowMessage(string msg)
-    {
-        Console.WriteLine(msg);
-    }
 }

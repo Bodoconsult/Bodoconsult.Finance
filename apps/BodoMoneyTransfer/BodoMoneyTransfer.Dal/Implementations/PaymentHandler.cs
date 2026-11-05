@@ -24,23 +24,25 @@ public class PaymentHandler : IPaymentHandler
     private readonly IWorkloadProcessorFactory _workloadProcessorFactory;
     private List<PaymentMessage> ErrorMessages { get; } = [];
 
-    /// <summary>
-    /// Current options
-    /// </summary>
-    public IOptions Options { get; }
+    public IBodoMoneyTransferAppGlobals AppGlobals { get; }
 
     /// <summary>
     /// Default ctor
     /// </summary>
     /// <param name="dataHandler">Current data handler</param>
-    /// <param name="options">Current options</param>
-    /// <param name="logger">Current app logger</param>
-    public PaymentHandler(IDataHandler dataHandler, IOptions options, IAppLoggerProxy logger, IWorkloadProcessorFactory workloadProcessorFactory)
+    /// <param name="appGlobals">Current app globals</param>
+    /// <param name="workloadProcessorFactory">Current workload processor factory</param>
+    public PaymentHandler(IDataHandler dataHandler, IAppGlobals appGlobals, IWorkloadProcessorFactory workloadProcessorFactory)
     {
-        Options = options;
-        Options.SetImportantMessageDelegate = SetImportantMessage;
+        if (appGlobals is not IBodoMoneyTransferAppGlobals globals)
+        {
+            throw new ArgumentException("appGlobals is not IBodoMoneyTransferAppGlobals");
+        }
+
+        AppGlobals = globals;
+        AppGlobals.SetImportantMessageDelegate = SetImportantMessage;
         DataHandler = dataHandler;
-        _logger = logger;
+        _logger = appGlobals.Logger;
         _workloadProcessorFactory = workloadProcessorFactory;
 
         SendMailDelagate = dataHandler.SendMail;
@@ -54,10 +56,10 @@ public class PaymentHandler : IPaymentHandler
         //    Password = PasswordHandler.Decrypt(DataHandler.GetSetting("KID_Password"))
         //};
 
-        Options.UseKidForAccountInfos = true;
+        AppGlobals.UseKidForAccountInfos = true;
 
         //if (!string.IsNullOrEmpty(_finApiContact.Url)) return;
-        Options.UseKidForAccountInfos = false;
+        AppGlobals.UseKidForAccountInfos = false;
     }
 
     /// <summary>
@@ -69,11 +71,6 @@ public class PaymentHandler : IPaymentHandler
     /// Delegate to send an email
     /// </summary>
     public SendMailDelegate SendMailDelagate { get; set; }
-
-    /// <summary>
-    /// Mail address(es) of receivers for error mails (separated by semicolon)
-    /// </summary>
-    public string ErrorMailer => Options.ErrorMailer;
 
     /// <summary>
     /// Get all jobs for payments to be done from different target databases
@@ -164,13 +161,14 @@ public class PaymentHandler : IPaymentHandler
             // *****************************
 
             // Save quotations
-            if (File.Exists(Options.QuotationFileName))
+            if (File.Exists(AppGlobals.QuotationFileName))
             {
-                File.Delete(Options.QuotationFileName);
+                File.Delete(AppGlobals.QuotationFileName);
             }
-            if (Options.SafekeepingItems.Count > 0)
+            if (AppGlobals.SafekeepingItems.Count > 0)
             {
-                JsonHelper.SaveAsFile(Options.QuotationFileName, Options.SafekeepingItems);
+                ArgumentException.ThrowIfNullOrEmpty(AppGlobals.QuotationFileName);
+                JsonHelper.SaveAsFile(AppGlobals.QuotationFileName, AppGlobals.SafekeepingItems);
             }
 
             SendState("Job done!");
@@ -252,6 +250,6 @@ public class PaymentHandler : IPaymentHandler
 
     private void SendState(string message)
     {
-        Options.StatusMessageDelegate.Invoke(message);
+        AppGlobals.StatusMessageDelegate.Invoke(message);
     }
 }

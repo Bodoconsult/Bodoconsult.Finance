@@ -98,7 +98,7 @@ public class BodoMoneyTransferService : IApplicationService
             }
         }
 
-        ph.Options.UseKidForAccountInfos = false;
+        ph.AppGlobals.UseKidForAccountInfos = false;
 
         ph.StartJobCollector();
         ph.ProcessAllWorkloads();

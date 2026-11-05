@@ -3,6 +3,8 @@
 using Bodoconsult.App.Abstractions.Interfaces;
 using Bodoconsult.App.Benchmarking;
 using Bodoconsult.App.Factories;
+using Bodoconsult.Database.Interfaces;
+using Bodoconsult.Database.SqlClient;
 using BodoMoneyTransfer.Dal.App;
 using BodoMoneyTransfer.Dal.Implementations;
 using BodoMoneyTransfer.Dal.Interfaces;
@@ -20,7 +22,7 @@ namespace BodoMoneyTransfer.DiContainerProvider;
 [SupportedOSPlatform("windows10.0.17763")]
 public class BodoMoneyTransferAllServicesContainerServiceProvider : IDiContainerServiceProvider
 {
-    private readonly string _benchmarkFileName = Path.Combine("C:\\ProgramData\\BodoMoneyTransfer", "BodoMoneyTransfer_Benchmark.csv");
+    //private readonly string _benchmarkFileName = Path.Combine("C:\\ProgramData\\BodoMoneyTransfer", "BodoMoneyTransfer_Benchmark.csv");
     private readonly IAppGlobals _appGlobals;
 
     /// <summary>
@@ -54,9 +56,9 @@ public class BodoMoneyTransferAllServicesContainerServiceProvider : IDiContainer
         diContainer.AddSingletonInstance(globals.LogDataFactory);
         diContainer.AddSingleton<IAppLoggerProxyFactory, AppLoggerProxyFactory>();
 
-        // benchmark
-        var benchProxy = AppBenchProxy.CreateAppBenchProxy(_benchmarkFileName, globals.LogDataFactory);
-        diContainer.AddSingletonInstance(benchProxy);
+        //// benchmark
+        //var benchProxy = AppBenchProxy.CreateAppBenchProxy(_benchmarkFileName, globals.LogDataFactory);
+        //diContainer.AddSingletonInstance(benchProxy);
 
         //// General app management
         //diContainer.AddSingleton<IGeneralAppManagementService, GeneralAppManagementService>();
@@ -64,6 +66,10 @@ public class BodoMoneyTransferAllServicesContainerServiceProvider : IDiContainer
 
         // Services
         //diContainer.AddSingleton();
+
+        // ReSharper disable once SuggestVarOrType_SimpleTypes
+        IConnManager db = SqlClientConnManager.GetConnManager(globals.AppStartParameter.DefaultConnectionString);
+        diContainer.AddSingleton(db);
         diContainer.AddSingleton<IDataHandler, DataHandler>();
         diContainer.AddSingleton<IWorkloadHandlerFactory, WorkloadHandlerFactory>();
         diContainer.AddSingleton<IWorkloadProcessorFactory, WorkloadProcessorFactory>();
@@ -81,7 +87,7 @@ public class BodoMoneyTransferAllServicesContainerServiceProvider : IDiContainer
     {
         var appLogger = diContainer.Get<IAppLoggerProxy>();
 
-        appLogger.LogInformation($"Benchmark starts logging to {_benchmarkFileName}...");
+        //appLogger.LogInformation($"Benchmark starts logging to {_benchmarkFileName}...");
 
         // Set logger to current logger factory
         var loggerFactory = diContainer.Get<ILoggerFactory>();

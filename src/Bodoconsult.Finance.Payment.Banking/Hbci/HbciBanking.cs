@@ -53,7 +53,6 @@ public class HbciBanking : BaseBanking
 
         try
         {
-
             if (Error != 0)
             {
                 return null;
@@ -92,10 +91,8 @@ public class HbciBanking : BaseBanking
     /// </summary>
     public override PaymentMessage OpenAccountSepa()
     {
-
         try
         {
-
             if (Error != 0)
             {
                 return null;
@@ -152,6 +149,12 @@ public class HbciBanking : BaseBanking
     public override AccountStatement GetAccountStatement(DateTime startDate, DateTime endDate)
     {
         var accountStatement = new AccountStatement();
+
+        if (_ddbac.Account is null)
+        {
+            Error = 4711;
+            return accountStatement;
+        }
 
         if (Error != 0)
         {
@@ -1717,6 +1720,12 @@ Erwartet: {urn:sepade:xsd:pain.001.001.02}DbtrAgt.
     /// <returns>balance amount</returns>
     public override decimal GetBalance()
     {
+        if (_ddbac.Account is null)
+        {
+            Error = 4711;
+            return 0;
+        }
+
         try
         {
             var hksal = _ddbac.CreateTransactionSegment("HKSAL");

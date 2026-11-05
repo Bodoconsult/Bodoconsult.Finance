@@ -16,8 +16,11 @@ public class HbciBankingService : BaseBankingService
     /// <summary>
     /// Default ctor
     /// </summary>
-    public HbciBankingService()
+    public HbciBankingService(string productName, string productVersion)
     {
+        ProductName = productName;
+        ProductVersion = productVersion;
+
         Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
         GetBanking();
     }

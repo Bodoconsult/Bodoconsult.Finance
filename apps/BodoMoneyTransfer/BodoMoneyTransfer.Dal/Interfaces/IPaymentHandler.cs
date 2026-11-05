@@ -1,5 +1,6 @@
 // Copyright (c) Bodoconsult EDV-Dienstleistungen GmbH. All rights reserved.
 
+using Bodoconsult.App.Abstractions.Interfaces;
 using Bodoconsult.Finance.Payment.Base.Models;
 using BodoMoneyTransfer.Dal.Delegates;
 
@@ -11,9 +12,9 @@ namespace BodoMoneyTransfer.Dal.Interfaces;
 public interface IPaymentHandler
 {
     /// <summary>
-    /// Current options
+    /// Current app globals
     /// </summary>
-    IOptions Options { get; }
+    IBodoMoneyTransferAppGlobals AppGlobals { get; }
 
     /// <summary>
     /// Current data handler

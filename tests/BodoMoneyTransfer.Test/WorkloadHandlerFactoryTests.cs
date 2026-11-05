@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Runtime.Versioning;
+using BodoMoneyTransfer.Test.App;
 
 namespace BodoMoneyTransfer.Test;
 
@@ -21,7 +22,7 @@ public class WorkloadHandlerFactoryTests
 {
     private IDataHandler _dataHandler;
     private readonly IAppLoggerProxy _appLoggerProxy = TestHelper.GetFakeAppLoggerProxy();
-    private IOptions _options;
+    private readonly Globals _appGlobals = Globals.Instance;
     private IWorkloadHandlerFactory _workloadHandlerFactory;
 
     [SetUp]
@@ -31,17 +32,9 @@ public class WorkloadHandlerFactoryTests
 
         var workload = new List<WorkloadTask>();
 
-        _options = new Options
-        {
-            ArchivePath = @"d:\temp\BodoMoneyTransfer\Archive",
-            OriginalArchivePath = @"d:\temp\BodoMoneyTransfer\Originals",
-            QuotationFileName = @"d:\temp\BodoMoneyTransfer\QuotationFile.json",
-            ErrorMailer = "Test@Test.de"
-        };
+        _appGlobals.StatusMessageDelegate = ShowMessage;
 
-        _options.StatusMessageDelegate = ShowMessage;
-
-        _dataHandler = new DummyDataHandler(_options, workload, payments);
+        _dataHandler = new DummyDataHandler(workload, payments);
        
         ////Globals.ImportantMessageChange += GlobalsOnImportantMessageChange;
         ////Globals.SendMailDelagate = SendMailDelagate;
@@ -79,7 +72,7 @@ public class WorkloadHandlerFactoryTests
 
         _workloadHandlerFactory = new WorkloadHandlerFactory(
             //null, 
-            _dataHandler, _options, _appLoggerProxy);
+            _dataHandler, _appGlobals, _appLoggerProxy);
 
 
         var workloadHandler = _workloadHandlerFactory.CreateInstance(workload);
@@ -114,7 +107,7 @@ public class WorkloadHandlerFactoryTests
 
         _workloadHandlerFactory = new WorkloadHandlerFactory(
             //null, 
-            _dataHandler, _options, _appLoggerProxy);
+            _dataHandler, _appGlobals, _appLoggerProxy);
 
         var workloadHandler = _workloadHandlerFactory.CreateInstance(workload);
 
@@ -153,7 +146,7 @@ public class WorkloadHandlerFactoryTests
 
         _workloadHandlerFactory = new WorkloadHandlerFactory(
             //null, 
-            _dataHandler, _options, _appLoggerProxy);
+            _dataHandler, _appGlobals, _appLoggerProxy);
 
 
         var workloadHandler = _workloadHandlerFactory.CreateInstance(workload);
@@ -193,7 +186,7 @@ public class WorkloadHandlerFactoryTests
 
         _workloadHandlerFactory = new WorkloadHandlerFactory(
             //null, 
-            _dataHandler, _options, _appLoggerProxy);
+            _dataHandler, _appGlobals, _appLoggerProxy);
 
         var workloadHandler = _workloadHandlerFactory.CreateInstance(workload);
 

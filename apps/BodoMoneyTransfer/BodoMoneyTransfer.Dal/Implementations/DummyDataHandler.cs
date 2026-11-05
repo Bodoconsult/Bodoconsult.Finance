@@ -6,6 +6,7 @@ using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using Bodoconsult.App.Abstractions.Interfaces;
 using Bodoconsult.Finance.Payment.Banking.Enums;
 using Bodoconsult.Finance.Payment.Base.Models;
 
@@ -18,17 +19,14 @@ public class DummyDataHandler: IDataHandler
 {
     private readonly IList<WorkloadTask> _workload;
     private readonly IList<Payment> _payments;
-    private IOptions _options;
 
     /// <summary>
     /// Default ctor
     /// </summary>
-    /// <param name="options"></param>
     /// <param name="workload"></param>
     /// <param name="payments"></param>
-    public DummyDataHandler(IOptions options, IList<WorkloadTask> workload, IList<Payment> payments)
+    public DummyDataHandler(IList<WorkloadTask> workload, IList<Payment> payments)
     {
-        _options = options;
         _workload = workload;
         _payments = payments;
     }

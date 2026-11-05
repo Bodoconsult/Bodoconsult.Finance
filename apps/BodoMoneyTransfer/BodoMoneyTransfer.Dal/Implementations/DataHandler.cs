@@ -2,7 +2,6 @@
 
 using Bodoconsult.App.Abstractions.Interfaces;
 using Bodoconsult.Database.Interfaces;
-using Bodoconsult.Database.SqlClient;
 using Bodoconsult.Finance.Payment.Banking.Enums;
 using Bodoconsult.Finance.Payment.Base.Models;
 using BodoMoneyTransfer.Dal.Helper;
@@ -17,17 +16,25 @@ using System.Linq;
 
 namespace BodoMoneyTransfer.Dal.Implementations;
 
+/// <summary>
+/// Current implementation of <see cref="IDataHandler"/>
+/// </summary>
 public class DataHandler : IDataHandler
 {
     private readonly IAppLoggerProxy _logger;
     private readonly IConnManager _db;
-    private readonly IOptions _options;
+    private readonly string _errorMailer;
 
-    public DataHandler(IOptions options, IAppLoggerProxy logger)
+    /// <summary>
+    /// Default ctor
+    /// </summary>
+    /// <param name="appGlobals">Current app logger</param>
+    /// <param name="db">Current DB connection manager</param>
+    public DataHandler(IAppGlobals appGlobals, IConnManager db)
     {
-        _options = options;
-        _db = SqlClientConnManager.GetConnManager(_options.ConnectionString);
-        _logger = logger;
+        _db = db;
+        _logger = appGlobals.Logger;
+        _errorMailer = appGlobals.AppStartParameter.ErrorMailAddress;
     }
 
     /// <summary>
@@ -138,7 +145,6 @@ public class DataHandler : IDataHandler
     {
         _db.Exec(cmd);
     }
-
 
     /// <summary>
     /// Get all open paymnts for an account
@@ -355,7 +361,7 @@ public class DataHandler : IDataHandler
             CommandText = "dbo.[spMAIL_New]"
         };
         lo.Parameters.Add("@To", SqlDbType.VarChar);
-        lo.Parameters[0].Value = _options.ErrorMailer;
+        lo.Parameters[0].Value = _errorMailer;
         lo.Parameters.Add("@Subject", SqlDbType.VarChar);
         lo.Parameters[1].Value = $"BodoMoneyTransfer:PaymentHandler:{subject}";
         lo.Parameters.Add("@Msg", SqlDbType.VarChar);

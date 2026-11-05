@@ -47,12 +47,12 @@ public class BaseBankingService : IBankingService
     /// <summary>
     /// FINTS-Registriernummer as product name since 1.8.2019
     /// </summary>
-    public string ProductName { get; set; }
+    public string ProductName { get; protected set; }
 
     /// <summary>
     /// Product version (max. length 5 chars)
     /// </summary>
-    public string ProductVersion { get; set; }
+    public string ProductVersion { get; protected set; }
 
     /// <summary>
     /// Open the payment contact

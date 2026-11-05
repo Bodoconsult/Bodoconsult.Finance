@@ -1,6 +1,5 @@
 ﻿// Copyright (c) Bodoconsult EDV-Dienstleistungen GmbH. All rights reserved.
 
-
 using System;
 using System.Runtime.Versioning;
 using System.Text;
@@ -17,8 +16,11 @@ public class EbicsBankingService : BaseBankingService
     /// <summary>
     /// Default ctor
     /// </summary>
-    public EbicsBankingService()
+    public EbicsBankingService(string productName, string productVersion)
     {
+        ProductName = productName;
+        ProductVersion = productVersion;
+
         Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 
         GetBanking();

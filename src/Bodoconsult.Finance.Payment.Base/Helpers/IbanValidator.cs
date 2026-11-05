@@ -1,9 +1,12 @@
 ﻿// Copyright (c) Bodoconsult EDV-Dienstleistungen GmbH. All rights reserved.
 
 
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.Numerics;
+using System.Reflection;
 using System.Text.RegularExpressions;
 
 namespace Bodoconsult.Finance.Payment.Base.Helpers;
@@ -121,4 +124,30 @@ public static class IbanValidator
         {"GB", 22},
         {"VG", 24}
     };
+}
+
+/// <summary>
+/// Payment app helper
+/// </summary>
+public static class PaymentAppHelper
+{
+    /// <summary>
+    /// Get the product version out of the assemblies file version
+    /// </summary>
+    /// <returns>Product version string</returns>
+    public static string GetProductVersion()
+    {
+        // Set product version
+        var assembly = Assembly.GetExecutingAssembly();
+        var fvi = FileVersionInfo.GetVersionInfo(assembly.Location);
+
+        if (fvi.FileVersion is null)
+        {
+            return "1.0";
+        }
+
+        var versiondata = fvi.FileVersion.Split(["."], StringSplitOptions.RemoveEmptyEntries);
+
+        return $"{versiondata[0]}.{versiondata[1]}";
+    }
 }

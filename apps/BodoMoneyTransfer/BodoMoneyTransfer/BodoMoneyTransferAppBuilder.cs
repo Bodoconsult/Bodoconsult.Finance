@@ -53,11 +53,8 @@ public class BodoMoneyTransferAppBuilder : BaseAppBuilder
             throw new ArgumentException("AppGlobals is not IBodoMoneyTransferAppGlobals");
         }
 
-        var options = globals.Options;
-
-        options.ArchivePath = DefaultAppStartProvider.ReadStringProperty(section, "ArchivePath", options.ArchivePath);
-        options.ErrorMailer = DefaultAppStartProvider.ReadStringProperty(section, "ErrorMailer", options.ErrorMailer);
-        options.OriginalArchivePath = DefaultAppStartProvider.ReadStringProperty(section, "OriginalArchivePath", options.OriginalArchivePath);
-        options.QuotationFileName = DefaultAppStartProvider.ReadStringProperty(section, "QuotationFile ", options.QuotationFileName);
+        globals.ArchivePath = DefaultAppStartProvider.ReadStringProperty(section, "ArchivePath", globals.ArchivePath);
+        globals.OriginalArchivePath = DefaultAppStartProvider.ReadStringProperty(section, "OriginalArchivePath", globals.OriginalArchivePath);
+        globals.QuotationFileName = DefaultAppStartProvider.ReadStringProperty(section, "QuotationFile", globals.QuotationFileName);
     }
 }

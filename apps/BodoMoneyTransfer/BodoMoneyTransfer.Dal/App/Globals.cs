@@ -1,13 +1,16 @@
 ﻿// Copyright (c) Bodoconsult EDV-Dienstleistungen GmbH. All rights reserved.
 
-using System;
-using System.Threading;
 using Bodoconsult.App;
 using Bodoconsult.App.Abstractions.Delegates;
 using Bodoconsult.App.Abstractions.Interfaces;
+using Bodoconsult.Finance.Payment.Base;
+using Bodoconsult.Finance.Payment.Base.Models;
 using BodoMoneyTransfer.Dal.Interfaces;
 using BodoMoneyTransfer.Dal.Model;
 using Microsoft.Extensions.Configuration;
+using System;
+using System.Collections.Generic;
+using System.Threading;
 
 namespace BodoMoneyTransfer.Dal.App;
 
@@ -93,7 +96,7 @@ public class Globals : IBodoMoneyTransferAppGlobals
     /// <summary>
     /// Current status message delegate
     /// </summary>
-    public Bodoconsult.App.Abstractions.Delegates.StatusMessageDelegate StatusMessageDelegate { get; set; }
+    public StatusMessageDelegate StatusMessageDelegate { get; set; } = Console.WriteLine;
 
     /// <summary>
     /// Current license management delegate
@@ -125,10 +128,11 @@ public class Globals : IBodoMoneyTransferAppGlobals
     /// </summary>
     public IConfigurationRoot ConfigurationRoot { get; set; }
 
+
     /// <summary>
-    /// Current banking options
+    /// A delegate sending an important payment message to UI or logging
     /// </summary>
-    public IOptions Options { get; set; } = new Options();
+    public ShowPaymentMessageDelegate SetImportantMessageDelegate { get; set; }
 
     /// <summary>
     /// Path to archive the PDF account statements created by BodoMoneyTransfer
@@ -136,18 +140,67 @@ public class Globals : IBodoMoneyTransferAppGlobals
     public string ArchivePath { get; set; }
 
     /// <summary>
-    /// Receiver for error mails
-    /// </summary>
-    public string ErrorMailer { get; set; }
-
-    /// <summary>
     /// Path to archive the orginal PDF account statements from the bank
     /// </summary>
     public string OriginalArchivePath { get; set; }
 
+    /// <summary>
+    /// Should transaction transfer run
+    /// </summary>
+    public bool IsRunTransactions { get; set; } = true;
 
     /// <summary>
-    /// Path to a file for quotations to store in
+    /// Should account statements be fetched
     /// </summary>
-    public string QuotationFile { get; set; }
+    public bool IsGetAccountStatement { get; set; } = true;
+
+    /// <summary>
+    /// Should account statements be archived as MT940
+    /// </summary>
+    public bool IsArchiveAccountStatements { get; set; } = true;
+
+    /// <summary>
+    /// Should the original PDFs of the account statements be fetched from the server
+    /// </summary>
+    public bool IsArchiveOriginalAccountStatements { get; set; } = true;
+
+    /// <summary>
+    /// Should the safekeeping items be fetched from the server
+    /// </summary>
+    public bool IsGetSafekeepingItems { get; set; } = true;
+
+    /// <summary>
+    /// Name of the file to write the quotation of safekeepings as JSON in
+    /// </summary>
+    public string QuotationFileName { get; set; }
+
+    /// <summary>
+    /// All safekeeping items
+    /// </summary>
+    public IList<SafekeepingItem> SafekeepingItems { get; } = new List<SafekeepingItem>();
+
+    /// <summary>
+    /// Use Kontoinformationsdienst (KID) for account infos. Default: false
+    /// </summary>
+    public bool UseKidForAccountInfos { get; set; }
+
+    /// <summary>
+    /// Start date for live account statements
+    /// </summary>
+    public DateTime AccountStatementDateUntil { get; set; }
+
+    /// <summary>
+    /// End date for live account statements
+    /// </summary>
+    public DateTime AccountStatementDateFrom { get; set; }
+
+    /// <summary>
+    /// Start date for live account statements
+    /// </summary>
+    public DateTime ArchiveAccountStatementDateUntil { get; set; }
+
+    /// <summary>
+    /// End date for live account statements
+    /// </summary>
+    public DateTime ArchiveAccountStatementDateFrom { get; set; }
 }

@@ -40,11 +40,9 @@ public class HbciBankingServiceFactory: IPaymentServiceFactory
             throw new Exception($"Contact has wrong type '{contact.GetType().Name}' instead of 'BankingContact'");
         }
 
-        var service = new HbciBankingService
+        var service = new HbciBankingService(ProductName, ProductVersion)
         {
-            PaymentContact = contact,
-            ProductName = ProductName,
-            ProductVersion = ProductVersion
+            PaymentContact = contact
         };
 
         var result = service.OpenContact();

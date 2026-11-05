@@ -1,14 +1,16 @@
 ﻿// Copyright (c) Bodoconsult EDV-Dienstleistungen GmbH. All rights reserved.
 
 using Bodoconsult.App.Abstractions.Interfaces;
+using Bodoconsult.App.DataProtection;
 using Bodoconsult.Finance.Payment.Banking.Ebics;
 using Bodoconsult.Finance.Payment.Banking.Factories;
 using Bodoconsult.Finance.Payment.Banking.Hbci;
 using Bodoconsult.Finance.Payment.Base.Interfaces;
 using BodoMoneyTransfer.Dal.Interfaces;
 using BodoMoneyTransfer.Dal.Model;
+using System;
+using System.Diagnostics;
 using System.Runtime.Versioning;
-using Bodoconsult.App.DataProtection;
 
 namespace BodoMoneyTransfer.Dal.Implementations;
 
@@ -21,21 +23,26 @@ public class WorkloadHandlerFactory : IWorkloadHandlerFactory
     //private readonly FinApiService _finApiService;
     private readonly IDataHandler _dataHandler;
     private readonly IAppLoggerProxy _logger;
-    private readonly IOptions _options;
+    private readonly IBodoMoneyTransferAppGlobals _appGlobals;
 
     /// <summary>
     /// Default ctor
     /// </summary>
     /// <param name="dataHandler">Current data handler</param>
-    /// <param name="options">Current banking options</param>
+    /// <param name="appGlobals">Current banking options</param>
     /// <param name="logger">Current app logger</param>
     public WorkloadHandlerFactory(
         //FinApiService finApiService,
-        IDataHandler dataHandler, IOptions options, IAppLoggerProxy logger)
+        IDataHandler dataHandler, IAppGlobals appGlobals, IAppLoggerProxy logger)
     {
+        if (appGlobals is not IBodoMoneyTransferAppGlobals globals)
+        {
+            throw new ArgumentException("AppGlobals is not IBodoMoneyTransferAppGlobals");
+        }
+
         //_finApiService = finApiService;
         _dataHandler = dataHandler;
-        _options = options;
+        _appGlobals = globals;
         _logger = logger;
     }
 
@@ -54,9 +61,9 @@ public class WorkloadHandlerFactory : IWorkloadHandlerFactory
 
         var msg = $"{paymentService.PaymentContact.ContactType}: working on {workload.BankCode} / {workload.AccountNr}";
         _logger.LogInformation(msg);
-        _options.StatusMessageDelegate.Invoke(msg);
+        _appGlobals.StatusMessageDelegate?.Invoke(msg);
 
-        var wh = new WorkloadHandler(_dataHandler, paymentService, workload, _options, _logger);
+        var wh = new WorkloadHandler(_dataHandler, paymentService, workload, _appGlobals);
 
         return wh;
     }
@@ -75,7 +82,6 @@ public class WorkloadHandlerFactory : IWorkloadHandlerFactory
         switch (workload.Provider)
         {
             case BankingServiceProvider.Hbci:
-
                 contact = new HbciBankingContact
                 {
                     Name = workload.Contact,
@@ -86,8 +92,8 @@ public class WorkloadHandlerFactory : IWorkloadHandlerFactory
 
                 factory = new HbciBankingServiceFactory
                 {
-                    ProductName = _options.ProductName,
-                    ProductVersion = _options.ProductVersion
+                    ProductName = _appGlobals.ProductName,
+                    ProductVersion = _appGlobals.ProductVersion
                 };
                 break;
 
@@ -103,8 +109,8 @@ public class WorkloadHandlerFactory : IWorkloadHandlerFactory
 
                 factory = new EbicsBankingServiceFactory
                 {
-                    ProductName = _options.ProductName,
-                    ProductVersion = _options.ProductVersion
+                    ProductName = _appGlobals.ProductName,
+                    ProductVersion = _appGlobals.ProductVersion
                 };
                 break;
 
@@ -116,8 +122,8 @@ public class WorkloadHandlerFactory : IWorkloadHandlerFactory
         }
 
         var service = factory.CreateInstance(contact);
-        service.StatusMessageDelegate = _options.StatusMessageDelegate;
-        service.ImportantMessageChange = _options.SetImportantMessageDelegate;
+        service.StatusMessageDelegate = _appGlobals.StatusMessageDelegate;
+        service.ImportantMessageChange = _appGlobals.SetImportantMessageDelegate;
         return service;
     }
 }

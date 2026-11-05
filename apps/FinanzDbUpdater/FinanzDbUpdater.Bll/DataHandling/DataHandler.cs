@@ -264,13 +264,13 @@ public sealed class DataHandler : IDataHandler
 
         Exec("exec UpdateVermögensstand");
 
-        //Exec("", false);
+        //Exec("");
 
-        //Exec("", false);
+        //Exec("");
 
-        //Exec("", false);
+        //Exec("");
 
-        //Exec("", false);
+        //Exec("");
     }
 
     /// <summary>
@@ -347,6 +347,11 @@ public sealed class DataHandler : IDataHandler
         return _db.GetDataTable(lo);
     }
 
+    /// <summary>
+    /// Get the covariance matrix for an asset owner
+    /// </summary>
+    /// <param name="owner">Requested asset owner</param>
+    /// <returns>Covariance matrix for the owner</returns>
     public DataTable GetCovarianceMatrixForOwner(string owner)
     {
         var kov = new SqlCommand { CommandType = CommandType.StoredProcedure, CommandText = "[dbo].[GetKovarianzDepot2]" };
@@ -355,6 +360,11 @@ public sealed class DataHandler : IDataHandler
         return _db.GetDataTable(kov);
     }
 
+    /// <summary>
+    /// Update the risk for an asset owner
+    /// </summary>
+    /// <param name="owner"></param>
+    /// <param name="risk"></param>
     public void UpdateOwnerRisk(string owner, double risk)
     {
         var lo = new SqlCommand { CommandType = CommandType.StoredProcedure, CommandText = "[dbo].[SetDepotRisiko]" };
@@ -365,10 +375,8 @@ public sealed class DataHandler : IDataHandler
         Exec(lo);
     }
 
-
     public IList<OwnerData> GetOwnersDataForMcs()
     {
-
         var result = new List<OwnerData>();
 
         var dt = _db.GetDataTable("exec dbo.spMonteCarlo_Start");
