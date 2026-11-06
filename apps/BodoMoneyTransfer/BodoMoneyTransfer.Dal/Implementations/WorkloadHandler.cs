@@ -118,15 +118,16 @@ public class WorkloadHandler : IWorkloadHandler
                 return;
             }
 
-            //// VOP process
-            //if (_workload.VopOptOut)
-            //{
-            //    TransferVopOptOut(ta);
-            //}
-            //else
-            //{
-                TransferVop(ta);
-            //}
+            // VOP process
+            if (_workload.VopOptOut)
+            {
+                TransferVopOptOut(ta);
+            }
+            else
+            {
+                throw new NotImplementedException();
+                //TransferVop(ta);
+            }
         }
         catch (Exception ex)
         {

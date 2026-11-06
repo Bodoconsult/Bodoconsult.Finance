@@ -151,9 +151,6 @@ public class PaymentHandler : IPaymentHandler
 
             SendState("Process workloads...");
             var wp = _workloadProcessorFactory.CreateInstance();
-            //var wp = new WorkloadProcessor(
-            //    //_finApiService,
-            //    DataHandler, Options, _logger);
             wp.ProcessAll();
 
             // *****************************

@@ -47,6 +47,20 @@ public class Globals : IBodoMoneyTransferAppGlobals
 
     #endregion
 
+    /// <summary>
+    /// Default ctor
+    /// </summary>
+    private Globals()
+    {
+        AccountStatementDateFrom = DateTime.Now.AddMonths(-2);
+        AccountStatementDateUntil = DateTime.Now;
+
+        var date = DateTime.Now.AddMonths(-1);
+
+        ArchiveAccountStatementDateFrom = new DateTime(date.Year, date.Month, 1);
+        ArchiveAccountStatementDateUntil = ArchiveAccountStatementDateFrom.AddMonths(1).AddDays(-1);
+    }
+
     /// <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</summary>
     public void Dispose()
     {

@@ -49,7 +49,7 @@ public class Globals : IBodoMoneyTransferAppGlobals
     /// <summary>
     /// Default ctor
     /// </summary>
-    public Globals()
+    private Globals()
     {
         AccountStatementDateFrom = DateTime.Now.AddMonths(-2);
         AccountStatementDateUntil = DateTime.Now;
