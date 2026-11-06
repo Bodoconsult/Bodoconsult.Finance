@@ -2,8 +2,6 @@
 
 using System.Diagnostics;
 using Bodoconsult.Finance.Payment.Base.Helpers;
-using BodoMoneyTransfer.Dal.App;
-using BodoMoneyTransfer.Dal.Helper;
 using NUnit.Framework;
 
 namespace BodoMoneyTransfer.Test;

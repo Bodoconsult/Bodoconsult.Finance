@@ -29,9 +29,6 @@ public class WorkloadProcessor : IWorkloadProcessor
         IDataHandler dataHandler, IAppGlobals appGlobals, IWorkloadHandlerFactory workloadHandlerFactory)
     {
         _workloadHandlerFactory = workloadHandlerFactory;
-        //_workloadHandlerFactory = new WorkloadHandlerFactory(
-        //    //finApiService,
-        //    dataHandler, options, logger);
 
         if (appGlobals is not IBodoMoneyTransferAppGlobals globals)
         {

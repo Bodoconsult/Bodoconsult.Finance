@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Bodoconsult EDV-Dienstleistungen GmbH. All rights reserved.
 
 using Bodoconsult.App.Abstractions.Interfaces;
-using Bodoconsult.App.Benchmarking;
 using Bodoconsult.App.Factories;
 using Bodoconsult.Database.Interfaces;
 using Bodoconsult.Database.SqlClient;
@@ -10,7 +9,6 @@ using BodoMoneyTransfer.Dal.Implementations;
 using BodoMoneyTransfer.Dal.Interfaces;
 using Microsoft.Extensions.Logging;
 using System;
-using System.IO;
 using System.Runtime.Versioning;
 using DiContainer = Bodoconsult.App.Abstractions.DependencyInjection.DiContainer;
 

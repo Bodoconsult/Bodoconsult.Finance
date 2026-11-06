@@ -6,7 +6,6 @@ using Bodoconsult.App.Abstractions.Interfaces;
 using Bodoconsult.Finance.Payment.Base;
 using Bodoconsult.Finance.Payment.Base.Models;
 using BodoMoneyTransfer.Dal.Interfaces;
-using BodoMoneyTransfer.Dal.Model;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -52,6 +51,7 @@ public class Globals : IBodoMoneyTransferAppGlobals
     /// </summary>
     private Globals()
     {
+        // Do not fetch mre than 3 months of account statements. Otherwise SecureGO confirmation app is required due EU banking regulation requirements
         AccountStatementDateFrom = DateTime.Now.AddMonths(-2);
         AccountStatementDateUntil = DateTime.Now;
 

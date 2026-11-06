@@ -1,12 +1,10 @@
 ﻿// Copyright (c) Bodoconsult EDV-Dienstleistungen. All rights reserved.
 
 using System;
-using Bodoconsult.App.Abstractions.Interfaces;
 using Bodoconsult.Finance.Payment.Banking.Ebics;
 using Bodoconsult.Finance.Payment.Base.Interfaces;
 using BodoMoneyTransfer.Dal.Implementations;
 using BodoMoneyTransfer.Dal.Model;
-using BodoMoneyTransfer.Test.Helpers;
 using NUnit.Framework;
 using System.Diagnostics;
 using System.Runtime.Versioning;

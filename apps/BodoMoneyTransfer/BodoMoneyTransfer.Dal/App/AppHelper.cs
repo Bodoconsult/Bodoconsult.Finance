@@ -1,9 +1,5 @@
 ﻿// Copyright (c) Bodoconsult EDV-Dienstleistungen GmbH.  All rights reserved.
 
-using System;
-using System.Diagnostics;
-using System.Reflection;
-
 namespace BodoMoneyTransfer.Dal.App;
 
 using Bodoconsult.App.DataProtection;

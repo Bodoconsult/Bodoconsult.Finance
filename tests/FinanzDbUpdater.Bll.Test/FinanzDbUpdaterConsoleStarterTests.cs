@@ -1,8 +1,5 @@
 // Copyright (c) Bodoconsult EDV-Dienstleistungen GmbH. All rights reserved.
 
-using FinanzDbUpdater.Bll.App;
-using FinanzDbUpdater.Bll.Helpers;
-using MathNet.Numerics;
 using NUnit.Framework;
 
 namespace FinanzDbUpdater.Bll.Test;

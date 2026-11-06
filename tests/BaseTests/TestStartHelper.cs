@@ -2,7 +2,6 @@
 
 using BaseTests.Apps;
 using Bodoconsult.App.Windows.DataProtection;
-using System.Diagnostics;
 
 namespace BaseTests;
 

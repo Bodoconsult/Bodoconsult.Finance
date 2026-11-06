@@ -1,6 +1,5 @@
 // Copyright (c) Bodoconsult EDV-Dienstleistungen GmbH. All rights reserved.
 
-using Bodoconsult.App.Abstractions.Interfaces;
 using Bodoconsult.Finance.Payment.Base.Models;
 using BodoMoneyTransfer.Dal.Delegates;
 

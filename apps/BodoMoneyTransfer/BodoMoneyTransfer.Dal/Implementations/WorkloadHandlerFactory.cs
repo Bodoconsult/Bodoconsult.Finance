@@ -9,7 +9,6 @@ using Bodoconsult.Finance.Payment.Base.Interfaces;
 using BodoMoneyTransfer.Dal.Interfaces;
 using BodoMoneyTransfer.Dal.Model;
 using System;
-using System.Diagnostics;
 using System.Runtime.Versioning;
 
 namespace BodoMoneyTransfer.Dal.Implementations;
